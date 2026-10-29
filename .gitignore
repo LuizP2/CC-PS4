@@ -4,3 +4,11 @@ dumps/
 downloads/
 logs/
 .reva/
+__pycache__/
+*.pyc
+graphify-out/cache/
+graphify-out/.rebuild.lock
+# runtime do ruflo
+.claude-flow/
+.swarm/
+ruvector.db

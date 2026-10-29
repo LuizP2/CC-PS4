@@ -180,13 +180,13 @@
     "semantic_hash": ""
   },
   "ps4_mcp/config.py": {
-    "mtime": 1793278382.2976873,
-    "ast_hash": "be2fa316ae5f3264a19a36d0a8477cc4",
+    "mtime": 1793295117.3081467,
+    "ast_hash": "8d822b34079eaa65ce42203542a96877",
     "semantic_hash": ""
   },
   "ps4_mcp/debug.py": {
-    "mtime": 1793278788.011457,
-    "ast_hash": "5f6466f29ab55791680aec3c9b3623c7",
+    "mtime": 1793310008.505529,
+    "ast_hash": "d0e3e9130bba78552f821fee48209bc9",
     "semantic_hash": ""
   },
   "ps4_mcp/deploy.py": {
@@ -220,8 +220,8 @@
     "semantic_hash": ""
   },
   "ps4_mcp/server.py": {
-    "mtime": 1793286985.6593075,
-    "ast_hash": "50a1983dbafeda1b8032d3bf93df5f77",
+    "mtime": 1793295117.3106341,
+    "ast_hash": "7b07ad3a7e4d6146608263909b9a25f4",
     "semantic_hash": ""
   },
   "ps4_mcp/sfo.py": {
@@ -240,8 +240,8 @@
     "semantic_hash": ""
   },
   "scripts/fase0_smoke.py": {
-    "mtime": 1793279019.397598,
-    "ast_hash": "4ba6d5ce0eba2577869ae35c94674df7",
+    "mtime": 1793295117.3087604,
+    "ast_hash": "fd8d297182014bbcc53dd9b89c4fac12",
     "semantic_hash": ""
   },
   "scripts/install_openorbis.sh": {
@@ -255,8 +255,8 @@
     "semantic_hash": ""
   },
   "scripts/send_payload.py": {
-    "mtime": 1793279024.0075562,
-    "ast_hash": "77f6dca0257aef20307f771d11fac815",
+    "mtime": 1793295117.309077,
+    "ast_hash": "34e460525fc55b734b46251a57fe0483",
     "semantic_hash": ""
   },
   "tests/__init__.py": {
@@ -350,8 +350,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1793279304.0088956,
-    "ast_hash": "4ce810a2c383d75849027822545ab654",
+    "mtime": 1793295117.3122797,
+    "ast_hash": "8c1f22aadbd6ca0c66e0fc6deef43516",
     "semantic_hash": ""
   },
   "docs/kh3-formato-legendas.md": {
@@ -360,8 +360,8 @@
     "semantic_hash": ""
   },
   "docs/protocolo-ps4debug.md": {
-    "mtime": 1793286890.2983465,
-    "ast_hash": "3334b962fb985ac7b189a0077dafbb2b",
+    "mtime": 1793310047.4178855,
+    "ast_hash": "78aa3d710dfee677b5a26d32f9642110",
     "semantic_hash": ""
   },
   "docs/relatorio-fase5.md": {
@@ -382,6 +382,36 @@
   "ps4-app/sce_sys/icon0.png": {
     "mtime": 1793286864.1892533,
     "ast_hash": "cdef1daf25a2bc738bd4b4785b41c4c9",
+    "semantic_hash": ""
+  },
+  "tests/test_discover.py": {
+    "mtime": 1793295124.0522778,
+    "ast_hash": "5137dffe052dfb87812f88ac343f0a56",
+    "semantic_hash": ""
+  },
+  ".claude-flow/neural/patterns.json": {
+    "mtime": 1793310227.7967663,
+    "ast_hash": "ad9918daa70c8369748517ec440b98a0",
+    "semantic_hash": ""
+  },
+  ".claude-flow/neural/stats.json": {
+    "mtime": 1793310227.8117664,
+    "ast_hash": "9ece4ee9cda484a07134e3a1b84b421d",
+    "semantic_hash": ""
+  },
+  ".claude-flow/policy/ledger-anchors.json": {
+    "mtime": 1793310226.615753,
+    "ast_hash": "30b9eb07428e446e36aba829899fe2b6",
+    "semantic_hash": ""
+  },
+  ".claude-flow/policy/state.json": {
+    "mtime": 1793310226.598414,
+    "ast_hash": "3f4c8bc92ba15cc2035a5a718ada80c3",
+    "semantic_hash": ""
+  },
+  ".swarm/ewc-fisher.json": {
+    "mtime": 1793310227.784766,
+    "ast_hash": "84146f38cd0d58f9e3b39c2199615b6a",
     "semantic_hash": ""
   }
 }
