@@ -11,6 +11,10 @@ import socket
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from ps4_mcp.config import discover_ps4  # noqa: E402
+
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -18,8 +22,10 @@ def main() -> int:
     ap.add_argument("--ip", default=os.environ.get("PS4_IP", ""))
     ap.add_argument("--port", type=int, default=9090)
     args = ap.parse_args()
+    if args.ip in ("", "auto"):
+        args.ip = discover_ps4()
     if not args.ip:
-        ap.error("informe --ip ou defina PS4_IP")
+        ap.error("PS4 não encontrado na rede: informe --ip ou defina PS4_IP")
     data = args.payload.read_bytes()
     if not data:
         ap.error(f"{args.payload} está vazio")

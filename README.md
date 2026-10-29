@@ -34,7 +34,7 @@ Fica de fora, como o próprio plano pede: subagentes por área do port (só depo
    - Para logs, ative um servidor de klog na porta 3232 (ou ajuste `PS4_LOG_SOURCE`).
 2. **No PC, uma vez:**
    ```bash
-   echo 'export PS4_IP=192.168.0.50' >> ~/.zshrc         # IP do console
+   echo 'export PS4_IP=192.168.0.50' >> ~/.zshrc         # opcional: sem ele o IP é descoberto na rede
    sudo sysctl -w net.ipv4.ip_unprivileged_port_start=755  # o ps4debug conecta de volta na porta 755 do PC
    echo 'net.ipv4.ip_unprivileged_port_start=755' | sudo tee /etc/sysctl.d/99-ps4debug.conf
    ```
@@ -48,7 +48,7 @@ Fica de fora, como o próprio plano pede: subagentes por área do port (só depo
 
 | Variável | Padrão | Uso |
 |---|---|---|
-| `PS4_IP` | (obrigatória) | IP do console. Só IPs privados são aceitos, salvo `PS4_ALLOW_PUBLIC_IP=1` |
+| `PS4_IP` | `auto` | IP do console. Vazio ou `auto`: descobre ao iniciar (DDP na porta 987; sem resposta, varre a /24 do PC atrás da porta 744). Só IPs privados são aceitos, salvo `PS4_ALLOW_PUBLIC_IP=1` |
 | `PS4DEBUG_PORT` / `PS4DEBUG_CALLBACK_PORT` | 744 / 755 | portas do ps4debug (a 755 é fixa no payload) |
 | `PS4_FTP_PORT` | 2121 | FTP do GoldHEN |
 | `PS4_LOG_SOURCE` | `tcp:<PS4_IP>:3232` | `tcp:IP:PORTA`, `udp:BIND:PORTA`, `file:/caminho` ou `off` |

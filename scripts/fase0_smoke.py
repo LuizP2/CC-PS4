@@ -15,6 +15,7 @@ import time
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from ps4_mcp.client import PS4Debug, PS4DebugError  # noqa: E402
+from ps4_mcp.config import discover_ps4  # noqa: E402
 from ps4_mcp.text import hexdump  # noqa: E402
 
 
@@ -26,8 +27,10 @@ def main() -> int:
     ap.add_argument("--ftp", action="store_true", help="também lista / pelo FTP (porta 2121)")
     ap.add_argument("--logs", action="store_true", help="também escuta o klog (porta 3232) por 5 s")
     args = ap.parse_args()
+    if args.ip in ("", "auto"):
+        args.ip = discover_ps4(args.port)
     if not args.ip:
-        ap.error("informe --ip ou defina PS4_IP")
+        ap.error("PS4 não encontrado na rede: informe --ip ou defina PS4_IP")
 
     client = PS4Debug(args.ip, args.port)
     try:

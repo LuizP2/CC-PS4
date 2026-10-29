@@ -94,7 +94,7 @@ class App:
 
     def require_ps4(self) -> None:
         if not self.cfg.ps4_ip:
-            raise ToolError("PS4_IP não configurado: defina env.PS4_IP no .mcp.json do projeto e reinicie o Claude Code")
+            raise ToolError("PS4 não encontrado na rede ao iniciar: ligue o console e reinicie o Claude Code, ou defina PS4_IP no ambiente")
         check_lan(self.cfg.ps4_ip, self.cfg.allow_public_ip)
         if not self._logs_started:
             self._logs_started = True
@@ -266,7 +266,7 @@ async def ps4_diagnose() -> str:
         checks.append({"check": name, "ok": ok, "detail": detail})
 
     if not cfg.ps4_ip:
-        add("PS4_IP", False, "não configurado (env.PS4_IP no .mcp.json)")
+        add("PS4_IP", False, "PS4 não encontrado na rede ao iniciar (DDP na porta 987 e varredura da porta 744). Ligue o console e reinicie, ou defina PS4_IP")
         return {"checks": checks}
     try:
         check_lan(cfg.ps4_ip, cfg.allow_public_ip)
