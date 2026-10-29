@@ -61,6 +61,8 @@ def test_address_expressions():
     assert parse_address("eboot.bin+0x1234", MAPS) == 0x401234
     assert parse_address("libc.sprx", MAPS) == 0x800000
     assert module_base(MAPS, "EBOOT.BIN") == 0x400000
+    fw1252 = [p.MapEntry("executable", 0x400000, 0x480000, 0, 5), p.MapEntry("(NoName)eboot.bin", 0x7EEDF8000, 0x7EEDFC000, 0, 5)]
+    assert parse_address("eboot.bin+0x20", fw1252) == 0x400020
     assert describe_address(MAPS, 0x481000) == "eboot.bin+0x81000"
     assert "não mapeado" in describe_address(MAPS, 0x10)
     with pytest.raises(ValueError, match="não encontrado"):

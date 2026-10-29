@@ -234,6 +234,8 @@ def find_map(maps: list[MapEntry], address: int) -> MapEntry | None:
 
 def module_base(maps: list[MapEntry], name: str) -> int | None:
     starts = [m.start for m in maps if m.name == name] or [m.start for m in maps if m.name.lower() == name.lower()]
+    if not starts and name.lower() == "eboot.bin":  # ps4debug 1.3 no FW 12.52 chama a imagem principal de "executable"
+        return module_base(maps, "executable")
     return min(starts) if starts else None
 
 

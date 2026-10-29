@@ -133,6 +133,11 @@ class DebugSession:
             with self._cond:
                 self._events.clear()
             threading.Thread(target=self._read_loop, args=(dbg,), daemon=True, name="ps4-interrupts").start()
+            # ps4debug 1.3 (GoldHEN) no FW 12.52 deixa o processo parado após o PT_ATTACH; o jogo congela sem isso.
+            try:
+                self._cmd(Cmd.DEBUG_STOPGO, U32.pack(0))
+            except PS4DebugError:
+                pass  # payloads que já continuam sozinhos podem recusar; o processo segue rodando
             return {"attached_pid": pid, "state": "running"}
 
     @staticmethod

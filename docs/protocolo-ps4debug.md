@@ -44,6 +44,8 @@ Fonte: [jogolden/ps4debug](https://github.com/jogolden/ps4debug), protocolo `"1.
 
 13. **Processo morre com debugger anexado** (`server.c:86`). Depois do `debug_cleanup`, o payload usa `curdbgctx` nulo: quando o jogo fecha ou é morto durante a sessão, o ps4debug provavelmente crasha e precisa ser recarregado.
 
+14. **ps4debug 1.3 (GoldHEN v1.1.19) no FW 12.52: o ATTACH deixa o processo parado.** O jogo congela até o detach. O cliente manda `STOPGO(0)` logo depois do ATTACH e ignora um eventual erro. Com isso, o crash do crash-test chegou como evento (`SIGSEGV` em `eboot.bin+0x38`).
+
 ## Sinais (FreeBSD)
 
 O `status` do pacote de interrupção é o valor do `wait4`. Para processo parado, `WSTOPSIG = (status >> 8) & 0xff`. No FreeBSD, SIGSTOP é 17 e SIGBUS é 10, diferente do Linux.
