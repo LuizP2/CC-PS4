@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "ps4": {
+      "command": "/home/luizp2/Desktop/CC-PS4/.venv/bin/python",
+      "args": ["-m", "ps4_mcp"],
+      "env": {
+        "PS4_IP": "${PS4_IP:-}",
+        "PS4_WORKDIR": "/home/luizp2/Desktop/CC-PS4",
+        "PS4_LOG_SOURCE": "${PS4_LOG_SOURCE:-}",
+        "PS4_BRIDGE": "${PS4_BRIDGE:-0}",
+        "PS4_ENABLE_WRITE": "${PS4_ENABLE_WRITE:-0}",
+        "PS4_ENABLE_DEPLOY": "${PS4_ENABLE_DEPLOY:-0}",
+        "OO_PS4_TOOLCHAIN": "${OO_PS4_TOOLCHAIN:-/home/luizp2/tools/OpenOrbis/PS4Toolchain}"
+      }
+    }
+  }
+}

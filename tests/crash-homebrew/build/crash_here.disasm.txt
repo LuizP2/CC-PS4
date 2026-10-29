@@ -1,0 +1,17 @@
+
+build/crashtest.elf:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000000020 <crash_here>:
+      20:      	push	rbp
+      21:      	mov	rbp, rsp
+      24:      	mov	qword ptr [rbp - 0x8], rdi
+      28:      	mov	rax, qword ptr [rbp - 0x8]
+      2c:      	add	rax, 0x8
+      30:      	mov	qword ptr [rbp - 0x10], rax
+      34:      	mov	rax, qword ptr [rbp - 0x10]
+      38:      	mov	eax, dword ptr [rax]
+      3a:      	pop	rbp
+      3b:      	ret
+      3c:      	nop	dword ptr [rax]
