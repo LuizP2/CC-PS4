@@ -1,12 +1,387 @@
 {
   "CLAUDE.md": {
-    "mtime": 1793276859.4313908,
-    "ast_hash": "945f4763122375e8be7905cba8f48175",
-    "semantic_hash": "945f4763122375e8be7905cba8f48175"
+    "mtime": 1793279268.146408,
+    "ast_hash": "0d8426f16ae9e62a59d5bf7a4d117af6",
+    "semantic_hash": ""
   },
   "ps4-claude-agent-plano.md": {
     "mtime": 1793276221.225833,
     "ast_hash": "44765b2939297f90f10d60d299167998",
     "semantic_hash": "44765b2939297f90f10d60d299167998"
+  },
+  ".mcp.json": {
+    "mtime": 1793279128.1852915,
+    "ast_hash": "68cc1bd04e66e009f26fee6a1aa18fad",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/bridge.c": {
+    "mtime": 1793286225.182052,
+    "ast_hash": "c692b83138da906864a4803ebf9588ea",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/bridge.h": {
+    "mtime": 1793286179.86243,
+    "ast_hash": "a573df57565edc10769ea44b26c3cd2e",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/font.c": {
+    "mtime": 1793286108.507743,
+    "ast_hash": "f5870d22e18fe9fca0c1ffd0fc0e0a5a",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/font.h": {
+    "mtime": 1793286092.0579515,
+    "ast_hash": "457a505ff6afbb0adf666a3dceab3e93",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/font8x8_basic.h": {
+    "mtime": 1793279508.2143037,
+    "ast_hash": "feaf06c473c8bab9c89d8f7762e706c2",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/font8x8_ext_latin.h": {
+    "mtime": 1793279508.2144744,
+    "ast_hash": "babb63192efe995e14aab67469a66f6b",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/http.c": {
+    "mtime": 1793286162.113004,
+    "ast_hash": "3aed636bcc448148fd2d252f493abdf2",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/http.h": {
+    "mtime": 1793286136.6302886,
+    "ast_hash": "2f7da66087a4b4acd1499432a01e8b54",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/httpc.c": {
+    "mtime": 1793286279.502094,
+    "ast_hash": "6941d7cf537bdab0aa953b9e0372f3fe",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/httpc.h": {
+    "mtime": 1793286267.5420847,
+    "ast_hash": "840cd56e019b591c8f5bf42e692b6352",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/render.c": {
+    "mtime": 1793286754.6310134,
+    "ast_hash": "c98aac7b400fbfeff1af3652963d429f",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/render.h": {
+    "mtime": 1793286404.4781766,
+    "ast_hash": "4156be30fb85ef5808ea6e1a70ed78bb",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/utf8.c": {
+    "mtime": 1793279531.8094296,
+    "ast_hash": "adc0e52ac662e75b6211274d66c8479f",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/utf8.h": {
+    "mtime": 1793279516.9916635,
+    "ast_hash": "9a4d29d20c76cafbcd0127cf27fd65a2",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/viewer.c": {
+    "mtime": 1793286394.2961674,
+    "ast_hash": "fa3fc11ca6608d8c6d8e5e261a14cc80",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/viewer.h": {
+    "mtime": 1793286345.795146,
+    "ast_hash": "ceb35ba60884ad7a919ee8fc58405994",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/wrap.c": {
+    "mtime": 1793286128.7921538,
+    "ast_hash": "766af14f0f7438cafeb63db425f67ff2",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/core/wrap.h": {
+    "mtime": 1793286112.686967,
+    "ast_hash": "33ac03a078ad7c22953d160ca8fb3bac",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/net_bsd.c": {
+    "mtime": 1793286260.4600792,
+    "ast_hash": "d33051b0269e919367152d2a629b6c39",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/platform.h": {
+    "mtime": 1793286239.0340626,
+    "ast_hash": "80c2cd3f0316ebed83a94ddd612d596d",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/platform_host.c": {
+    "mtime": 1793286507.958164,
+    "ast_hash": "c12a9b7b63caba19a89ce111d9fcf339",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/platform_host.h": {
+    "mtime": 1793286499.3321636,
+    "ast_hash": "175e31fba8f4f392c2330808b2bbc953",
+    "semantic_hash": ""
+  },
+  "ps4-app/src/platform_ps4.c": {
+    "mtime": 1793286820.2742362,
+    "ast_hash": "cdeafadcf72effb7ba9ab3439a4be566",
+    "semantic_hash": ""
+  },
+  "ps4-app/test_host/bridge_stub.py": {
+    "mtime": 1793286658.547574,
+    "ast_hash": "36a193132a7df5302da0524e389b5282",
+    "semantic_hash": ""
+  },
+  "ps4-app/test_host/e2e_main.c": {
+    "mtime": 1793286699.236317,
+    "ast_hash": "db21893812c14fa8725bd5a52daa5d94",
+    "semantic_hash": ""
+  },
+  "ps4-app/test_host/ppm2png.py": {
+    "mtime": 1793286665.341188,
+    "ast_hash": "955ff35f3235145161b14a9d52620b5e",
+    "semantic_hash": ""
+  },
+  "ps4-app/test_host/run_host_test.sh": {
+    "mtime": 1793286716.0382013,
+    "ast_hash": "ac888cc4b3d52072e0d6d50b0f468729",
+    "semantic_hash": ""
+  },
+  "ps4-app/test_host/test_core.c": {
+    "mtime": 1793286617.3660274,
+    "ast_hash": "5a93f20fc33366e97dff2fb940f8c90f",
+    "semantic_hash": ""
+  },
+  "ps4-app/tools/make_icon.py": {
+    "mtime": 1793286835.9142423,
+    "ast_hash": "37bd09510963d6ffdd82432e47fccc58",
+    "semantic_hash": ""
+  },
+  "ps4_mcp/__init__.py": {
+    "mtime": 1793278034.2786186,
+    "ast_hash": "2203e3d871905b643fa9564230cbed40",
+    "semantic_hash": ""
+  },
+  "ps4_mcp/__main__.py": {
+    "mtime": 1793278921.4615054,
+    "ast_hash": "eaca6a19083c4621bbdc0b8cb6af5dc8",
+    "semantic_hash": ""
+  },
+  "ps4_mcp/bridge.py": {
+    "mtime": 1793278721.401338,
+    "ast_hash": "cb79c387b0c2845d00241056172b7f3c",
+    "semantic_hash": ""
+  },
+  "ps4_mcp/client.py": {
+    "mtime": 1793286862.3196688,
+    "ast_hash": "381fae30ff49cd20127fb95ab04b39b3",
+    "semantic_hash": ""
+  },
+  "ps4_mcp/config.py": {
+    "mtime": 1793278382.2976873,
+    "ast_hash": "be2fa316ae5f3264a19a36d0a8477cc4",
+    "semantic_hash": ""
+  },
+  "ps4_mcp/debug.py": {
+    "mtime": 1793278788.011457,
+    "ast_hash": "5f6466f29ab55791680aec3c9b3623c7",
+    "semantic_hash": ""
+  },
+  "ps4_mcp/deploy.py": {
+    "mtime": 1793278716.0376325,
+    "ast_hash": "d71b227391096e11293efb24adf3f8a3",
+    "semantic_hash": ""
+  },
+  "ps4_mcp/elfdump.py": {
+    "mtime": 1793278594.2982526,
+    "ast_hash": "87c451dfaa4a4ec4ae103f8d731e5e36",
+    "semantic_hash": ""
+  },
+  "ps4_mcp/ftp.py": {
+    "mtime": 1793279391.253993,
+    "ast_hash": "95e698ea092bbfb758364d9687040113",
+    "semantic_hash": ""
+  },
+  "ps4_mcp/logs.py": {
+    "mtime": 1793279455.1200657,
+    "ast_hash": "cf5a84b74449587c9f7723b41e998aca",
+    "semantic_hash": ""
+  },
+  "ps4_mcp/protocol.py": {
+    "mtime": 1793278368.9661572,
+    "ast_hash": "d5994fa78c7ee777c1e2b9d09c59d5da",
+    "semantic_hash": ""
+  },
+  "ps4_mcp/safety.py": {
+    "mtime": 1793278586.9906378,
+    "ast_hash": "abf5e8e8b91cde300b8cbbc357f60321",
+    "semantic_hash": ""
+  },
+  "ps4_mcp/server.py": {
+    "mtime": 1793286985.6593075,
+    "ast_hash": "50a1983dbafeda1b8032d3bf93df5f77",
+    "semantic_hash": ""
+  },
+  "ps4_mcp/sfo.py": {
+    "mtime": 1793279346.8589432,
+    "ast_hash": "869af03bb82903ca01f9f1bce6a23352",
+    "semantic_hash": ""
+  },
+  "ps4_mcp/snapshot.py": {
+    "mtime": 1793278572.94724,
+    "ast_hash": "4190c5fa71c73615d51e076b97bb6666",
+    "semantic_hash": ""
+  },
+  "ps4_mcp/text.py": {
+    "mtime": 1793286107.7944443,
+    "ast_hash": "b6d563b04087b6ca271b0fa25d8c1253",
+    "semantic_hash": ""
+  },
+  "scripts/fase0_smoke.py": {
+    "mtime": 1793279019.397598,
+    "ast_hash": "4ba6d5ce0eba2577869ae35c94674df7",
+    "semantic_hash": ""
+  },
+  "scripts/install_openorbis.sh": {
+    "mtime": 1793279158.7954195,
+    "ast_hash": "da5aa44d38e7c1b783756f312f4617b0",
+    "semantic_hash": ""
+  },
+  "scripts/metrics.py": {
+    "mtime": 1793279035.486614,
+    "ast_hash": "b976f427dae77d90078b781a49bfdc8e",
+    "semantic_hash": ""
+  },
+  "scripts/send_payload.py": {
+    "mtime": 1793279024.0075562,
+    "ast_hash": "77f6dca0257aef20307f771d11fac815",
+    "semantic_hash": ""
+  },
+  "tests/__init__.py": {
+    "mtime": 1793278034.2819233,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "tests/crash-homebrew/src/main.c": {
+    "mtime": 1793278895.449543,
+    "ast_hash": "8096405bb678a2aa8e5f2cec01497dde",
+    "semantic_hash": ""
+  },
+  "tests/crash-homebrew/src/video.c": {
+    "mtime": 1793278890.7437515,
+    "ast_hash": "05d6321bd542eebc9ba74e5e49c75f63",
+    "semantic_hash": ""
+  },
+  "tests/crash-homebrew/src/video.h": {
+    "mtime": 1793278862.2604065,
+    "ast_hash": "aff16762ef3ab3d4c46de9e1c9f56311",
+    "semantic_hash": ""
+  },
+  "tests/crash-homebrew/tools/gen_offsets.py": {
+    "mtime": 1793279186.2357717,
+    "ast_hash": "aae0b3d93880187614f6e0db00beb5d2",
+    "semantic_hash": ""
+  },
+  "tests/crash-homebrew/tools/make_icon.py": {
+    "mtime": 1793278931.3993666,
+    "ast_hash": "b1949f4e6724bed123c514a845d1e5c7",
+    "semantic_hash": ""
+  },
+  "tests/fakes/__init__.py": {
+    "mtime": 1793278034.2819233,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "tests/fakes/fake_ps4debug.py": {
+    "mtime": 1793286737.6444597,
+    "ast_hash": "162e2dbf37e1f9047d29869d301d212c",
+    "semantic_hash": ""
+  },
+  "tests/fakes/run_fake.py": {
+    "mtime": 1793286584.0506177,
+    "ast_hash": "541d8348cc2417c4443c84d934106402",
+    "semantic_hash": ""
+  },
+  "tests/test_bridge_deploy.py": {
+    "mtime": 1793278983.4783785,
+    "ast_hash": "3db1a7bac5a5af8306982c653fe7f2af",
+    "semantic_hash": ""
+  },
+  "tests/test_core.py": {
+    "mtime": 1793278964.1995451,
+    "ast_hash": "8bb9d48552a1465dd9fa3da9b8029641",
+    "semantic_hash": ""
+  },
+  "tests/test_e2e_debug.py": {
+    "mtime": 1793286890.297088,
+    "ast_hash": "bb202562e29618105d5209d35ae017b9",
+    "semantic_hash": ""
+  },
+  "tests/test_fake_ps4debug.py": {
+    "mtime": 1793286728.5214815,
+    "ast_hash": "009f617f8ef1585a99d2b868e334c55b",
+    "semantic_hash": ""
+  },
+  "tests/test_ftp.py": {
+    "mtime": 1793286185.2030213,
+    "ast_hash": "6e9be850d1b338c0cf680f1dc63d217b",
+    "semantic_hash": ""
+  },
+  "tests/test_logs.py": {
+    "mtime": 1793286225.158052,
+    "ast_hash": "3217fb399f36f742ae8e8834477bf3fb",
+    "semantic_hash": ""
+  },
+  "tests/test_mcp_e2e.py": {
+    "mtime": 1793286995.6586142,
+    "ast_hash": "5a915c30b9d861f353e1e308842b88cf",
+    "semantic_hash": ""
+  },
+  "tests/test_sfo.py": {
+    "mtime": 1793286128.0989783,
+    "ast_hash": "03627caa466c55f99b5ddcda80e2f142",
+    "semantic_hash": ""
+  },
+  "tests/test_text.py": {
+    "mtime": 1793286107.7960014,
+    "ast_hash": "847076f7a4ab5f512f5b81dd4b1c8c9a",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1793279304.0088956,
+    "ast_hash": "4ce810a2c383d75849027822545ab654",
+    "semantic_hash": ""
+  },
+  "docs/kh3-formato-legendas.md": {
+    "mtime": 1793279118.2266972,
+    "ast_hash": "6f5fdc26b3202129906a0803e12f9d92",
+    "semantic_hash": ""
+  },
+  "docs/protocolo-ps4debug.md": {
+    "mtime": 1793286890.2983465,
+    "ast_hash": "3334b962fb985ac7b189a0077dafbb2b",
+    "semantic_hash": ""
+  },
+  "docs/relatorio-fase5.md": {
+    "mtime": 1793279109.045688,
+    "ast_hash": "a8987d430b6cf81a76b99bff08120978",
+    "semantic_hash": ""
+  },
+  "ps4-app/README.md": {
+    "mtime": 1793286984.9563072,
+    "ast_hash": "d6fbe99ee401fa7f153efa904f6322fb",
+    "semantic_hash": ""
+  },
+  "tests/crash-homebrew/README.md": {
+    "mtime": 1793286944.4822881,
+    "ast_hash": "b1bf540a1c8c8fe74ebeab105b642133",
+    "semantic_hash": ""
+  },
+  "ps4-app/sce_sys/icon0.png": {
+    "mtime": 1793286864.1892533,
+    "ast_hash": "cdef1daf25a2bc738bd4b4785b41c4c9",
+    "semantic_hash": ""
   }
 }

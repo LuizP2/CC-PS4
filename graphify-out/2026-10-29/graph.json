@@ -51,6 +51,321 @@
   },
   "nodes": [
     {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "id": "claude",
+      "community": 9,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "CC-PS4",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "id": "claude_cc_ps4",
+      "community": 9,
+      "norm_label": "cc-ps4"
+    },
+    {
+      "label": "Ferramentas e skills para este projeto",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L5",
+      "id": "claude_ferramentas_e_skills_para_este_projeto",
+      "community": 9,
+      "norm_label": "ferramentas e skills para este projeto"
+    },
+    {
+      "label": "ps4-claude-agent-plano.md",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L1",
+      "id": "ps4_claude_agent_plano",
+      "community": 4,
+      "norm_label": "ps4-claude-agent-plano.md"
+    },
+    {
+      "label": "PS4 Agent \u2014 Claude Code com acesso ao PS4 em tempo de execu\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L1",
+      "id": "ps4_claude_agent_plano_ps4_agent_claude_code_com_acesso_ao_ps4_em_tempo_de_execu\u00e7\u00e3o",
+      "community": 4,
+      "norm_label": "ps4 agent \u2014 claude code com acesso ao ps4 em tempo de execucao"
+    },
+    {
+      "label": "1. Objetivo",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L5",
+      "id": "ps4_claude_agent_plano_1_objetivo",
+      "community": 4,
+      "norm_label": "1. objetivo"
+    },
+    {
+      "label": "O que este projeto N\u00c3O reimplementa",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L17",
+      "id": "ps4_claude_agent_plano_o_que_este_projeto_n\u00e3o_reimplementa",
+      "community": 4,
+      "norm_label": "o que este projeto nao reimplementa"
+    },
+    {
+      "label": "2. Arquitetura",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L23",
+      "id": "ps4_claude_agent_plano_2_arquitetura",
+      "community": 4,
+      "norm_label": "2. arquitetura"
+    },
+    {
+      "label": "3. Pr\u00e9-requisitos",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L46",
+      "id": "ps4_claude_agent_plano_3_pr\u00e9_requisitos",
+      "community": 4,
+      "norm_label": "3. pre-requisitos"
+    },
+    {
+      "label": "4. Cat\u00e1logo de ferramentas do `ps4-mcp`",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L59",
+      "id": "ps4_claude_agent_plano_4_cat\u00e1logo_de_ferramentas_do_ps4_mcp",
+      "community": 8,
+      "norm_label": "4. catalogo de ferramentas do `ps4-mcp`"
+    },
+    {
+      "label": "4.1 Leitura (MVP)",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L63",
+      "id": "ps4_claude_agent_plano_4_1_leitura_mvp",
+      "community": 8,
+      "norm_label": "4.1 leitura (mvp)"
+    },
+    {
+      "label": "4.2 Debug (fase 3)",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L78",
+      "id": "ps4_claude_agent_plano_4_2_debug_fase_3",
+      "community": 8,
+      "norm_label": "4.2 debug (fase 3)"
+    },
+    {
+      "label": "4.3 Escrita (desabilitadas por padr\u00e3o)",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L91",
+      "id": "ps4_claude_agent_plano_4_3_escrita_desabilitadas_por_padr\u00e3o",
+      "community": 8,
+      "norm_label": "4.3 escrita (desabilitadas por padrao)"
+    },
+    {
+      "label": "4.4 Formato do snapshot de evento",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L95",
+      "id": "ps4_claude_agent_plano_4_4_formato_do_snapshot_de_evento",
+      "community": 8,
+      "norm_label": "4.4 formato do snapshot de evento"
+    },
+    {
+      "label": "5. Esqueleto do servidor MCP",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L118",
+      "id": "ps4_claude_agent_plano_5_esqueleto_do_servidor_mcp",
+      "community": 4,
+      "norm_label": "5. esqueleto do servidor mcp"
+    },
+    {
+      "label": "6. Eventos em \"tempo real\"",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L178",
+      "id": "ps4_claude_agent_plano_6_eventos_em_tempo_real",
+      "community": 4,
+      "norm_label": "6. eventos em \"tempo real\""
+    },
+    {
+      "label": "7. Fases",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L197",
+      "id": "ps4_claude_agent_plano_7_fases",
+      "community": 6,
+      "norm_label": "7. fases"
+    },
+    {
+      "label": "Fase 0 \u2014 Ambiente e primitivas (sem IA)",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L199",
+      "id": "ps4_claude_agent_plano_fase_0_ambiente_e_primitivas_sem_ia",
+      "community": 6,
+      "norm_label": "fase 0 \u2014 ambiente e primitivas (sem ia)"
+    },
+    {
+      "label": "Fase 1 \u2014 MCP de leitura",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L206",
+      "id": "ps4_claude_agent_plano_fase_1_mcp_de_leitura",
+      "community": 6,
+      "norm_label": "fase 1 \u2014 mcp de leitura"
+    },
+    {
+      "label": "Fase 2 \u2014 Sistema de arquivos e logs",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L212",
+      "id": "ps4_claude_agent_plano_fase_2_sistema_de_arquivos_e_logs",
+      "community": 6,
+      "norm_label": "fase 2 \u2014 sistema de arquivos e logs"
+    },
+    {
+      "label": "Fase 3 \u2014 Debug e eventos",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L217",
+      "id": "ps4_claude_agent_plano_fase_3_debug_e_eventos",
+      "community": 6,
+      "norm_label": "fase 3 \u2014 debug e eventos"
+    },
+    {
+      "label": "Fase 4 \u2014 Integra\u00e7\u00e3o com RE",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L222",
+      "id": "ps4_claude_agent_plano_fase_4_integra\u00e7\u00e3o_com_re",
+      "community": 6,
+      "norm_label": "fase 4 \u2014 integracao com re"
+    },
+    {
+      "label": "Fase 5 \u2014 Teste de valor (decide se o projeto continua)",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L231",
+      "id": "ps4_claude_agent_plano_fase_5_teste_de_valor_decide_se_o_projeto_continua",
+      "community": 6,
+      "norm_label": "fase 5 \u2014 teste de valor (decide se o projeto continua)"
+    },
+    {
+      "label": "Fase 6 \u2014 Opcional",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L239",
+      "id": "ps4_claude_agent_plano_fase_6_opcional",
+      "community": 6,
+      "norm_label": "fase 6 \u2014 opcional"
+    },
+    {
+      "label": "8. Seguran\u00e7a",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L246",
+      "id": "ps4_claude_agent_plano_8_seguran\u00e7a",
+      "community": 4,
+      "norm_label": "8. seguranca"
+    },
+    {
+      "label": "9. Riscos",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L256",
+      "id": "ps4_claude_agent_plano_9_riscos",
+      "community": 4,
+      "norm_label": "9. riscos"
+    },
+    {
+      "label": "10. Modelo de execu\u00e7\u00e3o: o agente fica vivo durante o jogo",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L270",
+      "id": "ps4_claude_agent_plano_10_modelo_de_execu\u00e7\u00e3o_o_agente_fica_vivo_durante_o_jogo",
+      "community": 4,
+      "norm_label": "10. modelo de execucao: o agente fica vivo durante o jogo"
+    },
+    {
+      "label": "11. Projeto piloto: tradu\u00e7\u00e3o das legendas do Kingdom Hearts 3",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L288",
+      "id": "ps4_claude_agent_plano_11_projeto_piloto_tradu\u00e7\u00e3o_das_legendas_do_kingdom_hearts_3",
+      "community": 7,
+      "norm_label": "11. projeto piloto: traducao das legendas do kingdom hearts 3"
+    },
+    {
+      "label": "11.1 Objetivo",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L290",
+      "id": "ps4_claude_agent_plano_11_1_objetivo",
+      "community": 7,
+      "norm_label": "11.1 objetivo"
+    },
+    {
+      "label": "11.2 Onde o agente ajuda (e onde n\u00e3o)",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L294",
+      "id": "ps4_claude_agent_plano_11_2_onde_o_agente_ajuda_e_onde_n\u00e3o",
+      "community": 7,
+      "norm_label": "11.2 onde o agente ajuda (e onde nao)"
+    },
+    {
+      "label": "11.3 Ferramentas extras para este piloto",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L310",
+      "id": "ps4_claude_agent_plano_11_3_ferramentas_extras_para_este_piloto",
+      "community": 7,
+      "norm_label": "11.3 ferramentas extras para este piloto"
+    },
+    {
+      "label": "11.4 Passo a passo do piloto",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L321",
+      "id": "ps4_claude_agent_plano_11_4_passo_a_passo_do_piloto",
+      "community": 7,
+      "norm_label": "11.4 passo a passo do piloto"
+    },
+    {
+      "label": "11.5 M\u00e9tricas para a Fase 5",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L331",
+      "id": "ps4_claude_agent_plano_11_5_m\u00e9tricas_para_a_fase_5",
+      "community": 7,
+      "norm_label": "11.5 metricas para a fase 5"
+    },
+    {
+      "label": "11.6 Riscos espec\u00edficos",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L339",
+      "id": "ps4_claude_agent_plano_11_6_riscos_espec\u00edficos",
+      "community": 7,
+      "norm_label": "11.6 riscos especificos"
+    },
+    {
+      "label": "12. Estrutura do reposit\u00f3rio",
+      "file_type": "document",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L350",
+      "id": "ps4_claude_agent_plano_12_estrutura_do_reposit\u00f3rio",
+      "community": 4,
+      "norm_label": "12. estrutura do repositorio"
+    },
+    {
       "label": "CC-PS4 CLAUDE.md",
       "file_type": "document",
       "source_file": "CLAUDE.md",
@@ -59,9 +374,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_claude",
       "community": 1,
-      "norm_label": "cc-ps4 claude.md"
+      "norm_label": "cc-ps4 claude.md",
+      "id": "cc_ps4_claude"
     },
     {
       "label": "ReVa MCP (Ghidra 12.1.3 headless)",
@@ -72,9 +387,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_claude_reva_mcp",
       "community": 1,
-      "norm_label": "reva mcp (ghidra 12.1.3 headless)"
+      "norm_label": "reva mcp (ghidra 12.1.3 headless)",
+      "id": "cc_ps4_claude_reva_mcp"
     },
     {
       "label": "ps4-gnm-port skill",
@@ -85,9 +400,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_claude_ps4_gnm_port_skill",
       "community": 1,
-      "norm_label": "ps4-gnm-port skill"
+      "norm_label": "ps4-gnm-port skill",
+      "id": "cc_ps4_claude_ps4_gnm_port_skill"
     },
     {
       "label": "agentic-harness-patterns skill",
@@ -98,9 +413,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_claude_agentic_harness_patterns",
       "community": 1,
-      "norm_label": "agentic-harness-patterns skill"
+      "norm_label": "agentic-harness-patterns skill",
+      "id": "cc_ps4_claude_agentic_harness_patterns"
     },
     {
       "label": "graphify code map",
@@ -111,9 +426,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_claude_graphify",
       "community": 1,
-      "norm_label": "graphify code map"
+      "norm_label": "graphify code map",
+      "id": "cc_ps4_claude_graphify"
     },
     {
       "label": "Token economy (caveman, ponytail, context-mode, RTK)",
@@ -125,9 +440,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Large hexdumps and logs go through context-mode instead of entering the context whole.",
-      "id": "cc_ps4_claude_token_economy",
       "community": 1,
-      "norm_label": "token economy (caveman, ponytail, context-mode, rtk)"
+      "norm_label": "token economy (caveman, ponytail, context-mode, rtk)",
+      "id": "cc_ps4_claude_token_economy"
     },
     {
       "label": "PS4 Agent implementation plan",
@@ -138,9 +453,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano",
-      "community": 2,
-      "norm_label": "ps4 agent implementation plan"
+      "community": 1,
+      "norm_label": "ps4 agent implementation plan",
+      "id": "cc_ps4_ps4_claude_agent_plano"
     },
     {
       "label": "Autonomous agent debug loop",
@@ -152,9 +467,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Agent decides what to read, reads, interprets and picks next read itself, instead of a human pasting ps4debug reports into prompts.",
-      "id": "cc_ps4_ps4_claude_agent_plano_autonomous_debug_loop",
-      "community": 4,
-      "norm_label": "autonomous agent debug loop"
+      "community": 3,
+      "norm_label": "autonomous agent debug loop",
+      "id": "cc_ps4_ps4_claude_agent_plano_autonomous_debug_loop"
     },
     {
       "label": "ps4-mcp server",
@@ -166,9 +481,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Does not reimplement debug primitives; adds the missing MCP tool layer and event orchestration on top of ps4debug.",
-      "id": "cc_ps4_ps4_claude_agent_plano_ps4_mcp",
-      "community": 4,
-      "norm_label": "ps4-mcp server"
+      "community": 3,
+      "norm_label": "ps4-mcp server",
+      "id": "cc_ps4_ps4_claude_agent_plano_ps4_mcp"
     },
     {
       "label": "ps4debug / ps4debug-NG payload",
@@ -179,9 +494,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_ps4debug",
-      "community": 4,
-      "norm_label": "ps4debug / ps4debug-ng payload"
+      "community": 3,
+      "norm_label": "ps4debug / ps4debug-ng payload",
+      "id": "cc_ps4_ps4_claude_agent_plano_ps4debug"
     },
     {
       "label": "ps4debug Python client (PyPI)",
@@ -192,9 +507,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_ps4debug_python_client",
       "community": 3,
-      "norm_label": "ps4debug python client (pypi)"
+      "norm_label": "ps4debug python client (pypi)",
+      "id": "cc_ps4_ps4_claude_agent_plano_ps4debug_python_client"
     },
     {
       "label": "Console FTP server (GoldHEN)",
@@ -205,9 +520,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_ftp_server",
-      "community": 0,
-      "norm_label": "console ftp server (goldhen)"
+      "community": 3,
+      "norm_label": "console ftp server (goldhen)",
+      "id": "cc_ps4_ps4_claude_agent_plano_ftp_server"
     },
     {
       "label": "Log reader",
@@ -218,9 +533,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_log_reader",
-      "community": 0,
-      "norm_label": "log reader"
+      "community": 3,
+      "norm_label": "log reader",
+      "id": "cc_ps4_ps4_claude_agent_plano_log_reader"
     },
     {
       "label": "REA MCP (Ghidra/IDA)",
@@ -231,9 +546,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_rea_mcp",
       "community": 0,
-      "norm_label": "rea mcp (ghidra/ida)"
+      "norm_label": "rea mcp (ghidra/ida)",
+      "id": "cc_ps4_ps4_claude_agent_plano_rea_mcp"
     },
     {
       "label": "Agent loop runs on PC",
@@ -245,9 +560,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Claude Code needs Node.js, shell, git, subagents, port source and REA; an on-console agent would lose these without gaining extra console access.",
-      "id": "cc_ps4_ps4_claude_agent_plano_pc_side_loop",
-      "community": 4,
-      "norm_label": "agent loop runs on pc"
+      "community": 3,
+      "norm_label": "agent loop runs on pc",
+      "id": "cc_ps4_ps4_claude_agent_plano_pc_side_loop"
     },
     {
       "label": "Read tools (MVP)",
@@ -258,9 +573,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_read_tools",
       "community": 3,
-      "norm_label": "read tools (mvp)"
+      "norm_label": "read tools (mvp)",
+      "id": "cc_ps4_ps4_claude_agent_plano_read_tools"
     },
     {
       "label": "Debug tools (phase 3)",
@@ -271,9 +586,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_debug_tools",
       "community": 0,
-      "norm_label": "debug tools (phase 3)"
+      "norm_label": "debug tools (phase 3)",
+      "id": "cc_ps4_ps4_claude_agent_plano_debug_tools"
     },
     {
       "label": "Write tools (disabled by default)",
@@ -285,9 +600,9 @@
       "author": null,
       "contributor": null,
       "rationale": "An agent writing memory or kernel can crash the console; require manual confirmation per call.",
-      "id": "cc_ps4_ps4_claude_agent_plano_write_tools",
       "community": 5,
-      "norm_label": "write tools (disabled by default)"
+      "norm_label": "write tools (disabled by default)",
+      "id": "cc_ps4_ps4_claude_agent_plano_write_tools"
     },
     {
       "label": "read_memory tool",
@@ -298,9 +613,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_read_memory",
       "community": 3,
-      "norm_label": "read_memory tool"
+      "norm_label": "read_memory tool",
+      "id": "cc_ps4_ps4_claude_agent_plano_read_memory"
     },
     {
       "label": "list_processes tool",
@@ -311,9 +626,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_list_processes",
       "community": 3,
-      "norm_label": "list_processes tool"
+      "norm_label": "list_processes tool",
+      "id": "cc_ps4_ps4_claude_agent_plano_list_processes"
     },
     {
       "label": "process_maps tool",
@@ -324,9 +639,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_process_maps",
       "community": 3,
-      "norm_label": "process_maps tool"
+      "norm_label": "process_maps tool",
+      "id": "cc_ps4_ps4_claude_agent_plano_process_maps"
     },
     {
       "label": "hexdump()",
@@ -337,9 +652,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_hexdump",
       "community": 3,
-      "norm_label": "hexdump()"
+      "norm_label": "hexdump()",
+      "id": "cc_ps4_ps4_claude_agent_plano_hexdump"
     },
     {
       "label": "download_file tool",
@@ -350,9 +665,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_download_file",
-      "community": 0,
-      "norm_label": "download_file tool"
+      "community": 3,
+      "norm_label": "download_file tool",
+      "id": "cc_ps4_ps4_claude_agent_plano_download_file"
     },
     {
       "label": "wait_for_event tool",
@@ -363,9 +678,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_wait_for_event",
       "community": 0,
-      "norm_label": "wait_for_event tool"
+      "norm_label": "wait_for_event tool",
+      "id": "cc_ps4_ps4_claude_agent_plano_wait_for_event"
     },
     {
       "label": "Event queue (asyncio.Queue)",
@@ -377,9 +692,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Model takes seconds per response so it cannot watch memory continuously; background task fills a queue that wait_for_event consumes.",
-      "id": "cc_ps4_ps4_claude_agent_plano_event_queue",
       "community": 0,
-      "norm_label": "event queue (asyncio.queue)"
+      "norm_label": "event queue (asyncio.queue)",
+      "id": "cc_ps4_ps4_claude_agent_plano_event_queue"
     },
     {
       "label": "Event snapshot format",
@@ -391,9 +706,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Rich prebuilt package avoids the agent needing ten calls to understand context.",
-      "id": "cc_ps4_ps4_claude_agent_plano_event_snapshot",
       "community": 0,
-      "norm_label": "event snapshot format"
+      "norm_label": "event snapshot format",
+      "id": "cc_ps4_ps4_claude_agent_plano_event_snapshot"
     },
     {
       "label": "module_offset",
@@ -404,9 +719,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_module_offset",
       "community": 0,
-      "norm_label": "module_offset"
+      "norm_label": "module_offset",
+      "id": "cc_ps4_ps4_claude_agent_plano_module_offset"
     },
     {
       "label": "FastMCP",
@@ -417,9 +732,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_fastmcp",
-      "community": 4,
-      "norm_label": "fastmcp"
+      "community": 3,
+      "norm_label": "fastmcp",
+      "id": "cc_ps4_ps4_claude_agent_plano_fastmcp"
     },
     {
       "label": "Implementation phases 0-6",
@@ -430,9 +745,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_phases",
-      "community": 2,
-      "norm_label": "implementation phases 0-6"
+      "community": 1,
+      "norm_label": "implementation phases 0-6",
+      "id": "cc_ps4_ps4_claude_agent_plano_phases"
     },
     {
       "label": "Phase 5 value test",
@@ -444,9 +759,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Report with time-to-cause, call count and hypothesis accuracy decides whether the project continues.",
-      "id": "cc_ps4_ps4_claude_agent_plano_phase5_value_test",
       "community": 2,
-      "norm_label": "phase 5 value test"
+      "norm_label": "phase 5 value test",
+      "id": "cc_ps4_ps4_claude_agent_plano_phase5_value_test"
     },
     {
       "label": "Security policy (LAN only, audit log, limits)",
@@ -457,9 +772,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_security",
       "community": 5,
-      "norm_label": "security policy (lan only, audit log, limits)"
+      "norm_label": "security policy (lan only, audit log, limits)",
+      "id": "cc_ps4_ps4_claude_agent_plano_security"
     },
     {
       "label": "safety.py",
@@ -470,9 +785,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_safety_py",
       "community": 5,
-      "norm_label": "safety.py"
+      "norm_label": "safety.py",
+      "id": "cc_ps4_ps4_claude_agent_plano_safety_py"
     },
     {
       "label": "Risk table",
@@ -483,9 +798,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_risks",
       "community": 1,
-      "norm_label": "risk table"
+      "norm_label": "risk table",
+      "id": "cc_ps4_ps4_claude_agent_plano_risks"
     },
     {
       "label": "Pausing alters timing (race bugs vanish)",
@@ -497,9 +812,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Use watchpoints and logs instead of breakpoints for timing bugs.",
-      "id": "cc_ps4_ps4_claude_agent_plano_observer_effect",
       "community": 1,
-      "norm_label": "pausing alters timing (race bugs vanish)"
+      "norm_label": "pausing alters timing (race bugs vanish)",
+      "id": "cc_ps4_ps4_claude_agent_plano_observer_effect"
     },
     {
       "label": "Kingdom Hearts 3 PT-BR subtitle pilot",
@@ -511,9 +826,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Distributed only as a patch from a legitimate copy; agent used as investigation tool, translation itself is human-reviewed.",
-      "id": "cc_ps4_ps4_claude_agent_plano_kh3_pilot",
       "community": 2,
-      "norm_label": "kingdom hearts 3 pt-br subtitle pilot"
+      "norm_label": "kingdom hearts 3 pt-br subtitle pilot",
+      "id": "cc_ps4_ps4_claude_agent_plano_kh3_pilot"
     },
     {
       "label": "UE4 .pak localization hypothesis",
@@ -524,9 +839,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_ue4_pak_hypothesis",
       "community": 2,
-      "norm_label": "ue4 .pak localization hypothesis"
+      "norm_label": "ue4 .pak localization hypothesis",
+      "id": "cc_ps4_ps4_claude_agent_plano_ue4_pak_hypothesis"
     },
     {
       "label": "Pilot tools (search_memory, read_text_region, search_files, compare_bytes)",
@@ -537,9 +852,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_pilot_tools",
       "community": 2,
-      "norm_label": "pilot tools (search_memory, read_text_region, search_files, compare_bytes)"
+      "norm_label": "pilot tools (search_memory, read_text_region, search_files, compare_bytes)",
+      "id": "cc_ps4_ps4_claude_agent_plano_pilot_tools"
     },
     {
       "label": "PS4 interface app (phase 6, optional)",
@@ -551,9 +866,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Foreground app is suspended when a game opens, unlike Sony-integrated services; overlay out of scope.",
-      "id": "cc_ps4_ps4_claude_agent_plano_ps4_ui_app",
-      "community": 2,
-      "norm_label": "ps4 interface app (phase 6, optional)"
+      "community": 1,
+      "norm_label": "ps4 interface app (phase 6, optional)",
+      "id": "cc_ps4_ps4_claude_agent_plano_ps4_ui_app"
     },
     {
       "label": "OpenOrbis build/deploy",
@@ -564,9 +879,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_openorbis",
-      "community": 2,
-      "norm_label": "openorbis build/deploy"
+      "community": 1,
+      "norm_label": "openorbis build/deploy",
+      "id": "cc_ps4_ps4_claude_agent_plano_openorbis"
     },
     {
       "label": "ps4-agent repository structure",
@@ -577,12 +892,342 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cc_ps4_ps4_claude_agent_plano_repo_structure",
       "community": 5,
-      "norm_label": "ps4-agent repository structure"
+      "norm_label": "ps4-agent repository structure",
+      "id": "cc_ps4_ps4_claude_agent_plano_repo_structure"
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "claude",
+      "target": "claude_cc_ps4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "claude_cc_ps4",
+      "target": "claude_ferramentas_e_skills_para_este_projeto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano",
+      "target": "ps4_claude_agent_plano_ps4_agent_claude_code_com_acesso_ao_ps4_em_tempo_de_execu\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L270",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_ps4_agent_claude_code_com_acesso_ao_ps4_em_tempo_de_execu\u00e7\u00e3o",
+      "target": "ps4_claude_agent_plano_10_modelo_de_execu\u00e7\u00e3o_o_agente_fica_vivo_durante_o_jogo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L288",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_ps4_agent_claude_code_com_acesso_ao_ps4_em_tempo_de_execu\u00e7\u00e3o",
+      "target": "ps4_claude_agent_plano_11_projeto_piloto_tradu\u00e7\u00e3o_das_legendas_do_kingdom_hearts_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L350",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_ps4_agent_claude_code_com_acesso_ao_ps4_em_tempo_de_execu\u00e7\u00e3o",
+      "target": "ps4_claude_agent_plano_12_estrutura_do_reposit\u00f3rio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_ps4_agent_claude_code_com_acesso_ao_ps4_em_tempo_de_execu\u00e7\u00e3o",
+      "target": "ps4_claude_agent_plano_1_objetivo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_ps4_agent_claude_code_com_acesso_ao_ps4_em_tempo_de_execu\u00e7\u00e3o",
+      "target": "ps4_claude_agent_plano_2_arquitetura",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_ps4_agent_claude_code_com_acesso_ao_ps4_em_tempo_de_execu\u00e7\u00e3o",
+      "target": "ps4_claude_agent_plano_3_pr\u00e9_requisitos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_ps4_agent_claude_code_com_acesso_ao_ps4_em_tempo_de_execu\u00e7\u00e3o",
+      "target": "ps4_claude_agent_plano_4_cat\u00e1logo_de_ferramentas_do_ps4_mcp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_ps4_agent_claude_code_com_acesso_ao_ps4_em_tempo_de_execu\u00e7\u00e3o",
+      "target": "ps4_claude_agent_plano_5_esqueleto_do_servidor_mcp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L178",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_ps4_agent_claude_code_com_acesso_ao_ps4_em_tempo_de_execu\u00e7\u00e3o",
+      "target": "ps4_claude_agent_plano_6_eventos_em_tempo_real",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L197",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_ps4_agent_claude_code_com_acesso_ao_ps4_em_tempo_de_execu\u00e7\u00e3o",
+      "target": "ps4_claude_agent_plano_7_fases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L246",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_ps4_agent_claude_code_com_acesso_ao_ps4_em_tempo_de_execu\u00e7\u00e3o",
+      "target": "ps4_claude_agent_plano_8_seguran\u00e7a",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L256",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_ps4_agent_claude_code_com_acesso_ao_ps4_em_tempo_de_execu\u00e7\u00e3o",
+      "target": "ps4_claude_agent_plano_9_riscos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_1_objetivo",
+      "target": "ps4_claude_agent_plano_o_que_este_projeto_n\u00e3o_reimplementa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_4_cat\u00e1logo_de_ferramentas_do_ps4_mcp",
+      "target": "ps4_claude_agent_plano_4_1_leitura_mvp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_4_cat\u00e1logo_de_ferramentas_do_ps4_mcp",
+      "target": "ps4_claude_agent_plano_4_2_debug_fase_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_4_cat\u00e1logo_de_ferramentas_do_ps4_mcp",
+      "target": "ps4_claude_agent_plano_4_3_escrita_desabilitadas_por_padr\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_4_cat\u00e1logo_de_ferramentas_do_ps4_mcp",
+      "target": "ps4_claude_agent_plano_4_4_formato_do_snapshot_de_evento",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L199",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_7_fases",
+      "target": "ps4_claude_agent_plano_fase_0_ambiente_e_primitivas_sem_ia",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L206",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_7_fases",
+      "target": "ps4_claude_agent_plano_fase_1_mcp_de_leitura",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L212",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_7_fases",
+      "target": "ps4_claude_agent_plano_fase_2_sistema_de_arquivos_e_logs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L217",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_7_fases",
+      "target": "ps4_claude_agent_plano_fase_3_debug_e_eventos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L222",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_7_fases",
+      "target": "ps4_claude_agent_plano_fase_4_integra\u00e7\u00e3o_com_re",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L231",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_7_fases",
+      "target": "ps4_claude_agent_plano_fase_5_teste_de_valor_decide_se_o_projeto_continua",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L239",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_7_fases",
+      "target": "ps4_claude_agent_plano_fase_6_opcional",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L290",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_11_projeto_piloto_tradu\u00e7\u00e3o_das_legendas_do_kingdom_hearts_3",
+      "target": "ps4_claude_agent_plano_11_1_objetivo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L294",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_11_projeto_piloto_tradu\u00e7\u00e3o_das_legendas_do_kingdom_hearts_3",
+      "target": "ps4_claude_agent_plano_11_2_onde_o_agente_ajuda_e_onde_n\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L310",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_11_projeto_piloto_tradu\u00e7\u00e3o_das_legendas_do_kingdom_hearts_3",
+      "target": "ps4_claude_agent_plano_11_3_ferramentas_extras_para_este_piloto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L321",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_11_projeto_piloto_tradu\u00e7\u00e3o_das_legendas_do_kingdom_hearts_3",
+      "target": "ps4_claude_agent_plano_11_4_passo_a_passo_do_piloto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L331",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_11_projeto_piloto_tradu\u00e7\u00e3o_das_legendas_do_kingdom_hearts_3",
+      "target": "ps4_claude_agent_plano_11_5_m\u00e9tricas_para_a_fase_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4-claude-agent-plano.md",
+      "source_location": "L339",
+      "weight": 1.0,
+      "source": "ps4_claude_agent_plano_11_projeto_piloto_tradu\u00e7\u00e3o_das_legendas_do_kingdom_hearts_3",
+      "target": "ps4_claude_agent_plano_11_6_riscos_espec\u00edficos",
+      "confidence_score": 1.0
+    },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
