@@ -13,8 +13,8 @@ import threading
 import time
 
 from .protocol import (
-    HEADER, KERN_READ, MAP_ENTRY, NOTIFY, PACKET_MAGIC, PID, PROC_INFO, PROC_LIST_ENTRY,
-    PROC_RW, STATUS_TEXT, U32, U64, Cmd, MapEntry, Status, cstr,
+    HEADER, KERN_READ, MAP_ENTRY, NOTIFY, PACKET_MAGIC, PID, PROC_ALLOC, PROC_CALL, PROC_CALL_RESP,
+    PROC_FREE, PROC_INFO, PROC_LIST_ENTRY, PROC_RW, STATUS_TEXT, U32, U64, Cmd, MapEntry, Status, cstr,
 )
 
 MAPS_TTL_S = 5.0
@@ -197,6 +197,51 @@ class PS4Debug:
             c.status(Cmd.PROC_WRITE)
 
         self._run(go, idempotent=False)
+
+    # --- RPC dentro do processo (proc.c: install/call/alloc/free) ---------------------------
+    # Nenhum destes é repetido: repetir aloca de novo ou executa a função duas vezes.
+
+    def proc_alloc(self, pid: int, length: int) -> int:
+        """Região rwx nova no processo. Em falha o payload devolve lixo: confira nos mapas."""
+        def go(c: Connection):
+            c.send(Cmd.PROC_ALLOC, PROC_ALLOC.pack(pid, length))
+            c.status(Cmd.PROC_ALLOC)
+            return U64.unpack(c.recv(8))[0]
+
+        self._maps.pop(pid, None)
+        return self._run(go, idempotent=False)
+
+    def proc_free(self, pid: int, address: int, length: int) -> None:
+        def go(c: Connection):
+            c.send(Cmd.PROC_FREE, PROC_FREE.pack(pid, address, length))
+            c.status(Cmd.PROC_FREE)
+
+        self._maps.pop(pid, None)
+        self._run(go, idempotent=False)
+
+    def proc_install(self, pid: int) -> int:
+        """Copia o stub de RPC para o processo e cria a thread dele; devolve o endereço do stub.
+        Sem libkernel*.sprx r-x no processo, a thread NÃO é criada e o status ainda é sucesso."""
+        def go(c: Connection):
+            c.send(Cmd.PROC_INSTALL, PID.pack(pid))
+            c.status(Cmd.PROC_INSTALL)
+            return U64.unpack(c.recv(8))[0]
+
+        self._maps.pop(pid, None)
+        return self._run(go, idempotent=False)
+
+    def proc_call(self, pid: int, stub: int, rip: int, *args: int) -> int:
+        """Chama rip(rdi..r9) na thread do stub e devolve rax.
+        PERIGO: o kernel espera rpc_done em laço. Se a thread do stub não roda (não existe, processo
+        parado por SIGSTOP/breakpoint), o payload trava até reiniciar o console. Quem chama confere."""
+        regs = [a & (1 << 64) - 1 for a in args] + [0] * (6 - len(args))
+
+        def go(c: Connection):
+            c.send(Cmd.PROC_CALL, PROC_CALL.pack(pid, stub, rip, *regs))
+            c.status(Cmd.PROC_CALL)
+            return PROC_CALL_RESP.unpack(c.recv(PROC_CALL_RESP.size))[1]
+
+        return self._run(go, idempotent=False)
 
     def kernel_base(self) -> int:
         def go(c: Connection):

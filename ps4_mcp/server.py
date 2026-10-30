@@ -7,9 +7,11 @@ habilitadas, e as perigosas pedem confirmação manual por chamada (elicitation 
 
 import asyncio
 import functools
+import hashlib
 import json
 import shutil
 import socket
+import struct
 import subprocess
 import time
 from pathlib import Path
@@ -31,7 +33,10 @@ from .deploy import DeployError, build_homebrew as _build_homebrew, install_pkg 
 from .elfdump import build_elf
 from .ftp import ConsoleFTP, FTPError
 from .logs import LogReader
-from .protocol import PROT_EXEC, PROT_READ, PROT_WRITE, prot_str
+from .protocol import (
+    PROT_EXEC, PROT_READ, PROT_WRITE, RPCSTUB_CODE_LEN, RPCSTUB_CODE_OFF, RPCSTUB_CODE_SHA256, RPCSTUB_MAGIC,
+    RPCSTUB_USLEEP_OFF, prot_str,
+)
 from .safety import Audit, SafetyError, check_lan, clamp
 from .sfo import parse_sfo
 from .snapshot import build_snapshot, disasm
@@ -47,6 +52,8 @@ disassemble, get_registers, list_threads → resume() ou step().
 Endereços aceitam 0x..., decimal ou "módulo+0xdesloc". module_offset = endereço − base do módulo:
 para ver pseudocódigo, gere dump_module e importe o ELF no ReVa (Ghidra); os endereços batem.
 Leituras grandes viram arquivo em dumps/ + resumo, para economizar contexto.
+Número na memória (moedas, vida): scan_value → peça ao usuário para mudar o valor no jogo → rescan
+até sobrar poucos candidatos. Não varra de novo: o rescan relê só os candidatos.
 Problema de conexão ou de porta 755: ps4_diagnose. Marque marcos com mark_milestone (métricas da fase 5).
 """
 
@@ -79,6 +86,8 @@ class App:
         self.waiting = False
         self.attached_name = ""
         self.last_milestone: float | None = None
+        self.scans: dict[int, dict] = {}  # scan_value/rescan: candidatos ficam aqui, não no contexto
+        self.rpc: dict[int, dict] = {}  # pid -> stub de RPC e buffers da varredura dentro do jogo
         self.bridge: Bridge | None = None
         self.bridge_error = ""
         self._logs_started = False
@@ -713,17 +722,20 @@ def _needles(text: str, encoding: str) -> list[tuple[str, bytes]]:
     return [(e, tx.encode_needle(text, e)) for e in encs]
 
 
-def _scan(a: App, pid: int, needles, regions: str, budget: int, max_results: int) -> dict:
-    maps = a.client.maps(pid, refresh=True)
+def _select_regions(maps, regions: str) -> list:
     kw = regions.lower()
     if kw == "writable":
-        selected = [m for m in maps if m.prot & PROT_READ and m.prot & PROT_WRITE]
-    elif kw == "all":
-        selected = [m for m in maps if m.prot & PROT_READ]
-    elif kw == "code":
-        selected = [m for m in maps if m.prot & PROT_READ and m.prot & PROT_EXEC]
-    else:
-        selected = [m for m in maps if m.prot & PROT_READ and kw in m.name.lower()]
+        return [m for m in maps if m.prot & PROT_READ and m.prot & PROT_WRITE]
+    if kw == "all":
+        return [m for m in maps if m.prot & PROT_READ]
+    if kw == "code":
+        return [m for m in maps if m.prot & PROT_READ and m.prot & PROT_EXEC]
+    return [m for m in maps if m.prot & PROT_READ and kw in m.name.lower()]
+
+
+def _scan(a: App, pid: int, needles, regions: str, budget: int, max_results: int) -> dict:
+    maps = a.client.maps(pid, refresh=True)
+    selected = _select_regions(maps, regions)
     width = max(len(n) for _, n in needles)
     found: dict[tuple[int, str], dict] = {}
     scanned, skipped, t0 = 0, 0, time.perf_counter()
@@ -761,6 +773,215 @@ async def search_memory(pid: int, text: str, encoding: str = "auto", regions: st
     Lê até max_mb pela rede (≈10–30 MB/s); refine com regions se for lento."""
     a = get_app()
     return await th(_scan, a, pid, _needles(text, encoding), regions, clamp(max_mb, 1, 4096) * 1024 * 1024, clamp(max_results, 1, 200))
+
+
+VALUE_TYPES = {"u8": "B", "u16": "H", "u32": "I", "u64": "Q", "i8": "b", "i16": "h", "i32": "i", "i64": "q",
+               "f32": "f", "f64": "d"}
+MAX_CANDIDATES = 2_000_000
+MAX_SCANS = 8
+LIST_AT = 20  # com até isso de candidatos, a resposta já traz os endereços
+HELPERS = Path(__file__).parent / "helpers"
+INGAME_CAP = 1 << 19  # endereços por chamada no buffer dentro do jogo (4 MiB)
+INGAME_CHUNK = 128 << 20  # memória varrida por PROC_CALL: cada chamada fica bem abaixo do timeout de 10 s
+
+
+def _value_fmt(type: str) -> struct.Struct:
+    if type not in VALUE_TYPES:
+        raise ToolError(f"type deve ser um de {', '.join(VALUE_TYPES)}")
+    return struct.Struct("<" + VALUE_TYPES[type])
+
+
+def _parse_value(fmt: struct.Struct, value: str):
+    if fmt.format[-1] in "fd":
+        v = float(value)
+    else:
+        v = parse_int(value) if "0x" in value.lower() else int(value)  # int() aceita negativos decimais
+    try:
+        fmt.pack(v)
+    except struct.error as e:
+        raise ToolError(f"{value} não cabe no tipo: {e}") from e
+    return v
+
+
+def _scan_result(a: App, scan_id: int, scan: dict, maps, net: int, t0: float, **extra) -> dict:
+    out = {"scan_id": scan_id, "candidates": len(scan["addrs"]), "read": _size(net),
+           "seconds": round(time.perf_counter() - t0, 1), **extra}
+    if len(scan["addrs"]) <= LIST_AT:
+        out["matches"] = [{"address": hex(addr), "where": describe_address(maps, addr), "value": v}
+                          for addr, v in zip(scan["addrs"], scan["vals"])]
+    elif scan["addrs"]:
+        out["next"] = "mude o valor no jogo e chame rescan com o valor novo (ou increased/decreased/changed/unchanged)"
+    return out
+
+
+def _ingame(a: App, pid: int) -> tuple[dict | None, str]:
+    """Prepara helpers/scan_value.bin dentro do jogo. (None, motivo) = varrer pela rede."""
+    if not a.cfg.ingame_scan:
+        return None, "PS4_INGAME_SCAN=0"
+    if a.debug.attached and a.debug.pid == pid:
+        # breakpoint, watchpoint ou pause param a thread do stub, e o PROC_CALL travaria o payload
+        return None, "processo anexado ao debugger: dê detach para varrer dentro do jogo"
+    rpc = a.rpc.get(pid)
+    if rpc is not None:
+        return (rpc, "") if rpc["ok"] else (None, rpc["why"])
+    a.rpc[pid] = rpc = {"ok": False, "why": "", "owned": set()}
+    try:
+        stub = a.client.proc_install(pid)
+        rpc["owned"].add(stub)
+        head = a.client.read(pid, stub, RPCSTUB_CODE_OFF + RPCSTUB_CODE_LEN)
+        if head[:4] != RPCSTUB_MAGIC or hashlib.sha256(head[RPCSTUB_CODE_OFF:]).hexdigest() != RPCSTUB_CODE_SHA256:
+            rpc["why"] = "stub de RPC diferente do conhecido nesta versão do ps4debug"
+            return None, rpc["why"]
+        deadline = time.monotonic() + 3
+        while not int.from_bytes(a.client.read(pid, stub + RPCSTUB_USLEEP_OFF, 8), "little"):
+            if time.monotonic() > deadline:  # sem a thread, o PROC_CALL trava o payload: nunca chame
+                rpc["why"] = "a thread do stub de RPC não iniciou (processo sem libkernel ou parado)"
+                return None, rpc["why"]
+            time.sleep(0.1)
+        blob = (HELPERS / "scan_value.bin").read_bytes()
+        code = a.client.proc_alloc(pid, len(blob))
+        out = a.client.proc_alloc(pid, INGAME_CAP * 8)
+        rpc["owned"] |= {code, out}
+        maps = a.client.maps(pid, refresh=True)
+        if not (find_map(maps, code) and find_map(maps, out)):
+            rpc["why"] = "PROC_ALLOC falhou no processo"
+            return None, rpc["why"]
+        a.client.write(pid, code, blob)
+    except PS4DebugError as e:
+        rpc["why"] = f"preparo da varredura no jogo falhou: {e}"
+        return None, rpc["why"]
+    rpc.update(ok=True, stub=stub, code=code, out=out)
+    return rpc, ""
+
+
+def _scan_ingame(a: App, pid: int, rpc: dict, regions: list, raw_value: int, size: int, budget: int):
+    """Uma chamada por bloco de até INGAME_CHUNK; pela rede volta só a lista de endereços."""
+    addrs, scanned, net, truncated = [], 0, 0, False
+    for m in regions:
+        for pos in range(m.start, m.end, INGAME_CHUNK):
+            if scanned >= budget or truncated:
+                break
+            length = min(INGAME_CHUNK, m.end - pos)
+            n = a.client.proc_call(pid, rpc["stub"], rpc["code"], pos, length, raw_value, size, rpc["out"], INGAME_CAP)
+            scanned += length
+            got = min(n, INGAME_CAP)
+            for off in range(0, got * 8, 1 << 20):
+                raw = a.client.read(pid, rpc["out"] + off, min(1 << 20, got * 8 - off))
+                net += len(raw)
+                addrs.extend(struct.unpack(f"<{len(raw) // 8}Q", raw))
+            if n > INGAME_CAP or len(addrs) >= MAX_CANDIDATES:
+                truncated = True
+    return addrs[:MAX_CANDIDATES], scanned, net, truncated
+
+
+def _scan_value(a: App, pid: int, fmt: struct.Struct, value, regions: str, budget: int) -> dict:
+    needle, size = fmt.pack(value), fmt.size
+    t0 = time.perf_counter()
+    rpc, why = _ingame(a, pid)
+    owned = a.rpc.get(pid, {}).get("owned", set())  # buffers do próprio MCP no jogo não entram na busca
+    maps = a.client.maps(pid, refresh=True)
+    selected = [m for m in _select_regions(maps, regions) if m.start not in owned]
+    if rpc:
+        try:
+            addrs, scanned, net, truncated = _scan_ingame(a, pid, rpc, selected, int.from_bytes(needle, "little"), size, budget)
+            return _finish_scan(a, pid, fmt, value, maps, addrs, net, t0, truncated, scanned >= budget, budget,
+                                engine="in-game", scanned=_size(scanned))
+        except PS4DebugError as e:
+            rpc.update(ok=False, why=f"varredura no jogo falhou: {e}")
+            why = rpc["why"]
+    addrs, scanned, truncated = [], 0, False
+    for m in selected:
+        # shortcut: só valores alinhados ao tamanho do tipo (como o "fast scan" do Cheat Engine); blocos de 1 MiB
+        # a partir do início da região (página) nunca cortam um valor alinhado ao meio.
+        for pos in range(m.start, m.end, 1 << 20):
+            if scanned >= budget or truncated:
+                break
+            data = a.client.read(pid, pos, min(1 << 20, m.end - pos))
+            scanned += len(data)
+            off = data.find(needle)
+            while off >= 0:
+                if (pos + off) % size == 0:
+                    addrs.append(pos + off)
+                    if len(addrs) >= MAX_CANDIDATES:
+                        truncated = True
+                        break
+                off = data.find(needle, off + 1)
+    return _finish_scan(a, pid, fmt, value, maps, addrs, scanned, t0, truncated, scanned >= budget, budget,
+                        engine="network", **({"engine_note": why} if why != "PS4_INGAME_SCAN=0" else {}))
+
+
+def _finish_scan(a: App, pid: int, fmt, value, maps, addrs: list, net: int, t0: float, truncated: bool,
+                 over_budget: bool, budget: int, **extra) -> dict:
+    scan = {"pid": pid, "fmt": fmt, "addrs": addrs, "vals": [value] * len(addrs)}
+    scan_id = max(a.scans, default=0) + 1
+    a.scans[scan_id] = scan
+    while len(a.scans) > MAX_SCANS:
+        del a.scans[min(a.scans)]
+    if truncated:
+        extra["truncated"] = "a lista de candidatos foi cortada: restrinja regions ou use um valor mais raro"
+    if over_budget:
+        extra["budget"] = f"leitura parou em max_mb ({_size(budget)}): aumente max_mb ou restrinja regions"
+    return _scan_result(a, scan_id, scan, maps, net, t0, **extra)
+
+
+def _rescan(a: App, scan_id: int, condition: str) -> dict:
+    scan = a.scans.get(scan_id)
+    if scan is None:
+        raise ToolError(f"scan_id {scan_id} não existe (o servidor guarda os {MAX_SCANS} últimos); rode scan_value")
+    pid, fmt = scan["pid"], scan["fmt"]
+    cond = condition.strip().lower()
+    tests = {"changed": lambda new, old: new != old, "unchanged": lambda new, old: new == old,
+             "increased": lambda new, old: new > old, "decreased": lambda new, old: new < old}
+    if cond in tests:
+        keep = tests[cond]
+    else:
+        target = _parse_value(fmt, condition)
+        keep = lambda new, old: new == target  # noqa: E731
+    maps = a.client.maps(pid, refresh=True)
+    t0, scanned, addrs, vals = time.perf_counter(), 0, [], []
+    pairs = sorted(zip(scan["addrs"], scan["vals"]))
+    i = 0
+    while i < len(pairs):
+        m = find_map(maps, pairs[i][0])
+        if m is None or not m.prot & PROT_READ:  # região sumiu: o candidato morre
+            i += 1
+            continue
+        # junta os candidatos próximos numa leitura só, sem sair da região nem passar de 1 MiB
+        start = end = pairs[i][0]
+        j = i
+        while j < len(pairs) and pairs[j][0] < m.end and pairs[j][0] - start < 1 << 20 and pairs[j][0] - end <= 4096:
+            end = pairs[j][0]
+            j += 1
+        data = a.client.read(pid, start, end + fmt.size - start)
+        scanned += len(data)
+        for addr, old in pairs[i:j]:
+            new = fmt.unpack_from(data, addr - start)[0]
+            if keep(new, old):
+                addrs.append(addr)
+                vals.append(new)
+        i = j
+    scan["addrs"], scan["vals"] = addrs, vals
+    return _scan_result(a, scan_id, scan, maps, scanned, t0)
+
+
+@ps4_tool()
+async def scan_value(pid: int, value: str, type: str = "u32", regions: str = "writable", max_mb: int = 512) -> str:
+    """Procura um número (moedas, vida, munição) na memória, como o Cheat Engine. Guarda os candidatos
+    no servidor e responde só a contagem e um scan_id. Depois mude o valor no jogo e chame rescan.
+    type: u8/u16/u32/u64/i8/i16/i32/i64/f32/f64 (valor alinhado ao tamanho; float exato).
+    regions: writable (padrão), all, code ou trecho do nome. Em recomps, prefira o heap guest."""
+    a = get_app()
+    fmt = _value_fmt(type)
+    return await th(_scan_value, a, pid, fmt, _parse_value(fmt, value), regions, clamp(max_mb, 1, 4096) * 1024 * 1024)
+
+
+@ps4_tool()
+async def rescan(scan_id: int, condition: str) -> str:
+    """Refina um scan_value relendo só os endereços candidatos (kilobytes, não a região inteira).
+    condition: o valor novo (ex.: "38") ou increased, decreased, changed, unchanged em relação à
+    passada anterior. Com até 20 candidatos, a resposta traz endereço e valor de cada um."""
+    a = get_app()
+    return await th(_rescan, a, scan_id, condition)
 
 
 @ps4_tool()

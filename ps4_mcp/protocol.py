@@ -28,7 +28,11 @@ class Cmd(IntEnum):
     PROC_READ = 0xBDAA0002
     PROC_WRITE = 0xBDAA0003
     PROC_MAPS = 0xBDAA0004
+    PROC_INSTALL = 0xBDAA0005  # CMD_PROC_INTALL no C (sic)
+    PROC_CALL = 0xBDAA0006
     PROC_INFO = 0xBDAA000A
+    PROC_ALLOC = 0xBDAA000B
+    PROC_FREE = 0xBDAA000C
     DEBUG_ATTACH = 0xBDBB0001
     DEBUG_DETACH = 0xBDBB0002
     DEBUG_BREAKPT = 0xBDBB0003
@@ -70,6 +74,16 @@ PROC_RW = struct.Struct("<IQI")  # pid, address, length (16)
 PROC_LIST_ENTRY = struct.Struct("<32si")  # p_comm[32], pid (36)
 MAP_ENTRY = struct.Struct("<32sQQQH")  # name[32], start, end, offset, prot (58)
 PROC_INFO = struct.Struct("<I40s64s16s64s")  # pid, name, path, titleid, contentid (188)
+PROC_CALL = struct.Struct("<IQQ6Q")  # pid, rpcstub, rip, rdi, rsi, rdx, rcx, r8, r9 (68)
+PROC_CALL_RESP = struct.Struct("<IQ")  # pid, rax (12)
+PROC_ALLOC = struct.Struct("<II")  # pid, length (8)
+PROC_FREE = struct.Struct("<IQI")  # pid, address, length (16)
+# rpcasm.h: layout do stub de RPC que o PROC_INSTALL copia para o processo (410 bytes, entrada em 0xA3).
+# A thread do stub resolve sceKernelUsleep e grava o ponteiro em +0x9B antes do 1º laço: é o sinal de vida.
+RPCSTUB_MAGIC = b"RSTB"
+RPCSTUB_USLEEP_OFF = 0x9B
+RPCSTUB_CODE_OFF, RPCSTUB_CODE_LEN = 0xA3, 247
+RPCSTUB_CODE_SHA256 = "bf0aacdc9d98f65c5513202dae204c1127b9f56fd021b60c577d7474517a9609"  # outro stub: offsets desconhecidos
 BREAKPT = struct.Struct("<IIQ")  # index, enabled, address (16)
 WATCHPT = struct.Struct("<IIIIQ")  # index, enabled, length, breaktype, address (24)
 THRINFO = struct.Struct("<II32s")  # lwpid, priority, name[32] (40)

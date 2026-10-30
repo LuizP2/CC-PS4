@@ -23,7 +23,7 @@ Claude Code ── MCP stdio ──► ps4_mcp (PC) ──► ps4debug :744 / ca
 | 2. Arquivos e logs | `list_dir`, `read_file`, `download_file`, `tail_logs` (FTP + klog TCP/UDP/arquivo) | FTP real (pyftpdlib), klog falso |
 | 3. Debug e eventos | `attach`/`detach`, `set_breakpoint`/`clear_breakpoint`, `set_watchpoint`/`clear_watchpoint`, `wait_for_event`, `get_registers`, `list_threads`, `step`, `resume`/`pause` + snapshot (seção 4.4) + PKG de teste `tests/crash-homebrew` | ps4debug falso fiel ao C + validação cruzada com a lib `ps4debug` do PyPI |
 | 4. Integração com RE | `dump_module` (memória decifrada → ELF com endereços reais) + ReVa/Ghidra 12.1.3 instalados | ELF importado e decompilado no ReVa |
-| 5. Teste de valor | `mark_milestone`, `scripts/metrics.py`, `docs/relatorio-fase5.md`, ferramentas do piloto KH3 (`search_memory`, `read_text_region`, `search_files`, `compare_bytes`), `docs/kh3-formato-legendas.md` | ferramentas testadas; o teste de valor em si exige o console |
+| 5. Teste de valor | `mark_milestone`, `scripts/metrics.py`, `docs/relatorio-fase5.md`, ferramentas do piloto KH3 (`search_memory`, `scan_value`, `rescan`, `read_text_region`, `search_files`, `compare_bytes`), `docs/kh3-formato-legendas.md` | ferramentas testadas; o teste de valor em si exige o console |
 | 6. Opcional | app `ps4-app/` (PKG), bridge (`post_status`, `get_messages`, mensagens chegam em `wait_for_event`), `notify_console`, `build_homebrew`/`install_pkg` | build dos PKGs, cliente do app compilado e testado no PC, instalação contra um RPI falso |
 
 Fica de fora, como o próprio plano pede: subagentes por área do port (só depois que o fluxo de um agente estiver sólido) e overlay por cima do jogo (não há método estável). Para avisar quem está jogando, `notify_console` usa a notificação do sistema, que aparece por cima do jogo.
@@ -93,7 +93,7 @@ Se o NetworkManager compartilhar a conexão e mesmo assim o PS4 não pegar IP, o
 
 Na prática, isso ajuda tanto quanto a rede:
 - **Restrinja a região.** No `search_memory`, use `regions` (`writable`, `code` ou um trecho do nome). Em recomps, procure só no heap do jogo guest. No Super Mario Wonder recomp, por exemplo, ele fica em `0x5000000000` (~460 MiB) e não nos 3.5 GiB graváveis do processo.
-- **Refine em vez de varrer de novo.** Numa varredura de valor (por exemplo, moedas), a segunda passada relê só os blocos onde sobraram candidatos. Ela foi de 430 mil candidatos para 13 lendo bem menos memória.
+- **Refine em vez de varrer de novo.** Para um número (moedas, vida), use `scan_value` e depois `rescan`. Os candidatos ficam no servidor MCP e o Claude recebe só a contagem. Mude o valor no jogo e chame `rescan` com o valor novo (ou `increased`/`decreased`/`changed`/`unchanged`): ele relê só os endereços candidatos, não a região inteira. Com até 20 candidatos, a resposta lista endereço e valor. No teste do Super Mario Wonder, isso foi de 430 mil candidatos para 13.
 - **Combine valores vizinhos.** Procurar dois números juntos (por exemplo, moedas `38` + moedas roxas `158`) encontra a estrutura numa passada só.
 - **Gere o dump uma vez e trabalhe fora do console.** O `dump_module` gera o ELF uma vez. Depois disso, a análise no ReVa/Ghidra não usa mais a rede.
 
@@ -114,6 +114,7 @@ Na prática, isso ajuda tanto quanto a rede:
 | `PS4_MAX_READ` / `PS4_INLINE_HEX_MAX` | 65536 / 1024 | limite de leitura e quanto vira hexdump inline (acima disso: arquivo + resumo) |
 | `PS4_MAX_BREAKPOINTS` / `PS4_MAX_WAIT_S` | 10 / 300 | limites da seção 8 |
 | `PS4_ENABLE_WRITE` | 0 | habilita `write_memory`, `kill_process` e `kernel_read`, sempre com confirmação manual |
+| `PS4_INGAME_SCAN` | 0 | roda o `scan_value` dentro do jogo pelo RPC do ps4debug (1ª varredura bem mais rápida; pela rede só volta a lista de endereços). Desligado até validar no console. Nunca é usado com o processo anexado |
 | `PS4_ENABLE_DEPLOY` | 0 | habilita `build_homebrew` e `install_pkg` (instala via Remote Package Installer, porta 12800) |
 | `PS4_BRIDGE` | 0 | liga o bridge do app CCPS4 Agent Viewer |
 | `PS4_WORKDIR` | pasta do projeto | onde ficam `dumps/`, `downloads/` e `logs/audit.jsonl` |

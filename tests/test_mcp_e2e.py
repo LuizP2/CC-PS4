@@ -19,6 +19,7 @@ from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
 
 from ps4_mcp.sfo import build_sfo
+from tests.native_blob import Blob, needs_x86_64
 from tests.test_e2e_debug import CODE, CODE_BASE, PID, free_port, make_console
 
 SUBTITLE = "CCPS4 legenda de teste: Olá, ação, coração!"
@@ -110,7 +111,7 @@ def test_full_investigation_over_mcp(lab):
                     "read_string", "resolve_address", "disassemble", "list_dir", "read_file", "download_file", "tail_logs",
                     "attach", "detach", "set_breakpoint", "clear_breakpoint", "set_watchpoint", "clear_watchpoint",
                     "wait_for_event", "get_registers", "list_threads", "step", "resume", "pause", "dump_module",
-                    "search_memory", "read_text_region", "search_files", "compare_bytes", "mark_milestone",
+                    "search_memory", "scan_value", "rescan", "read_text_region", "search_files", "compare_bytes", "mark_milestone",
                     "notify_console", "post_status", "get_messages", "write_memory", "kill_process", "kernel_read"}
         assert expected <= names, expected - names
         assert "install_pkg" not in names  # deploy desligado
@@ -182,6 +183,76 @@ def test_full_investigation_over_mcp(lab):
     assert not fake.payload_crashed
     audit = (work / "logs" / "audit.jsonl").read_text().splitlines()
     assert any('"kind": "event"' in line or '"kind":"event"' in line for line in audit)
+
+
+def test_value_scan_and_rescan(lab):
+    proc = lab["proc"]
+    proc.write(0x2000200, (37).to_bytes(4, "little"))  # as "moedas"
+    proc.write(0x2000300, (37).to_bytes(4, "little"))  # outro 37 qualquer, que não muda
+    proc.write(0x2000501, (37).to_bytes(4, "little"))  # desalinhado: fica de fora
+    proc.write(0x2000600, (-5).to_bytes(4, "little", signed=True))
+
+    async def scenario(s: ClientSession):
+        first = await call(s, "scan_value", pid=PID, value="37")
+        assert first["candidates"] == 2 and {m["address"] for m in first["matches"]} == {"0x2000200", "0x2000300"}
+        proc.write(0x2000200, (38).to_bytes(4, "little"))
+        up = await call(s, "rescan", scan_id=first["scan_id"], condition="increased")
+        assert up["candidates"] == 1 and up["matches"][0] == {"address": "0x2000200", "where": up["matches"][0]["where"], "value": 38}
+        assert (await call(s, "rescan", scan_id=first["scan_id"], condition="38"))["candidates"] == 1
+        assert (await call(s, "rescan", scan_id=first["scan_id"], condition="unchanged"))["candidates"] == 1
+        same = await call(s, "rescan", scan_id=first["scan_id"], condition="0x26")
+        assert same["candidates"] == 1
+        gone = await call(s, "rescan", scan_id=first["scan_id"], condition="decreased")
+        assert gone["candidates"] == 0 and gone["matches"] == []
+
+        neg = await call(s, "scan_value", pid=PID, value="-5", type="i32", regions="heap")
+        assert neg["scan_id"] == first["scan_id"] + 1 and [m["address"] for m in neg["matches"]] == ["0x2000600"]
+        bad = await s.call_tool("rescan", {"scan_id": 999, "condition": "1"})
+        assert bad.isError and "scan_value" in bad.content[0].text
+        bad = await s.call_tool("scan_value", {"pid": PID, "value": "300", "type": "u8"})
+        assert bad.isError and "não cabe" in bad.content[0].text
+
+    asyncio.run(_session(lab["env"], scenario))
+    assert not lab["fake"].payload_crashed
+
+
+@needs_x86_64
+def test_value_scan_runs_inside_the_game(lab):
+    fake, proc = lab["fake"], lab["proc"]
+    proc.map("libkernel.sprx", 0x800000000, 0x4000, prot=5)  # sem ela o payload não cria a thread do stub
+    proc.on_call_code(Blob("scan_value").code, Blob("scan_value").in_fake(proc))
+    proc.write(0x2000200, (37).to_bytes(4, "little"))
+    proc.write(0x2000300, (37).to_bytes(4, "little"))
+
+    async def scenario(s: ClientSession):
+        first = await call(s, "scan_value", pid=PID, value="37")
+        assert first["engine"] == "in-game" and first["candidates"] == 2
+        assert {m["address"] for m in first["matches"]} == {"0x2000200", "0x2000300"}
+        again = await call(s, "scan_value", pid=PID, value="37")  # o stub é reaproveitado e os buffers do MCP ficam fora
+        assert again["engine"] == "in-game" and again["candidates"] == 2
+        proc.write(0x2000200, (38).to_bytes(4, "little"))
+        assert (await call(s, "rescan", scan_id=first["scan_id"], condition="38"))["matches"][0]["address"] == "0x2000200"
+        await call(s, "attach")
+        attached = await call(s, "scan_value", pid=PID, value="37")  # anexado: um breakpoint travaria o PROC_CALL
+        assert attached["engine"] == "network" and "detach" in attached["engine_note"]
+        await call(s, "detach")
+
+    asyncio.run(_session(lab["env"] | {"PS4_INGAME_SCAN": "1"}, scenario))
+    assert [c for c, _ in fake.commands].count("CMD_PROC_INTALL") == 1
+    assert not fake.payload_crashed
+
+
+def test_value_scan_never_calls_a_dead_rpc_stub(lab):
+    fake, proc = lab["fake"], lab["proc"]  # sem libkernel.sprx: o PROC_INSTALL não cria a thread do stub
+    proc.write(0x2000200, (37).to_bytes(4, "little"))
+
+    async def scenario(s: ClientSession):
+        res = await call(s, "scan_value", pid=PID, value="37")
+        assert res["engine"] == "network" and res["candidates"] == 1 and "thread" in res["engine_note"]
+        assert (await call(s, "ps4_status"))["ps4debug"]["version"]  # payload continua atendendo
+
+    asyncio.run(_session(lab["env"] | {"PS4_INGAME_SCAN": "1"}, scenario))
+    assert "CMD_PROC_CALL" not in [c for c, _ in fake.commands]
 
 
 def test_write_needs_manual_confirmation_and_flags(lab):

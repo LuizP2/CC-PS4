@@ -46,6 +46,16 @@ Fonte: [jogolden/ps4debug](https://github.com/jogolden/ps4debug), protocolo `"1.
 
 14. **ps4debug 1.3 (GoldHEN v1.1.19) no FW 12.52: o ATTACH deixa o processo parado.** O jogo congela até o detach. O cliente manda `STOPGO(0)` logo depois do ATTACH e ignora um eventual erro. Com isso, o crash do crash-test chegou como evento (`SIGSEGV` em `eboot.bin+0x38`).
 
+15. **RPC dentro do processo** (`proc.c: proc_install_handle/proc_call_handle/proc_alloc_handle`, `rpcasm.h`). É o que o `scan_value` usa com `PS4_INGAME_SCAN=1`.
+    - `PROC_INSTALL` (`CMD_PROC_INTALL` no C) aloca uma região, copia o stub de 410 bytes (magic `RSTB`, entrada em `0xA3`) e cria uma thread nele. Responde `u64` com o endereço do stub.
+    - A thread só é criada se o processo tiver `libkernel*.sprx` r-x. Sem ela, o status ainda é sucesso.
+    - A thread resolve `sceKernelUsleep` e grava o ponteiro em `stub+0x9B` antes do 1º laço. O cliente só chama o stub depois de ver esse campo diferente de zero. Também confere o hash do código do stub, porque com outro stub os offsets mudam.
+    - `PROC_CALL` (`pid`, `stub`, `rip`, `rdi`…`r9`, 68 bytes) escreve os argumentos no stub, liga `rpc_go` e o **kernel espera `rpc_done` em laço**. Responde `pid` + `rax`.
+    - Se a thread do stub não roda (não existe, processo parado por `SIGSTOP`, breakpoint ou watchpoint), esse laço nunca termina e o payload trava até reiniciar o console. Por isso o MCP não usa RPC com o processo anexado ao debugger.
+    - A thread do stub dorme 100 ms entre verificações, então cada `PROC_CALL` custa até ~100 ms a mais.
+    - `PROC_ALLOC` (`pid`, `length`) cria uma região rwx e responde `u64`. Em falha, devolve lixo: o cliente confere o endereço nos mapas. `PROC_FREE` (`pid`, `address`, `length`) desfaz a região. Erro nesses dois não derruba a conexão.
+    - Um bug no código chamado derruba o jogo, não o console.
+
 ## Sinais (FreeBSD)
 
 O `status` do pacote de interrupção é o valor do `wait4`. Para processo parado, `WSTOPSIG = (status >> 8) & 0xff`. No FreeBSD, SIGSTOP é 17 e SIGBUS é 10, diferente do Linux.

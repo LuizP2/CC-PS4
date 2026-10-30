@@ -23,7 +23,7 @@ Claude Code ── MCP stdio ──► ps4_mcp (PC) ──► ps4debug :744 / ca
 | 2. Archivos y logs | `list_dir`, `read_file`, `download_file`, `tail_logs` (FTP + klog TCP/UDP/archivo) | FTP real (pyftpdlib), klog falso |
 | 3. Debug y eventos | `attach`/`detach`, `set_breakpoint`/`clear_breakpoint`, `set_watchpoint`/`clear_watchpoint`, `wait_for_event`, `get_registers`, `list_threads`, `step`, `resume`/`pause` + snapshot (sección 4.4) + PKG de prueba `tests/crash-homebrew` | ps4debug falso fiel al código C + validación cruzada con la lib `ps4debug` de PyPI |
 | 4. Integración con RE | `dump_module` (memoria descifrada → ELF con direcciones reales) + ReVa/Ghidra 12.1.3 instalados | ELF importado y decompilado en ReVa |
-| 5. Prueba de valor | `mark_milestone`, `scripts/metrics.py`, `docs/relatorio-fase5.md`, herramientas del piloto KH3 (`search_memory`, `read_text_region`, `search_files`, `compare_bytes`), `docs/kh3-formato-legendas.md` | herramientas probadas; la prueba de valor en sí necesita la consola |
+| 5. Prueba de valor | `mark_milestone`, `scripts/metrics.py`, `docs/relatorio-fase5.md`, herramientas del piloto KH3 (`search_memory`, `scan_value`, `rescan`, `read_text_region`, `search_files`, `compare_bytes`), `docs/kh3-formato-legendas.md` | herramientas probadas; la prueba de valor en sí necesita la consola |
 | 6. Opcional | app `ps4-app/` (PKG), bridge (`post_status`, `get_messages`, los mensajes llegan en `wait_for_event`), `notify_console`, `build_homebrew`/`install_pkg` | build de los PKG, cliente de la app compilado y probado en el PC, instalación contra un RPI falso |
 
 Queda fuera, como pide el propio plan: subagentes por área del port (solo cuando el flujo de un agente esté sólido) y overlay sobre el juego (no hay un método estable). Para avisar a quien está jugando, `notify_console` usa la notificación del sistema, que aparece encima del juego.
@@ -93,7 +93,7 @@ Si NetworkManager comparte la conexión y aun así el PS4 no obtiene IP, o si se
 
 En la práctica, esto ayuda tanto como la red:
 - **Restringe la región.** En `search_memory`, usa `regions` (`writable`, `code` o parte del nombre). En recomps, busca solo en el heap del juego guest. En el recomp de Super Mario Wonder, por ejemplo, está en `0x5000000000` (~460 MiB) y no en los 3.5 GiB escribibles del proceso.
-- **Refina en vez de volver a recorrer.** En una búsqueda de valor (por ejemplo, monedas), la segunda pasada relee solo los bloques donde quedaron candidatos. Pasó de 430 mil candidatos a 13 leyendo mucha menos memoria.
+- **Refina en vez de volver a recorrer.** Para un número (monedas, vida), usa `scan_value` y después `rescan`. Los candidatos quedan en el servidor MCP y Claude recibe solo el conteo. Cambia el valor en el juego y llama a `rescan` con el valor nuevo (o `increased`/`decreased`/`changed`/`unchanged`): relee solo las direcciones candidatas, no la región entera. Con 20 candidatos o menos, la respuesta lista dirección y valor. En la prueba de Super Mario Wonder, esto pasó de 430 mil candidatos a 13.
 - **Combina valores vecinos.** Buscar dos números juntos (por ejemplo, monedas `38` + monedas moradas `158`) encuentra la estructura en una sola pasada.
 - **Haz el dump una vez y trabaja fuera de la consola.** `dump_module` genera el ELF una vez. Después, el análisis en ReVa/Ghidra ya no usa la red.
 
@@ -114,6 +114,7 @@ En la práctica, esto ayuda tanto como la red:
 | `PS4_MAX_READ` / `PS4_INLINE_HEX_MAX` | 65536 / 1024 | límite de lectura y cuánto se muestra como hexdump inline (por encima: archivo + resumen) |
 | `PS4_MAX_BREAKPOINTS` / `PS4_MAX_WAIT_S` | 10 / 300 | límites de la sección 8 |
 | `PS4_ENABLE_WRITE` | 0 | habilita `write_memory`, `kill_process` y `kernel_read`, siempre con confirmación manual |
+| `PS4_INGAME_SCAN` | 0 | ejecuta `scan_value` dentro del juego vía el RPC de ps4debug (primer recorrido mucho más rápido; por la red solo vuelve la lista de direcciones). Desactivado hasta validarlo en una consola. Nunca se usa con el proceso adjuntado |
 | `PS4_ENABLE_DEPLOY` | 0 | habilita `build_homebrew` e `install_pkg` (instala vía Remote Package Installer, puerto 12800) |
 | `PS4_BRIDGE` | 0 | activa el bridge de la app CCPS4 Agent Viewer |
 | `PS4_WORKDIR` | carpeta del proyecto | donde quedan `dumps/`, `downloads/` y `logs/audit.jsonl` |

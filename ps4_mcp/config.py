@@ -78,6 +78,7 @@ class Config:
     enable_write: bool = False
     write_confirm: str = "elicit"  # elicit | none
     enable_deploy: bool = False
+    ingame_scan: bool = False  # scan_value roda dentro do jogo (PROC_CALL); desligado até validar no console
     workdir: Path = field(default_factory=Path.cwd)
     bridge: bool = False
     bridge_port: int = 8765
@@ -111,6 +112,7 @@ class Config:
             enable_write=_bool("PS4_ENABLE_WRITE"),
             write_confirm=os.environ.get("PS4_WRITE_CONFIRM", "elicit").strip().lower(),
             enable_deploy=_bool("PS4_ENABLE_DEPLOY"),
+            ingame_scan=_bool("PS4_INGAME_SCAN"),
             workdir=workdir,
             bridge=_bool("PS4_BRIDGE"),
             bridge_port=_int("PS4_BRIDGE_PORT", 8765),

@@ -328,6 +328,7 @@ class FakeProcess:
         self.mappings: list[_Mapping] = []
         self.threads: dict[int, FakeThread] = {}
         self.call_handlers: dict[int, Callable[..., int]] = {}
+        self.code_handlers: list[tuple[bytes, Callable[..., int]]] = []
         self.rpc_stubs: dict[int, int | None] = {}   # stub address -> stub thread lwpid (None: no thread)
         self.loaded_elfs: list[tuple[int, bytes]] = []
         # ptrace / wait4 state
@@ -394,6 +395,10 @@ class FakeProcess:
     def on_call(self, address: int, fn: Callable[..., int]) -> None:
         """Python implementation of the function at ``address`` for CMD_PROC_CALL (rdi..r9 -> rax)."""
         self.call_handlers[address] = fn
+
+    def on_call_code(self, code: bytes, fn: Callable[..., int]) -> None:
+        """Como on_call, mas para código que o cliente aloca e copia: casa pelos bytes em rip."""
+        self.code_handlers.append((code, fn))
 
     def read(self, address: int, size: int) -> bytes:
         """Raw memory (ignores protections); unmapped bytes read as zero."""
@@ -1118,6 +1123,8 @@ class FakePS4Debug:
             if stub is not None:
                 self._rw(pid, stub, len(RPCSTUB), data=RPCSTUB)
                 p.rpc_stubs[stub] = self._create_thread(p, "rpcstub")
+                if p.rpc_stubs[stub] is not None:   # a thread do stub resolve sceKernelUsleep e grava em +0x9B
+                    self._rw(pid, stub + 0x9B, 8, data=struct.pack("<Q", 0x800001230))
         if not stub:
             self._status(sock, CMD_DATA_NULL)
             return 1
@@ -1140,7 +1147,8 @@ class FakePS4Debug:
                 th = p.threads.get(lwp) if lwp is not None else None
                 if th is None or th.suspended or p.state != "running":
                     raise _Hang("kernel busy-waits on rpc_done forever (stub thread not running)")
-                fn = p.call_handlers.get(rip)
+                fn = p.call_handlers.get(rip) or next(
+                    (f for code, f in p.code_handlers if p.read(rip, len(code)) == code), None)
                 rax = (fn(*args) if fn else 0) & MASK64
                 self._rw(pid, stub + RPCSTUB_RAX_OFF, 8, data=struct.pack("<Q", rax))
                 self._rw(pid, stub + RPCSTUB_GO_OFF, 2, data=b"\x00\x00")

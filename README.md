@@ -23,7 +23,7 @@ Claude Code ── MCP stdio ──► ps4_mcp (PC) ──► ps4debug :744 / ca
 | 2. Files and logs | `list_dir`, `read_file`, `download_file`, `tail_logs` (FTP + klog TCP/UDP/file) | real FTP (pyftpdlib), fake klog |
 | 3. Debug and events | `attach`/`detach`, `set_breakpoint`/`clear_breakpoint`, `set_watchpoint`/`clear_watchpoint`, `wait_for_event`, `get_registers`, `list_threads`, `step`, `resume`/`pause` + snapshot (section 4.4) + test PKG `tests/crash-homebrew` | fake ps4debug faithful to the C code + cross-check against the `ps4debug` lib from PyPI |
 | 4. RE integration | `dump_module` (decrypted memory → ELF with real addresses) + ReVa/Ghidra 12.1.3 installed | ELF imported and decompiled in ReVa |
-| 5. Value test | `mark_milestone`, `scripts/metrics.py`, `docs/relatorio-fase5.md`, KH3 pilot tools (`search_memory`, `read_text_region`, `search_files`, `compare_bytes`), `docs/kh3-formato-legendas.md` | tools tested; the value test itself needs the console |
+| 5. Value test | `mark_milestone`, `scripts/metrics.py`, `docs/relatorio-fase5.md`, KH3 pilot tools (`search_memory`, `scan_value`, `rescan`, `read_text_region`, `search_files`, `compare_bytes`), `docs/kh3-formato-legendas.md` | tools tested; the value test itself needs the console |
 | 6. Optional | `ps4-app/` app (PKG), bridge (`post_status`, `get_messages`, messages arrive in `wait_for_event`), `notify_console`, `build_homebrew`/`install_pkg` | PKG builds, app client compiled and tested on the PC, install against a fake RPI |
 
 Left out, as the plan itself says: per-area subagents for the port (only after the single-agent flow is solid) and an in-game overlay (there is no stable method). To alert whoever is playing, `notify_console` uses the system notification, which shows on top of the game.
@@ -93,7 +93,7 @@ If NetworkManager shares the connection and the PS4 still doesn't get an IP, or 
 
 In practice this helps as much as the network:
 - **Narrow the region.** In `search_memory`, use `regions` (`writable`, `code` or part of the name). In recomps, search only the guest game heap. In the Super Mario Wonder recomp, for example, it sits at `0x5000000000` (~460 MiB), not in the process's 3.5 GiB of writable memory.
-- **Refine instead of rescanning.** In a value scan (for example, coins), the second pass rereads only the blocks that still have candidates. It went from 430 thousand candidates to 13 while reading much less memory.
+- **Refine instead of rescanning.** For a number (coins, health), use `scan_value` and then `rescan`. The candidates stay in the MCP server and Claude only gets the count. Change the value in the game and call `rescan` with the new value (or `increased`/`decreased`/`changed`/`unchanged`): it rereads only the candidate addresses, not the whole region. With 20 candidates or fewer, the reply lists address and value. In the Super Mario Wonder test, this went from 430 thousand candidates to 13.
 - **Combine neighboring values.** Searching for two numbers together (for example, coins `38` + purple coins `158`) finds the structure in a single pass.
 - **Dump once and work off the console.** `dump_module` generates the ELF once. After that, analysis in ReVa/Ghidra doesn't use the network anymore.
 
@@ -114,6 +114,7 @@ In practice this helps as much as the network:
 | `PS4_MAX_READ` / `PS4_INLINE_HEX_MAX` | 65536 / 1024 | read limit and how much becomes an inline hexdump (above that: file + summary) |
 | `PS4_MAX_BREAKPOINTS` / `PS4_MAX_WAIT_S` | 10 / 300 | section 8 limits |
 | `PS4_ENABLE_WRITE` | 0 | enables `write_memory`, `kill_process` and `kernel_read`, always with manual confirmation |
+| `PS4_INGAME_SCAN` | 0 | runs `scan_value` inside the game via ps4debug RPC (much faster first scan; only reads the address list over the network). Off until validated on a console. Never used while attached to the process |
 | `PS4_ENABLE_DEPLOY` | 0 | enables `build_homebrew` and `install_pkg` (installs via Remote Package Installer, port 12800) |
 | `PS4_BRIDGE` | 0 | turns on the CCPS4 Agent Viewer app bridge |
 | `PS4_WORKDIR` | project folder | where `dumps/`, `downloads/` and `logs/audit.jsonl` live |
