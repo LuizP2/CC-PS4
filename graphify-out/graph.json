@@ -51,195 +51,6 @@
   },
   "nodes": [
     {
-      "label": "patterns.json",
-      "file_type": "code",
-      "source_file": ".claude-flow/neural/patterns.json",
-      "source_location": "L1",
-      "id": "neural_patterns",
-      "community": 49,
-      "norm_label": "patterns.json"
-    },
-    {
-      "label": "stats.json",
-      "file_type": "code",
-      "source_file": ".claude-flow/neural/stats.json",
-      "source_location": "L1",
-      "id": "neural_stats",
-      "community": 37,
-      "norm_label": "stats.json"
-    },
-    {
-      "label": "trajectoriesRecorded",
-      "file_type": "code",
-      "source_file": ".claude-flow/neural/stats.json",
-      "source_location": "L2",
-      "id": "neural_stats_trajectoriesrecorded",
-      "community": 37,
-      "norm_label": "trajectoriesrecorded"
-    },
-    {
-      "label": "patternsLearned",
-      "file_type": "code",
-      "source_file": ".claude-flow/neural/stats.json",
-      "source_location": "L3",
-      "id": "neural_stats_patternslearned",
-      "community": 37,
-      "norm_label": "patternslearned"
-    },
-    {
-      "label": "signalsProcessed",
-      "file_type": "code",
-      "source_file": ".claude-flow/neural/stats.json",
-      "source_location": "L4",
-      "id": "neural_stats_signalsprocessed",
-      "community": 37,
-      "norm_label": "signalsprocessed"
-    },
-    {
-      "label": "lastAdaptation",
-      "file_type": "code",
-      "source_file": ".claude-flow/neural/stats.json",
-      "source_location": "L5",
-      "id": "neural_stats_lastadaptation",
-      "community": 37,
-      "norm_label": "lastadaptation"
-    },
-    {
-      "label": "ledger-anchors.json",
-      "file_type": "code",
-      "source_file": ".claude-flow/policy/ledger-anchors.json",
-      "source_location": "L1",
-      "id": "policy_ledger_anchors",
-      "community": 44,
-      "norm_label": "ledger-anchors.json"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": ".claude-flow/policy/ledger-anchors.json",
-      "source_location": "L1",
-      "id": "policy_ledger_anchors_version",
-      "community": 44,
-      "norm_label": "version"
-    },
-    {
-      "label": "entries",
-      "file_type": "code",
-      "source_file": ".claude-flow/policy/ledger-anchors.json",
-      "source_location": "L1",
-      "id": "policy_ledger_anchors_entries",
-      "community": 44,
-      "norm_label": "entries"
-    },
-    {
-      "label": "state.json",
-      "file_type": "code",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L1",
-      "id": "policy_state",
-      "community": 28,
-      "norm_label": "state.json"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L2",
-      "id": "policy_state_version",
-      "community": 28,
-      "norm_label": "version"
-    },
-    {
-      "label": "mode",
-      "file_type": "code",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L3",
-      "id": "policy_state_mode",
-      "community": 28,
-      "norm_label": "mode"
-    },
-    {
-      "label": "rules",
-      "file_type": "code",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L4",
-      "id": "policy_state_rules",
-      "community": 28,
-      "norm_label": "rules"
-    },
-    {
-      "label": "budgets",
-      "file_type": "code",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L5",
-      "id": "policy_state_budgets",
-      "community": 28,
-      "norm_label": "budgets"
-    },
-    {
-      "label": "usage",
-      "file_type": "code",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L6",
-      "id": "policy_state_usage",
-      "community": 28,
-      "norm_label": "usage"
-    },
-    {
-      "label": "approvals",
-      "file_type": "code",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L7",
-      "id": "policy_state_approvals",
-      "community": 28,
-      "norm_label": "approvals"
-    },
-    {
-      "label": "receipts",
-      "file_type": "code",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L8",
-      "id": "policy_state_receipts",
-      "community": 28,
-      "norm_label": "receipts"
-    },
-    {
-      "label": "migratedAt",
-      "file_type": "code",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L2930",
-      "id": "policy_state_migratedat",
-      "community": 28,
-      "norm_label": "migratedat"
-    },
-    {
-      "label": "migratedFrom",
-      "file_type": "code",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L2931",
-      "id": "policy_state_migratedfrom",
-      "community": 28,
-      "norm_label": "migratedfrom"
-    },
-    {
-      "label": "ledgerLength",
-      "file_type": "code",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L2932",
-      "id": "policy_state_ledgerlength",
-      "community": 28,
-      "norm_label": "ledgerlength"
-    },
-    {
-      "label": "ledgerHead",
-      "file_type": "code",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L2933",
-      "id": "policy_state_ledgerhead",
-      "community": 28,
-      "norm_label": "ledgerhead"
-    },
-    {
       "label": ".mcp.json",
       "file_type": "code",
       "source_file": ".mcp.json",
@@ -360,94 +171,40 @@
       "norm_label": "oo_ps4_toolchain"
     },
     {
-      "label": "ewc-fisher.json",
+      "label": "agentdb.rvf.idmap.json",
       "file_type": "code",
-      "source_file": ".swarm/ewc-fisher.json",
+      "source_file": "agentdb.rvf.idmap.json",
       "source_location": "L1",
-      "id": "swarm_ewc_fisher",
-      "community": 34,
-      "norm_label": "ewc-fisher.json"
+      "id": "agentdb_rvf_idmap",
+      "community": 49,
+      "norm_label": "agentdb.rvf.idmap.json"
     },
     {
-      "label": "version",
+      "label": "idToLabel",
       "file_type": "code",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L2",
-      "id": "swarm_ewc_fisher_version",
-      "community": 34,
-      "norm_label": "version"
+      "source_file": "agentdb.rvf.idmap.json",
+      "source_location": "L1",
+      "id": "agentdb_rvf_idmap_idtolabel",
+      "community": 49,
+      "norm_label": "idtolabel"
     },
     {
-      "label": "config",
+      "label": "labelToId",
       "file_type": "code",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L3",
-      "id": "swarm_ewc_fisher_config",
-      "community": 34,
-      "norm_label": "config"
+      "source_file": "agentdb.rvf.idmap.json",
+      "source_location": "L1",
+      "id": "agentdb_rvf_idmap_labeltoid",
+      "community": 49,
+      "norm_label": "labeltoid"
     },
     {
-      "label": "lambda",
+      "label": "nextLabel",
       "file_type": "code",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L4",
-      "id": "swarm_ewc_fisher_config_lambda",
-      "community": 34,
-      "norm_label": "lambda"
-    },
-    {
-      "label": "dimensions",
-      "file_type": "code",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L5",
-      "id": "swarm_ewc_fisher_config_dimensions",
-      "community": 34,
-      "norm_label": "dimensions"
-    },
-    {
-      "label": "fisherDecayRate",
-      "file_type": "code",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L6",
-      "id": "swarm_ewc_fisher_config_fisherdecayrate",
-      "community": 34,
-      "norm_label": "fisherdecayrate"
-    },
-    {
-      "label": "globalFisher",
-      "file_type": "code",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L8",
-      "id": "swarm_ewc_fisher_globalfisher",
-      "community": 34,
-      "norm_label": "globalfisher"
-    },
-    {
-      "label": "patterns",
-      "file_type": "code",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L394",
-      "id": "swarm_ewc_fisher_patterns",
-      "community": 34,
-      "norm_label": "patterns"
-    },
-    {
-      "label": "consolidationHistory",
-      "file_type": "code",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L395",
-      "id": "swarm_ewc_fisher_consolidationhistory",
-      "community": 34,
-      "norm_label": "consolidationhistory"
-    },
-    {
-      "label": "savedAt",
-      "file_type": "code",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L396",
-      "id": "swarm_ewc_fisher_savedat",
-      "community": 34,
-      "norm_label": "savedat"
+      "source_file": "agentdb.rvf.idmap.json",
+      "source_location": "L1",
+      "id": "agentdb_rvf_idmap_nextlabel",
+      "community": 49,
+      "norm_label": "nextlabel"
     },
     {
       "label": "bridge.c",
@@ -1589,7 +1346,7 @@
       "source_file": "ps4-app/src/net_bsd.c",
       "source_location": "L44",
       "id": "src_net_bsd_net_init",
-      "community": 1,
+      "community": 16,
       "norm_label": "net_init()"
     },
     {
@@ -2524,7 +2281,7 @@
       "source_file": "ps4_mcp/__init__.py",
       "source_location": "L1",
       "id": "ps4_mcp_init",
-      "community": 26,
+      "community": 23,
       "norm_label": "__init__.py"
     },
     {
@@ -2533,7 +2290,7 @@
       "source_file": "ps4_mcp/__init__.py",
       "source_location": "L1",
       "id": "ps4_mcp_init_rationale_1",
-      "community": 26,
+      "community": 23,
       "norm_label": "ps4 agent: servidor mcp para o claude code investigar o ps4 em tempo de execucao"
     },
     {
@@ -2542,7 +2299,7 @@
       "source_file": "ps4_mcp/__main__.py",
       "source_location": "L1",
       "id": "ps4_mcp_main",
-      "community": 20,
+      "community": 23,
       "norm_label": "__main__.py"
     },
     {
@@ -2551,7 +2308,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L1",
       "id": "ps4_mcp_bridge",
-      "community": 7,
+      "community": 24,
       "norm_label": "bridge.py"
     },
     {
@@ -2560,7 +2317,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L28",
       "id": "ps4_mcp_bridge_clean",
-      "community": 7,
+      "community": 24,
       "norm_label": "_clean()"
     },
     {
@@ -2569,7 +2326,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L28",
       "id": "ps4_mcp_bridge_py_str",
-      "community": 7,
+      "community": 24,
       "norm_label": "str"
     },
     {
@@ -2578,7 +2335,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L34",
       "id": "ps4_mcp_bridge_bridge",
-      "community": 7,
+      "community": 24,
       "norm_label": "bridge"
     },
     {
@@ -2587,7 +2344,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L35",
       "id": "ps4_mcp_bridge_bridge_init",
-      "community": 7,
+      "community": 24,
       "norm_label": ".__init__()"
     },
     {
@@ -2596,7 +2353,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L35",
       "id": "ps4_mcp_bridge_py_int",
-      "community": 7,
+      "community": 24,
       "norm_label": "int"
     },
     {
@@ -2605,7 +2362,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L35",
       "id": "ps4_mcp_bridge_py_float",
-      "community": 7,
+      "community": 24,
       "norm_label": "float"
     },
     {
@@ -2614,7 +2371,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L51",
       "id": "ps4_mcp_bridge_bridge_port",
-      "community": 7,
+      "community": 24,
       "norm_label": ".port()"
     },
     {
@@ -2623,7 +2380,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L54",
       "id": "ps4_mcp_bridge_bridge_start",
-      "community": 7,
+      "community": 24,
       "norm_label": ".start()"
     },
     {
@@ -2632,7 +2389,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L59",
       "id": "ps4_mcp_bridge_bridge_stop",
-      "community": 7,
+      "community": 24,
       "norm_label": ".stop()"
     },
     {
@@ -2641,7 +2398,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L64",
       "id": "ps4_mcp_bridge_bridge_add",
-      "community": 7,
+      "community": 24,
       "norm_label": ".add()"
     },
     {
@@ -2650,7 +2407,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L71",
       "id": "ps4_mcp_bridge_bridge_has_messages",
-      "community": 7,
+      "community": 24,
       "norm_label": ".has_messages()"
     },
     {
@@ -2659,7 +2416,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L71",
       "id": "ps4_mcp_bridge_py_bool",
-      "community": 7,
+      "community": 24,
       "norm_label": "bool"
     },
     {
@@ -2668,7 +2425,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L74",
       "id": "ps4_mcp_bridge_bridge_pop_messages",
-      "community": 7,
+      "community": 24,
       "norm_label": ".pop_messages()"
     },
     {
@@ -2677,7 +2434,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L80",
       "id": "ps4_mcp_bridge_bridge_feed_since",
-      "community": 7,
+      "community": 24,
       "norm_label": ".feed_since()"
     },
     {
@@ -2686,7 +2443,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L85",
       "id": "ps4_mcp_bridge_bridge_allowed",
-      "community": 7,
+      "community": 24,
       "norm_label": ".allowed()"
     },
     {
@@ -2695,7 +2452,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L93",
       "id": "ps4_mcp_bridge_bridge_post_message",
-      "community": 7,
+      "community": 24,
       "norm_label": "._post_message()"
     },
     {
@@ -2704,7 +2461,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L101",
       "id": "ps4_mcp_bridge_bridge_announce",
-      "community": 7,
+      "community": 24,
       "norm_label": "._announce()"
     },
     {
@@ -2713,7 +2470,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L118",
       "id": "ps4_mcp_bridge_bridge_handler",
-      "community": 7,
+      "community": 24,
       "norm_label": "._handler()"
     },
     {
@@ -2722,7 +2479,7 @@
       "source_file": "ps4_mcp/bridge.py",
       "source_location": "L1",
       "id": "ps4_mcp_bridge_rationale_1",
-      "community": 7,
+      "community": 24,
       "norm_label": "bridge pc \u2194 app \"ccps4 agent viewer\" no ps4 (fase 6, opcional, liga com ps4_brid"
     },
     {
@@ -2731,7 +2488,7 @@
       "source_file": "ps4_mcp/client.py",
       "source_location": "L1",
       "id": "ps4_mcp_client",
-      "community": 24,
+      "community": 27,
       "norm_label": "client.py"
     },
     {
@@ -2740,7 +2497,7 @@
       "source_file": "ps4_mcp/client.py",
       "source_location": "L23",
       "id": "ps4_mcp_client_ps4debugerror",
-      "community": 24,
+      "community": 28,
       "norm_label": "ps4debugerror"
     },
     {
@@ -2758,7 +2515,7 @@
       "source_file": "ps4_mcp/client.py",
       "source_location": "L27",
       "id": "ps4_mcp_client_statuserror",
-      "community": 24,
+      "community": 28,
       "norm_label": "statuserror"
     },
     {
@@ -2767,7 +2524,7 @@
       "source_file": "ps4_mcp/client.py",
       "source_location": "L28",
       "id": "ps4_mcp_client_statuserror_init",
-      "community": 17,
+      "community": 28,
       "norm_label": ".__init__()"
     },
     {
@@ -2785,7 +2542,7 @@
       "source_file": "ps4_mcp/client.py",
       "source_location": "L35",
       "id": "ps4_mcp_client_connection",
-      "community": 24,
+      "community": 17,
       "norm_label": "connection"
     },
     {
@@ -2974,7 +2731,7 @@
       "source_file": "ps4_mcp/client.py",
       "source_location": "L156",
       "id": "mapentry",
-      "community": 15,
+      "community": 13,
       "norm_label": "mapentry"
     },
     {
@@ -3037,43 +2794,43 @@
       "source_file": "ps4_mcp/client.py",
       "source_location": "L235",
       "id": "ps4_mcp_client_module_base",
-      "community": 13,
+      "community": 19,
       "norm_label": "module_base()"
     },
     {
       "label": "parse_int()",
       "file_type": "code",
       "source_file": "ps4_mcp/client.py",
-      "source_location": "L240",
+      "source_location": "L242",
       "id": "ps4_mcp_client_parse_int",
-      "community": 13,
+      "community": 19,
       "norm_label": "parse_int()"
     },
     {
       "label": "parse_address()",
       "file_type": "code",
       "source_file": "ps4_mcp/client.py",
-      "source_location": "L251",
+      "source_location": "L253",
       "id": "ps4_mcp_client_parse_address",
-      "community": 13,
+      "community": 19,
       "norm_label": "parse_address()"
     },
     {
       "label": "describe_address()",
       "file_type": "code",
       "source_file": "ps4_mcp/client.py",
-      "source_location": "L268",
+      "source_location": "L270",
       "id": "ps4_mcp_client_describe_address",
-      "community": 13,
+      "community": 19,
       "norm_label": "describe_address()"
     },
     {
       "label": "unmapped_warning()",
       "file_type": "code",
       "source_file": "ps4_mcp/client.py",
-      "source_location": "L276",
+      "source_location": "L278",
       "id": "ps4_mcp_client_unmapped_warning",
-      "community": 15,
+      "community": 13,
       "norm_label": "unmapped_warning()"
     },
     {
@@ -3082,7 +2839,7 @@
       "source_file": "ps4_mcp/client.py",
       "source_location": "L1",
       "id": "ps4_mcp_client_rationale_1",
-      "community": 24,
+      "community": 27,
       "norm_label": "cliente das primitivas do ps4debug: processos, memoria, kernel e notificacoes."
     },
     {
@@ -3091,7 +2848,7 @@
       "source_file": "ps4_mcp/client.py",
       "source_location": "L24",
       "id": "ps4_mcp_client_rationale_24",
-      "community": 24,
+      "community": 28,
       "norm_label": "falha de comunicacao ou de uso do ps4debug (mensagem pronta para o agente)."
     },
     {
@@ -3100,7 +2857,7 @@
       "source_file": "ps4_mcp/client.py",
       "source_location": "L36",
       "id": "ps4_mcp_client_rationale_36",
-      "community": 24,
+      "community": 17,
       "norm_label": "uma conexao tcp com o ps4debug (porta 744)."
     },
     {
@@ -3125,18 +2882,18 @@
       "label": "Aceita 0x412abc, 4271804, \"eboot.bin+0x12abc\" ou \"eboot.bin\" (base do m\u00f3dulo).",
       "file_type": "rationale",
       "source_file": "ps4_mcp/client.py",
-      "source_location": "L252",
-      "id": "ps4_mcp_client_rationale_252",
-      "community": 13,
+      "source_location": "L254",
+      "id": "ps4_mcp_client_rationale_254",
+      "community": 19,
       "norm_label": "aceita 0x412abc, 4271804, \"eboot.bin+0x12abc\" ou \"eboot.bin\" (base do modulo)."
     },
     {
       "label": "O payload devolve zeros fora das regi\u00f5es mapeadas; avisa para o agente n\u00e3o se en",
       "file_type": "rationale",
       "source_file": "ps4_mcp/client.py",
-      "source_location": "L277",
-      "id": "ps4_mcp_client_rationale_277",
-      "community": 15,
+      "source_location": "L279",
+      "id": "ps4_mcp_client_rationale_279",
+      "community": 13,
       "norm_label": "o payload devolve zeros fora das regioes mapeadas; avisa para o agente nao se en"
     },
     {
@@ -3199,7 +2956,7 @@
       "source_file": "ps4_mcp/config.py",
       "source_location": "L62",
       "id": "ps4_mcp_config_config",
-      "community": 24,
+      "community": 28,
       "norm_label": "config"
     },
     {
@@ -3253,7 +3010,7 @@
       "source_file": "ps4_mcp/debug.py",
       "source_location": "L1",
       "id": "ps4_mcp_debug",
-      "community": 24,
+      "community": 27,
       "norm_label": "debug.py"
     },
     {
@@ -3262,7 +3019,7 @@
       "source_file": "ps4_mcp/debug.py",
       "source_location": "L36",
       "id": "ps4_mcp_debug_bind_hint",
-      "community": 24,
+      "community": 0,
       "norm_label": "_bind_hint()"
     },
     {
@@ -3280,7 +3037,7 @@
       "source_file": "ps4_mcp/debug.py",
       "source_location": "L36",
       "id": "oserror",
-      "community": 24,
+      "community": 28,
       "norm_label": "oserror"
     },
     {
@@ -3289,7 +3046,7 @@
       "source_file": "ps4_mcp/debug.py",
       "source_location": "L36",
       "id": "ps4_mcp_debug_py_str",
-      "community": 24,
+      "community": 28,
       "norm_label": "str"
     },
     {
@@ -3316,7 +3073,7 @@
       "source_file": "ps4_mcp/debug.py",
       "source_location": "L49",
       "id": "ps4_mcp_debug_py_config",
-      "community": 24,
+      "community": 28,
       "norm_label": "config"
     },
     {
@@ -3325,7 +3082,7 @@
       "source_file": "ps4_mcp/debug.py",
       "source_location": "L49",
       "id": "ps4_mcp_debug_py_ps4debug",
-      "community": 24,
+      "community": 28,
       "norm_label": "ps4debug"
     },
     {
@@ -3343,7 +3100,7 @@
       "source_file": "ps4_mcp/debug.py",
       "source_location": "L71",
       "id": "ps4_mcp_debug_debugsession_attached",
-      "community": 0,
+      "community": 28,
       "norm_label": ".attached()"
     },
     {
@@ -3352,7 +3109,7 @@
       "source_file": "ps4_mcp/debug.py",
       "source_location": "L71",
       "id": "ps4_mcp_debug_py_bool",
-      "community": 24,
+      "community": 28,
       "norm_label": "bool"
     },
     {
@@ -3397,7 +3154,7 @@
       "source_file": "ps4_mcp/debug.py",
       "source_location": "L144",
       "id": "statuserror",
-      "community": 24,
+      "community": 28,
       "norm_label": "statuserror"
     },
     {
@@ -3442,7 +3199,7 @@
       "source_file": "ps4_mcp/debug.py",
       "source_location": "L189",
       "id": "ps4_mcp_debug_py_socket",
-      "community": 24,
+      "community": 28,
       "norm_label": "socket"
     },
     {
@@ -3451,7 +3208,7 @@
       "source_file": "ps4_mcp/debug.py",
       "source_location": "L219",
       "id": "ps4_mcp_debug_debugsession_classify",
-      "community": 21,
+      "community": 27,
       "norm_label": "._classify()"
     },
     {
@@ -3487,7 +3244,7 @@
       "source_file": "ps4_mcp/debug.py",
       "source_location": "L263",
       "id": "ps4_mcp_debug_py_float",
-      "community": 24,
+      "community": 28,
       "norm_label": "float"
     },
     {
@@ -3514,7 +3271,7 @@
       "source_file": "ps4_mcp/debug.py",
       "source_location": "L276",
       "id": "ps4_mcp_debug_py_bytes",
-      "community": 24,
+      "community": 28,
       "norm_label": "bytes"
     },
     {
@@ -3622,7 +3379,7 @@
       "source_file": "ps4_mcp/debug.py",
       "source_location": "L414",
       "id": "ps4_mcp_debug_recv_exact",
-      "community": 24,
+      "community": 28,
       "norm_label": "_recv_exact()"
     },
     {
@@ -3631,7 +3388,7 @@
       "source_file": "ps4_mcp/debug.py",
       "source_location": "L1",
       "id": "ps4_mcp_debug_rationale_1",
-      "community": 24,
+      "community": 27,
       "norm_label": "sessao de debug: attach, breakpoints, watchpoints, controle do processo e fila d"
     },
     {
@@ -3658,7 +3415,7 @@
       "source_file": "ps4_mcp/deploy.py",
       "source_location": "L26",
       "id": "ps4_mcp_deploy_deployerror",
-      "community": 22,
+      "community": 18,
       "norm_label": "deployerror"
     },
     {
@@ -3874,7 +3631,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L1",
       "id": "ps4_mcp_ftp",
-      "community": 19,
+      "community": 7,
       "norm_label": "ftp.py"
     },
     {
@@ -3883,7 +3640,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L35",
       "id": "ps4_mcp_ftp_ftperror",
-      "community": 19,
+      "community": 7,
       "norm_label": "ftperror"
     },
     {
@@ -3892,7 +3649,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L51",
       "id": "ps4_mcp_ftp_parse_list_line",
-      "community": 19,
+      "community": 7,
       "norm_label": "parse_list_line()"
     },
     {
@@ -3901,7 +3658,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L51",
       "id": "ps4_mcp_ftp_py_str",
-      "community": 19,
+      "community": 7,
       "norm_label": "str"
     },
     {
@@ -3910,7 +3667,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L82",
       "id": "ps4_mcp_ftp_clean_path",
-      "community": 19,
+      "community": 7,
       "norm_label": "_clean_path()"
     },
     {
@@ -3919,7 +3676,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L91",
       "id": "ps4_mcp_ftp_reply",
-      "community": 19,
+      "community": 7,
       "norm_label": "_reply()"
     },
     {
@@ -3928,7 +3685,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L91",
       "id": "ps4_mcp_ftp_py_baseexception",
-      "community": 19,
+      "community": 7,
       "norm_label": "baseexception"
     },
     {
@@ -3937,7 +3694,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L95",
       "id": "ps4_mcp_ftp_explain",
-      "community": 19,
+      "community": 7,
       "norm_label": "_explain()"
     },
     {
@@ -3946,7 +3703,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L107",
       "id": "ps4_mcp_ftp_consoleftp",
-      "community": 19,
+      "community": 7,
       "norm_label": "consoleftp"
     },
     {
@@ -3955,7 +3712,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L113",
       "id": "ps4_mcp_ftp_consoleftp_init",
-      "community": 19,
+      "community": 7,
       "norm_label": ".__init__()"
     },
     {
@@ -3964,7 +3721,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L113",
       "id": "ps4_mcp_ftp_py_int",
-      "community": 19,
+      "community": 7,
       "norm_label": "int"
     },
     {
@@ -3973,7 +3730,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L113",
       "id": "ps4_mcp_ftp_py_float",
-      "community": 19,
+      "community": 7,
       "norm_label": "float"
     },
     {
@@ -3982,7 +3739,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L125",
       "id": "ps4_mcp_ftp_consoleftp_list_dir",
-      "community": 19,
+      "community": 7,
       "norm_label": ".list_dir()"
     },
     {
@@ -3991,7 +3748,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L130",
       "id": "ps4_mcp_ftp_consoleftp_read_file",
-      "community": 19,
+      "community": 7,
       "norm_label": ".read_file()"
     },
     {
@@ -4000,7 +3757,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L130",
       "id": "ps4_mcp_ftp_py_bytes",
-      "community": 19,
+      "community": 7,
       "norm_label": "bytes"
     },
     {
@@ -4009,7 +3766,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L130",
       "id": "ps4_mcp_ftp_py_bool",
-      "community": 19,
+      "community": 7,
       "norm_label": "bool"
     },
     {
@@ -4018,7 +3775,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L142",
       "id": "ps4_mcp_ftp_consoleftp_download",
-      "community": 19,
+      "community": 7,
       "norm_label": ".download()"
     },
     {
@@ -4027,7 +3784,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L195",
       "id": "ps4_mcp_ftp_consoleftp_size",
-      "community": 19,
+      "community": 7,
       "norm_label": ".size()"
     },
     {
@@ -4036,7 +3793,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L218",
       "id": "ps4_mcp_ftp_consoleftp_close",
-      "community": 19,
+      "community": 7,
       "norm_label": ".close()"
     },
     {
@@ -4045,7 +3802,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L235",
       "id": "ps4_mcp_ftp_consoleftp_call",
-      "community": 19,
+      "community": 7,
       "norm_label": "._call()"
     },
     {
@@ -4054,7 +3811,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L258",
       "id": "ps4_mcp_ftp_consoleftp_connection",
-      "community": 19,
+      "community": 7,
       "norm_label": "._connection()"
     },
     {
@@ -4063,7 +3820,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L258",
       "id": "ftp",
-      "community": 19,
+      "community": 7,
       "norm_label": "ftp"
     },
     {
@@ -4072,7 +3829,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L279",
       "id": "ps4_mcp_ftp_consoleftp_connect_hint",
-      "community": 19,
+      "community": 7,
       "norm_label": "._connect_hint()"
     },
     {
@@ -4081,7 +3838,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L298",
       "id": "ps4_mcp_ftp_consoleftp_drop",
-      "community": 19,
+      "community": 7,
       "norm_label": "._drop()"
     },
     {
@@ -4090,7 +3847,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L304",
       "id": "ps4_mcp_ftp_consoleftp_list",
-      "community": 19,
+      "community": 7,
       "norm_label": "._list()"
     },
     {
@@ -4099,7 +3856,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L319",
       "id": "ps4_mcp_ftp_consoleftp_retr",
-      "community": 19,
+      "community": 7,
       "norm_label": "._retr()"
     },
     {
@@ -4108,7 +3865,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L354",
       "id": "ps4_mcp_ftp_consoleftp_finish_aborted",
-      "community": 19,
+      "community": 7,
       "norm_label": "._finish_aborted()"
     },
     {
@@ -4117,7 +3874,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L1",
       "id": "ps4_mcp_ftp_rationale_1",
-      "community": 19,
+      "community": 7,
       "norm_label": "cliente ftp para o servidor do console (goldhen, baseado no ftps4 do xerpi).  pa"
     },
     {
@@ -4126,7 +3883,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L36",
       "id": "ps4_mcp_ftp_rationale_36",
-      "community": 19,
+      "community": 7,
       "norm_label": "falha numa operacao ftp com o console; a mensagem (pt-br) ja explica o que houve"
     },
     {
@@ -4135,7 +3892,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L52",
       "id": "ps4_mcp_ftp_rationale_52",
-      "community": 19,
+      "community": 7,
       "norm_label": "interpreta uma linha de list estilo unix (formato do ftps4/goldhen, pyftpdlib, l"
     },
     {
@@ -4144,7 +3901,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L108",
       "id": "ps4_mcp_ftp_rationale_108",
-      "community": 19,
+      "community": 7,
       "norm_label": "cliente ftp do console: thread-safe (um lock), conexao preguicosa e uma reconexa"
     },
     {
@@ -4153,7 +3910,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L126",
       "id": "ps4_mcp_ftp_rationale_126",
-      "community": 19,
+      "community": 7,
       "norm_label": "lista uma pasta do console: pastas primeiro, depois por nome (ver parse_list_lin"
     },
     {
@@ -4162,7 +3919,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L131",
       "id": "ps4_mcp_ftp_rationale_131",
-      "community": 19,
+      "community": 7,
       "norm_label": "le no maximo `max_bytes` do inicio do arquivo. devolve (dados, truncado)."
     },
     {
@@ -4171,7 +3928,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L143",
       "id": "ps4_mcp_ftp_rationale_143",
-      "community": 19,
+      "community": 7,
       "norm_label": "baixa um arquivo para o pc (grava num temporario e renomeia no fim).          se"
     },
     {
@@ -4180,7 +3937,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L196",
       "id": "ps4_mcp_ftp_rationale_196",
-      "community": 19,
+      "community": 7,
       "norm_label": "tamanho do arquivo em bytes. usa size; se o servidor nao suportar, procura o arq"
     },
     {
@@ -4189,7 +3946,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L219",
       "id": "ps4_mcp_ftp_rationale_219",
-      "community": 19,
+      "community": 7,
       "norm_label": "encerra a conexao (quit). o cliente continua utilizavel: reconecta sob demanda."
     },
     {
@@ -4198,7 +3955,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L320",
       "id": "ps4_mcp_ftp_rationale_320",
-      "community": 19,
+      "community": 7,
       "norm_label": "transfere o arquivo para `sink` (ate `limit` bytes). devolve (bytes, truncado)."
     },
     {
@@ -4207,7 +3964,7 @@
       "source_file": "ps4_mcp/ftp.py",
       "source_location": "L355",
       "id": "ps4_mcp_ftp_rationale_355",
-      "community": 19,
+      "community": 7,
       "norm_label": "depois de fechar a conexao de dados no meio do retr, espera a resposta final por"
     },
     {
@@ -4531,7 +4288,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L1",
       "id": "ps4_mcp_protocol",
-      "community": 21,
+      "community": 27,
       "norm_label": "protocol.py"
     },
     {
@@ -4540,7 +4297,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L25",
       "id": "ps4_mcp_protocol_cmd",
-      "community": 24,
+      "community": 28,
       "norm_label": "cmd"
     },
     {
@@ -4549,7 +4306,7 @@
       "source_file": "",
       "source_location": "",
       "id": "intenum",
-      "community": 24,
+      "community": 28,
       "norm_label": "intenum"
     },
     {
@@ -4558,7 +4315,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L49",
       "id": "ps4_mcp_protocol_status",
-      "community": 24,
+      "community": 28,
       "norm_label": "status"
     },
     {
@@ -4567,7 +4324,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L112",
       "id": "ps4_mcp_protocol_cstr",
-      "community": 21,
+      "community": 27,
       "norm_label": "cstr()"
     },
     {
@@ -4576,7 +4333,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L112",
       "id": "ps4_mcp_protocol_py_bytes",
-      "community": 21,
+      "community": 27,
       "norm_label": "bytes"
     },
     {
@@ -4585,7 +4342,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L112",
       "id": "ps4_mcp_protocol_py_str",
-      "community": 21,
+      "community": 27,
       "norm_label": "str"
     },
     {
@@ -4594,7 +4351,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L116",
       "id": "ps4_mcp_protocol_prot_str",
-      "community": 23,
+      "community": 37,
       "norm_label": "prot_str()"
     },
     {
@@ -4603,7 +4360,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L116",
       "id": "ps4_mcp_protocol_py_int",
-      "community": 21,
+      "community": 27,
       "norm_label": "int"
     },
     {
@@ -4621,7 +4378,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L131",
       "id": "ps4_mcp_protocol_mapentry_size",
-      "community": 21,
+      "community": 17,
       "norm_label": ".size()"
     },
     {
@@ -4630,7 +4387,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L134",
       "id": "ps4_mcp_protocol_mapentry_contains",
-      "community": 21,
+      "community": 27,
       "norm_label": ".contains()"
     },
     {
@@ -4639,7 +4396,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L134",
       "id": "ps4_mcp_protocol_py_bool",
-      "community": 21,
+      "community": 27,
       "norm_label": "bool"
     },
     {
@@ -4648,7 +4405,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L138",
       "id": "ps4_mcp_protocol_parse_regs",
-      "community": 21,
+      "community": 27,
       "norm_label": "parse_regs()"
     },
     {
@@ -4657,7 +4414,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L142",
       "id": "ps4_mcp_protocol_pack_regs",
-      "community": 21,
+      "community": 27,
       "norm_label": "pack_regs()"
     },
     {
@@ -4666,7 +4423,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L147",
       "id": "ps4_mcp_protocol_interrupt",
-      "community": 21,
+      "community": 27,
       "norm_label": "interrupt"
     },
     {
@@ -4675,7 +4432,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L155",
       "id": "ps4_mcp_protocol_parse_interrupt",
-      "community": 21,
+      "community": 27,
       "norm_label": "parse_interrupt()"
     },
     {
@@ -4684,7 +4441,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L164",
       "id": "ps4_mcp_protocol_wait_status",
-      "community": 21,
+      "community": 27,
       "norm_label": "wait_status()"
     },
     {
@@ -4693,7 +4450,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L173",
       "id": "ps4_mcp_protocol_signal_name",
-      "community": 21,
+      "community": 27,
       "norm_label": "signal_name()"
     },
     {
@@ -4702,7 +4459,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L1",
       "id": "ps4_mcp_protocol_rationale_1",
-      "community": 21,
+      "community": 27,
       "norm_label": "formato de fio do ps4debug (jogolden, protocolo \"1.2\").  tudo aqui foi conferido"
     },
     {
@@ -4711,7 +4468,7 @@
       "source_file": "ps4_mcp/protocol.py",
       "source_location": "L165",
       "id": "ps4_mcp_protocol_rationale_165",
-      "community": 21,
+      "community": 27,
       "norm_label": "decodifica o status do wait4() do freebsd: (\"stopped\"|\"exited\"|\"signaled\", numer"
     },
     {
@@ -4765,7 +4522,7 @@
       "source_file": "ps4_mcp/safety.py",
       "source_location": "L29",
       "id": "ps4_mcp_safety_clamp",
-      "community": 13,
+      "community": 19,
       "norm_label": "clamp()"
     },
     {
@@ -4846,7 +4603,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L1",
       "id": "ps4_mcp_server",
-      "community": 13,
+      "community": 23,
       "norm_label": "server.py"
     },
     {
@@ -4864,7 +4621,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L57",
       "id": "ps4_mcp_server_py_str",
-      "community": 23,
+      "community": 37,
       "norm_label": "str"
     },
     {
@@ -4873,7 +4630,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L61",
       "id": "ps4_mcp_server_size",
-      "community": 23,
+      "community": 37,
       "norm_label": "_size()"
     },
     {
@@ -4882,7 +4639,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L61",
       "id": "ps4_mcp_server_py_int",
-      "community": 13,
+      "community": 37,
       "norm_label": "int"
     },
     {
@@ -4891,7 +4648,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L69",
       "id": "ps4_mcp_server_app",
-      "community": 18,
+      "community": 21,
       "norm_label": "app"
     },
     {
@@ -4900,7 +4657,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L70",
       "id": "ps4_mcp_server_app_init",
-      "community": 18,
+      "community": 7,
       "norm_label": ".__init__()"
     },
     {
@@ -4909,7 +4666,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L70",
       "id": "ps4_mcp_server_py_config",
-      "community": 18,
+      "community": 7,
       "norm_label": "config"
     },
     {
@@ -4927,7 +4684,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L103",
       "id": "ps4_mcp_server_app_bridge_state",
-      "community": 18,
+      "community": 21,
       "norm_label": ".bridge_state()"
     },
     {
@@ -4936,7 +4693,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L114",
       "id": "ps4_mcp_server_app_feed",
-      "community": 18,
+      "community": 21,
       "norm_label": "._feed()"
     },
     {
@@ -4945,7 +4702,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L126",
       "id": "ps4_mcp_server_app_read_sfo",
-      "community": 18,
+      "community": 21,
       "norm_label": ".read_sfo()"
     },
     {
@@ -4954,7 +4711,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L144",
       "id": "ps4_mcp_server_app_game_info",
-      "community": 18,
+      "community": 21,
       "norm_label": ".game_info()"
     },
     {
@@ -4963,7 +4720,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L151",
       "id": "ps4_mcp_server_app_event_snapshot",
-      "community": 15,
+      "community": 21,
       "norm_label": ".event_snapshot()"
     },
     {
@@ -4972,7 +4729,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L160",
       "id": "ps4_mcp_server_app_shutdown",
-      "community": 20,
+      "community": 23,
       "norm_label": ".shutdown()"
     },
     {
@@ -4981,7 +4738,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L173",
       "id": "ps4_mcp_server_get_app",
-      "community": 13,
+      "community": 19,
       "norm_label": "get_app()"
     },
     {
@@ -5026,7 +4783,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L222",
       "id": "ps4_mcp_server_confirm",
-      "community": 23,
+      "community": 37,
       "norm_label": "confirm()"
     },
     {
@@ -5035,7 +4792,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L222",
       "id": "context",
-      "community": 23,
+      "community": 37,
       "norm_label": "context"
     },
     {
@@ -5062,7 +4819,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L327",
       "id": "ps4_mcp_server_list_processes",
-      "community": 13,
+      "community": 23,
       "norm_label": "list_processes()"
     },
     {
@@ -5071,7 +4828,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L335",
       "id": "ps4_mcp_server_process_maps",
-      "community": 23,
+      "community": 37,
       "norm_label": "process_maps()"
     },
     {
@@ -5080,7 +4837,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L348",
       "id": "ps4_mcp_server_read_memory",
-      "community": 13,
+      "community": 19,
       "norm_label": "read_memory()"
     },
     {
@@ -5089,7 +4846,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L368",
       "id": "ps4_mcp_server_read_pointer_chain",
-      "community": 13,
+      "community": 19,
       "norm_label": "read_pointer_chain()"
     },
     {
@@ -5098,7 +4855,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L404",
       "id": "ps4_mcp_server_read_string",
-      "community": 13,
+      "community": 19,
       "norm_label": "read_string()"
     },
     {
@@ -5107,7 +4864,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L416",
       "id": "ps4_mcp_server_resolve_address",
-      "community": 13,
+      "community": 19,
       "norm_label": "resolve_address()"
     },
     {
@@ -5116,7 +4873,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L430",
       "id": "ps4_mcp_server_disassemble",
-      "community": 13,
+      "community": 19,
       "norm_label": "disassemble()"
     },
     {
@@ -5125,7 +4882,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L449",
       "id": "ps4_mcp_server_list_dir",
-      "community": 13,
+      "community": 23,
       "norm_label": "list_dir()"
     },
     {
@@ -5134,7 +4891,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L458",
       "id": "ps4_mcp_server_read_file",
-      "community": 13,
+      "community": 21,
       "norm_label": "read_file()"
     },
     {
@@ -5143,7 +4900,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L475",
       "id": "ps4_mcp_server_download_file",
-      "community": 13,
+      "community": 23,
       "norm_label": "download_file()"
     },
     {
@@ -5152,7 +4909,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L485",
       "id": "ps4_mcp_server_tail_logs",
-      "community": 13,
+      "community": 37,
       "norm_label": "tail_logs()"
     },
     {
@@ -5161,7 +4918,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L497",
       "id": "ps4_mcp_server_require_attached",
-      "community": 20,
+      "community": 37,
       "norm_label": "_require_attached()"
     },
     {
@@ -5170,7 +4927,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L505",
       "id": "ps4_mcp_server_attach",
-      "community": 13,
+      "community": 19,
       "norm_label": "attach()"
     },
     {
@@ -5179,7 +4936,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L530",
       "id": "ps4_mcp_server_detach",
-      "community": 13,
+      "community": 23,
       "norm_label": "detach()"
     },
     {
@@ -5188,7 +4945,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L539",
       "id": "ps4_mcp_server_set_breakpoint",
-      "community": 13,
+      "community": 19,
       "norm_label": "set_breakpoint()"
     },
     {
@@ -5197,7 +4954,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L554",
       "id": "ps4_mcp_server_clear_breakpoint",
-      "community": 20,
+      "community": 37,
       "norm_label": "clear_breakpoint()"
     },
     {
@@ -5206,7 +4963,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L561",
       "id": "ps4_mcp_server_set_watchpoint",
-      "community": 13,
+      "community": 37,
       "norm_label": "set_watchpoint()"
     },
     {
@@ -5215,7 +4972,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L573",
       "id": "ps4_mcp_server_clear_watchpoint",
-      "community": 20,
+      "community": 37,
       "norm_label": "clear_watchpoint()"
     },
     {
@@ -5224,7 +4981,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L580",
       "id": "ps4_mcp_server_wait_for_event",
-      "community": 13,
+      "community": 37,
       "norm_label": "wait_for_event()"
     },
     {
@@ -5233,7 +4990,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L615",
       "id": "ps4_mcp_server_get_registers",
-      "community": 20,
+      "community": 37,
       "norm_label": "get_registers()"
     },
     {
@@ -5242,7 +4999,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L630",
       "id": "ps4_mcp_server_list_threads",
-      "community": 20,
+      "community": 37,
       "norm_label": "list_threads()"
     },
     {
@@ -5251,7 +5008,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L647",
       "id": "ps4_mcp_server_step",
-      "community": 20,
+      "community": 23,
       "norm_label": "step()"
     },
     {
@@ -5260,7 +5017,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L658",
       "id": "ps4_mcp_server_resume",
-      "community": 20,
+      "community": 37,
       "norm_label": "resume()"
     },
     {
@@ -5269,7 +5026,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L664",
       "id": "ps4_mcp_server_pause",
-      "community": 20,
+      "community": 37,
       "norm_label": "pause()"
     },
     {
@@ -5278,7 +5035,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L672",
       "id": "ps4_mcp_server_dump_module",
-      "community": 23,
+      "community": 37,
       "norm_label": "dump_module()"
     },
     {
@@ -5305,7 +5062,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L716",
       "id": "ps4_mcp_server_scan",
-      "community": 23,
+      "community": 37,
       "norm_label": "_scan()"
     },
     {
@@ -5314,7 +5071,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L757",
       "id": "ps4_mcp_server_search_memory",
-      "community": 13,
+      "community": 19,
       "norm_label": "search_memory()"
     },
     {
@@ -5323,7 +5080,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L767",
       "id": "ps4_mcp_server_read_text_region",
-      "community": 13,
+      "community": 19,
       "norm_label": "read_text_region()"
     },
     {
@@ -5332,7 +5089,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L779",
       "id": "ps4_mcp_server_search_files",
-      "community": 13,
+      "community": 37,
       "norm_label": "search_files()"
     },
     {
@@ -5341,7 +5098,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L790",
       "id": "ps4_mcp_server_compare_bytes",
-      "community": 13,
+      "community": 19,
       "norm_label": "compare_bytes()"
     },
     {
@@ -5395,7 +5152,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L855",
       "id": "ps4_mcp_server_install_pkg",
-      "community": 23,
+      "community": 37,
       "norm_label": "install_pkg()"
     },
     {
@@ -5404,7 +5161,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L866",
       "id": "ps4_mcp_server_write_memory",
-      "community": 23,
+      "community": 37,
       "norm_label": "write_memory()"
     },
     {
@@ -5413,7 +5170,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L880",
       "id": "ps4_mcp_server_kill_process",
-      "community": 23,
+      "community": 37,
       "norm_label": "kill_process()"
     },
     {
@@ -5422,7 +5179,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L887",
       "id": "ps4_mcp_server_kernel_read",
-      "community": 13,
+      "community": 37,
       "norm_label": "kernel_read()"
     },
     {
@@ -5431,7 +5188,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L896",
       "id": "ps4_mcp_server_main",
-      "community": 20,
+      "community": 23,
       "norm_label": "main()"
     },
     {
@@ -5440,7 +5197,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L1",
       "id": "ps4_mcp_server_rationale_1",
-      "community": 13,
+      "community": 23,
       "norm_label": "servidor mcp do ps4 agent: as ferramentas das secoes 4 e 11 do plano para o clau"
     },
     {
@@ -5458,7 +5215,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L223",
       "id": "ps4_mcp_server_rationale_223",
-      "community": 23,
+      "community": 37,
       "norm_label": "confirmacao manual por chamada (secao 4.3): pergunta ao usuario pelo cliente mcp"
     },
     {
@@ -5485,7 +5242,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L328",
       "id": "ps4_mcp_server_rationale_328",
-      "community": 13,
+      "community": 23,
       "norm_label": "lista os processos do ps4 (pid e nome). jogos e homebrew aparecem como eboot.bin"
     },
     {
@@ -5494,7 +5251,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L336",
       "id": "ps4_mcp_server_rationale_336",
-      "community": 23,
+      "community": 37,
       "norm_label": "regioes de memoria do processo: inicio-fim, tamanho, protecao (rwx) e nome do mo"
     },
     {
@@ -5503,7 +5260,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L349",
       "id": "ps4_mcp_server_rationale_349",
-      "community": 13,
+      "community": 19,
       "norm_label": "le memoria do processo. address: 0x412abc, decimal ou \"eboot.bin+0x12abc\". ate p"
     },
     {
@@ -5512,7 +5269,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L369",
       "id": "ps4_mcp_server_rationale_369",
-      "community": 13,
+      "community": 19,
       "norm_label": "segue uma cadeia de ponteiros: le o ponteiro em base; para cada offset, soma ao"
     },
     {
@@ -5521,7 +5278,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L405",
       "id": "ps4_mcp_server_rationale_405",
-      "community": 13,
+      "community": 19,
       "norm_label": "le uma string terminada em zero. encoding: utf-8, utf-16le, shift_jis, latin-1."
     },
     {
@@ -5530,7 +5287,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L417",
       "id": "ps4_mcp_server_rationale_417",
-      "community": 13,
+      "community": 19,
       "norm_label": "converte endereco de execucao em modulo+deslocamento (e vice-versa, com \"modulo+"
     },
     {
@@ -5539,7 +5296,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L431",
       "id": "ps4_mcp_server_rationale_431",
-      "community": 13,
+      "community": 19,
       "norm_label": "disassembly x86-64 a partir do endereco (sem precisar do ghidra). breakpoints ar"
     },
     {
@@ -5548,7 +5305,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L450",
       "id": "ps4_mcp_server_rationale_450",
-      "community": 13,
+      "community": 23,
       "norm_label": "lista uma pasta do console via ftp (ex.: /mnt/sandbox, /user/app, /data). jogos"
     },
     {
@@ -5557,7 +5314,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L459",
       "id": "ps4_mcp_server_rationale_459",
-      "community": 13,
+      "community": 21,
       "norm_label": "le um arquivo do console via ftp. mode: auto (texto se parecer texto, senao hex)"
     },
     {
@@ -5566,7 +5323,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L476",
       "id": "ps4_mcp_server_rationale_476",
-      "community": 13,
+      "community": 23,
       "norm_label": "baixa um arquivo do console para downloads/ no pc (ex.: assets, saves, binarios"
     },
     {
@@ -5575,7 +5332,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L486",
       "id": "ps4_mcp_server_rationale_486",
-      "community": 13,
+      "community": 37,
       "norm_label": "ultimas n linhas de log do console (klog). grep: trecho sem diferenciar maiuscul"
     },
     {
@@ -5584,7 +5341,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L506",
       "id": "ps4_mcp_server_rationale_506",
-      "community": 13,
+      "community": 19,
       "norm_label": "inicia a sessao de debug no processo (pid=0 escolhe o unico eboot.bin). o proces"
     },
     {
@@ -5593,7 +5350,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L531",
       "id": "ps4_mcp_server_rationale_531",
-      "community": 13,
+      "community": 23,
       "norm_label": "encerra a sessao de debug: o ps4debug restaura os bytes dos breakpoints, limpa o"
     },
     {
@@ -5602,7 +5359,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L540",
       "id": "ps4_mcp_server_rationale_540",
-      "community": 13,
+      "community": 19,
       "norm_label": "breakpoint de software (0xcc) num endereco de codigo: \"eboot.bin+0x12abc\" ou 0x."
     },
     {
@@ -5611,7 +5368,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L555",
       "id": "ps4_mcp_server_rationale_555",
-      "community": 20,
+      "community": 37,
       "norm_label": "remove o breakpoint (o ps4debug devolve o byte original)."
     },
     {
@@ -5620,7 +5377,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L562",
       "id": "ps4_mcp_server_rationale_562",
-      "community": 13,
+      "community": 37,
       "norm_label": "watchpoint de hardware (dr0\u2013dr3, max. 4). mode: write, rw ou exec (exec exige si"
     },
     {
@@ -5629,7 +5386,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L581",
       "id": "ps4_mcp_server_rationale_581",
-      "community": 13,
+      "community": 37,
       "norm_label": "bloqueia ate um breakpoint, watchpoint ou crash disparar (ou chegar mensagem do"
     },
     {
@@ -5638,7 +5395,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L616",
       "id": "ps4_mcp_server_rationale_616",
-      "community": 20,
+      "community": 37,
       "norm_label": "registradores de uma thread (thread_id=0 usa a thread do ultimo evento). o proce"
     },
     {
@@ -5647,7 +5404,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L631",
       "id": "ps4_mcp_server_rationale_631",
-      "community": 20,
+      "community": 37,
       "norm_label": "threads do processo anexado (lwpid, prioridade, nome)."
     },
     {
@@ -5656,7 +5413,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L648",
       "id": "ps4_mcp_server_rationale_648",
-      "community": 20,
+      "community": 23,
       "norm_label": "executa uma instrucao (processo precisa estar pausado) e devolve o snapshot do n"
     },
     {
@@ -5665,7 +5422,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L659",
       "id": "ps4_mcp_server_rationale_659",
-      "community": 20,
+      "community": 37,
       "norm_label": "continua a execucao do processo pausado."
     },
     {
@@ -5674,7 +5431,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L665",
       "id": "ps4_mcp_server_rationale_665",
-      "community": 20,
+      "community": 37,
       "norm_label": "pausa o processo (sigstop) para inspecionar threads e registradores."
     },
     {
@@ -5683,7 +5440,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L673",
       "id": "ps4_mcp_server_rationale_673",
-      "community": 23,
+      "community": 37,
       "norm_label": "dumpa as regioes de um modulo (decifrado, na memoria) num elf64 com os enderecos"
     },
     {
@@ -5692,7 +5449,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L759",
       "id": "ps4_mcp_server_rationale_759",
-      "community": 13,
+      "community": 19,
       "norm_label": "procura uma frase (ex.: a legenda na tela) na memoria do jogo. encoding auto = u"
     },
     {
@@ -5701,7 +5458,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L768",
       "id": "ps4_mcp_server_rationale_768",
-      "community": 13,
+      "community": 19,
       "norm_label": "le um bloco e decodifica como texto mostrando codigos de controle (<0a>, <001f>."
     },
     {
@@ -5710,7 +5467,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L780",
       "id": "ps4_mcp_server_rationale_780",
-      "community": 13,
+      "community": 37,
       "norm_label": "procura a frase nos arquivos extraidos do jogo no pc (pasta ou arquivo local), e"
     },
     {
@@ -5719,7 +5476,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L792",
       "id": "ps4_mcp_server_rationale_792",
-      "community": 13,
+      "community": 19,
       "norm_label": "compara bytes da memoria com um arquivo do pc no offset dado, para entender a tr"
     },
     {
@@ -5773,7 +5530,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L856",
       "id": "ps4_mcp_server_rationale_856",
-      "community": 23,
+      "community": 37,
       "norm_label": "instala um .pkg no ps4 pelo remote package installer (porta 12800, precisa estar"
     },
     {
@@ -5782,7 +5539,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L867",
       "id": "ps4_mcp_server_rationale_867",
-      "community": 23,
+      "community": 37,
       "norm_label": "escreve bytes na memoria do processo. pode travar o jogo. pede confirmacao manua"
     },
     {
@@ -5791,7 +5548,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L881",
       "id": "ps4_mcp_server_rationale_881",
-      "community": 23,
+      "community": 37,
       "norm_label": "mata o processo anexado (sigkill). pede confirmacao manual."
     },
     {
@@ -5800,7 +5557,7 @@
       "source_file": "ps4_mcp/server.py",
       "source_location": "L888",
       "id": "ps4_mcp_server_rationale_888",
-      "community": 13,
+      "community": 37,
       "norm_label": "le memoria do kernel. endereco invalido causa kernel panic. pede confirmacao man"
     },
     {
@@ -5998,7 +5755,7 @@
       "source_file": "ps4_mcp/snapshot.py",
       "source_location": "L84",
       "id": "ps4_mcp_snapshot_py_ps4debug",
-      "community": 15,
+      "community": 17,
       "norm_label": "ps4debug"
     },
     {
@@ -6380,6 +6137,78 @@
       "norm_label": "compara bytes lidos da memoria com o arquivo no `offset` (mesmo tamanho).      o"
     },
     {
+      "label": "bench_read.py",
+      "file_type": "code",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L1",
+      "id": "scripts_bench_read",
+      "community": 25,
+      "norm_label": "bench_read.py"
+    },
+    {
+      "label": "bench_debug()",
+      "file_type": "code",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L25",
+      "id": "scripts_bench_read_bench_debug",
+      "community": 25,
+      "norm_label": "bench_debug()"
+    },
+    {
+      "label": "str",
+      "file_type": "code",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L25",
+      "id": "scripts_bench_read_py_str",
+      "community": 25,
+      "norm_label": "str"
+    },
+    {
+      "label": "int",
+      "file_type": "code",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L25",
+      "id": "scripts_bench_read_py_int",
+      "community": 25,
+      "norm_label": "int"
+    },
+    {
+      "label": "float",
+      "file_type": "code",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L25",
+      "id": "scripts_bench_read_py_float",
+      "community": 25,
+      "norm_label": "float"
+    },
+    {
+      "label": "bench_ftp()",
+      "file_type": "code",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L40",
+      "id": "scripts_bench_read_bench_ftp",
+      "community": 25,
+      "norm_label": "bench_ftp()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L62",
+      "id": "scripts_bench_read_main",
+      "community": 25,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Baixa at\u00e9 `total` bytes do maior arquivo em /system/common/lib (sempre existe).",
+      "file_type": "rationale",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L41",
+      "id": "scripts_bench_read_rationale_41",
+      "community": 25,
+      "norm_label": "baixa ate `total` bytes do maior arquivo em /system/common/lib (sempre existe)."
+    },
+    {
       "label": "fase0_smoke.py",
       "file_type": "code",
       "source_file": "scripts/fase0_smoke.py",
@@ -6394,7 +6223,7 @@
       "source_file": "scripts/fase0_smoke.py",
       "source_location": "L22",
       "id": "scripts_fase0_smoke_main",
-      "community": 25,
+      "community": 7,
       "norm_label": "main()"
     },
     {
@@ -6403,7 +6232,7 @@
       "source_file": "scripts/fase0_smoke.py",
       "source_location": "L22",
       "id": "scripts_fase0_smoke_py_int",
-      "community": 19,
+      "community": 7,
       "norm_label": "int"
     },
     {
@@ -6561,6 +6390,339 @@
       "id": "scripts_install_openorbis_cleanup",
       "community": 31,
       "norm_label": "cleanup()"
+    },
+    {
+      "label": "build_patch.py",
+      "file_type": "code",
+      "source_file": "scripts/kh3/build_patch.py",
+      "source_location": "L1",
+      "id": "kh3_build_patch",
+      "community": 44,
+      "norm_label": "build_patch.py"
+    },
+    {
+      "label": "pkgtool()",
+      "file_type": "code",
+      "source_file": "scripts/kh3/build_patch.py",
+      "source_location": "L53",
+      "id": "kh3_build_patch_pkgtool",
+      "community": 44,
+      "norm_label": "pkgtool()"
+    },
+    {
+      "label": "str",
+      "file_type": "code",
+      "source_file": "scripts/kh3/build_patch.py",
+      "source_location": "L53",
+      "id": "scripts_kh3_build_patch_py_str",
+      "community": 44,
+      "norm_label": "str"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts/kh3/build_patch.py",
+      "source_location": "L64",
+      "id": "kh3_build_patch_main",
+      "community": 44,
+      "norm_label": "main()"
+    },
+    {
+      "label": "int",
+      "file_type": "code",
+      "source_file": "scripts/kh3/build_patch.py",
+      "source_location": "L64",
+      "id": "scripts_kh3_build_patch_py_int",
+      "community": 44,
+      "norm_label": "int"
+    },
+    {
+      "label": "find_aes_ascii.py",
+      "file_type": "code",
+      "source_file": "scripts/kh3/find_aes_ascii.py",
+      "source_location": "L1",
+      "id": "kh3_find_aes_ascii",
+      "community": 27,
+      "norm_label": "find_aes_ascii.py"
+    },
+    {
+      "label": "ok()",
+      "file_type": "code",
+      "source_file": "scripts/kh3/find_aes_ascii.py",
+      "source_location": "L15",
+      "id": "kh3_find_aes_ascii_ok",
+      "community": 27,
+      "norm_label": "ok()"
+    },
+    {
+      "label": "Testa como chave AES toda sequ\u00eancia de 32 caracteres ASCII imprim\u00edveis do eboot",
+      "file_type": "rationale",
+      "source_file": "scripts/kh3/find_aes_ascii.py",
+      "source_location": "L1",
+      "id": "kh3_find_aes_ascii_rationale_1",
+      "community": 27,
+      "norm_label": "testa como chave aes toda sequencia de 32 caracteres ascii imprimiveis do eboot"
+    },
+    {
+      "label": "kh3_find.py",
+      "file_type": "code",
+      "source_file": "scripts/kh3/kh3_find.py",
+      "source_location": "L1",
+      "id": "kh3_kh3_find",
+      "community": 40,
+      "norm_label": "kh3_find.py"
+    },
+    {
+      "label": "Retry",
+      "file_type": "code",
+      "source_file": "scripts/kh3/kh3_find.py",
+      "source_location": "L15",
+      "id": "kh3_kh3_find_retry",
+      "community": 40,
+      "norm_label": "retry"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "scripts/kh3/kh3_find.py",
+      "source_location": "L17",
+      "id": "kh3_kh3_find_retry_init",
+      "community": 40,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".__getattr__()",
+      "file_type": "code",
+      "source_file": "scripts/kh3/kh3_find.py",
+      "source_location": "L20",
+      "id": "kh3_kh3_find_retry_getattr",
+      "community": 40,
+      "norm_label": ".__getattr__()"
+    },
+    {
+      "label": "Procura textos na mem\u00f3ria do KH3 pulando MiBs zerados (amostra de 4 KiB por MiB)",
+      "file_type": "rationale",
+      "source_file": "scripts/kh3/kh3_find.py",
+      "source_location": "L1",
+      "id": "kh3_kh3_find_rationale_1",
+      "community": 40,
+      "norm_label": "procura textos na memoria do kh3 pulando mibs zerados (amostra de 4 kib por mib)"
+    },
+    {
+      "label": "Cliente que reconecta e repete a chamada quando o link cai (cabo com mau contato",
+      "file_type": "rationale",
+      "source_file": "scripts/kh3/kh3_find.py",
+      "source_location": "L16",
+      "id": "kh3_kh3_find_rationale_16",
+      "community": 40,
+      "norm_label": "cliente que reconecta e repete a chamada quando o link cai (cabo com mau contato"
+    },
+    {
+      "label": "kh3_mod.py",
+      "file_type": "code",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L1",
+      "id": "kh3_kh3_mod",
+      "community": 34,
+      "norm_label": "kh3_mod.py"
+    },
+    {
+      "label": "read_locres()",
+      "file_type": "code",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L11",
+      "id": "kh3_kh3_mod_read_locres",
+      "community": 34,
+      "norm_label": "read_locres()"
+    },
+    {
+      "label": "bytes",
+      "file_type": "code",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L11",
+      "id": "scripts_kh3_kh3_mod_py_bytes",
+      "community": 34,
+      "norm_label": "bytes"
+    },
+    {
+      "label": "fstr()",
+      "file_type": "code",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L34",
+      "id": "kh3_kh3_mod_fstr",
+      "community": 34,
+      "norm_label": "fstr()"
+    },
+    {
+      "label": "str",
+      "file_type": "code",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L34",
+      "id": "scripts_kh3_kh3_mod_py_str",
+      "community": 34,
+      "norm_label": "str"
+    },
+    {
+      "label": "bool",
+      "file_type": "code",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L34",
+      "id": "scripts_kh3_kh3_mod_py_bool",
+      "community": 34,
+      "norm_label": "bool"
+    },
+    {
+      "label": "write_locres()",
+      "file_type": "code",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L40",
+      "id": "kh3_kh3_mod_write_locres",
+      "community": 34,
+      "norm_label": "write_locres()"
+    },
+    {
+      "label": "pak_v4()",
+      "file_type": "code",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L51",
+      "id": "kh3_kh3_mod_pak_v4",
+      "community": 34,
+      "norm_label": "pak_v4()"
+    },
+    {
+      "label": "Troca strings de um .locres (v1) e empacota num pak UE4 v4 sem criptografia. Uso",
+      "file_type": "rationale",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L1",
+      "id": "kh3_kh3_mod_rationale_1",
+      "community": 34,
+      "norm_label": "troca strings de um .locres (v1) e empacota num pak ue4 v4 sem criptografia. uso"
+    },
+    {
+      "label": "utf16=True grava todo FString em UTF-16, como o KH3 faz; False usa ANSI quando o",
+      "file_type": "rationale",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L41",
+      "id": "kh3_kh3_mod_rationale_41",
+      "community": 34,
+      "norm_label": "utf16=true grava todo fstring em utf-16, como o kh3 faz; false usa ansi quando o"
+    },
+    {
+      "label": "pak_extract.py",
+      "file_type": "code",
+      "source_file": "scripts/kh3/pak_extract.py",
+      "source_location": "L1",
+      "id": "kh3_pak_extract",
+      "community": 50,
+      "norm_label": "pak_extract.py"
+    },
+    {
+      "label": "ftp_range()",
+      "file_type": "code",
+      "source_file": "scripts/kh3/pak_extract.py",
+      "source_location": "L14",
+      "id": "kh3_pak_extract_ftp_range",
+      "community": 50,
+      "norm_label": "ftp_range()"
+    },
+    {
+      "label": "Extrai arquivos de um pak UE4 v4 pelo FTP. Uso: pak_extract.py <pak> <index.json",
+      "file_type": "rationale",
+      "source_file": "scripts/kh3/pak_extract.py",
+      "source_location": "L1",
+      "id": "kh3_pak_extract_rationale_1",
+      "community": 50,
+      "norm_label": "extrai arquivos de um pak ue4 v4 pelo ftp. uso: pak_extract.py <pak> <index.json"
+    },
+    {
+      "label": "pak_index.py",
+      "file_type": "code",
+      "source_file": "scripts/kh3/pak_index.py",
+      "source_location": "L1",
+      "id": "kh3_pak_index",
+      "community": 34,
+      "norm_label": "pak_index.py"
+    },
+    {
+      "label": "ftp_range()",
+      "file_type": "code",
+      "source_file": "scripts/kh3/pak_index.py",
+      "source_location": "L14",
+      "id": "kh3_pak_index_ftp_range",
+      "community": 34,
+      "norm_label": "ftp_range()"
+    },
+    {
+      "label": "u()",
+      "file_type": "code",
+      "source_file": "scripts/kh3/pak_index.py",
+      "source_location": "L36",
+      "id": "kh3_pak_index_u",
+      "community": 34,
+      "norm_label": "u()"
+    },
+    {
+      "label": "fstr()",
+      "file_type": "code",
+      "source_file": "scripts/kh3/pak_index.py",
+      "source_location": "L39",
+      "id": "kh3_pak_index_fstr",
+      "community": 34,
+      "norm_label": "fstr()"
+    },
+    {
+      "label": "Baixa e decifra o \u00edndice de um pak UE4 (v4) pelo FTP e lista os arquivos. Uso: p",
+      "file_type": "rationale",
+      "source_file": "scripts/kh3/pak_index.py",
+      "source_location": "L1",
+      "id": "kh3_pak_index_rationale_1",
+      "community": 34,
+      "norm_label": "baixa e decifra o indice de um pak ue4 (v4) pelo ftp e lista os arquivos. uso: p"
+    },
+    {
+      "label": "trace_pak_mount.py",
+      "file_type": "code",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L1",
+      "id": "kh3_trace_pak_mount",
+      "community": 27,
+      "norm_label": "trace_pak_mount.py"
+    },
+    {
+      "label": "wstr()",
+      "file_type": "code",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L27",
+      "id": "kh3_trace_pak_mount_wstr",
+      "community": 64,
+      "norm_label": "wstr()"
+    },
+    {
+      "label": "int",
+      "file_type": "code",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L27",
+      "id": "scripts_kh3_trace_pak_mount_py_int",
+      "community": 64,
+      "norm_label": "int"
+    },
+    {
+      "label": "str",
+      "file_type": "code",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L27",
+      "id": "scripts_kh3_trace_pak_mount_py_str",
+      "community": 64,
+      "norm_label": "str"
+    },
+    {
+      "label": "eboot_pids()",
+      "file_type": "code",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L32",
+      "id": "kh3_trace_pak_mount_eboot_pids",
+      "community": 64,
+      "norm_label": "eboot_pids()"
     },
     {
       "label": "metrics.py",
@@ -6937,7 +7099,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L216",
       "id": "tests_fakes_fake_ps4debug_py_bytes",
-      "community": 14,
+      "community": 26,
       "norm_label": "bytes"
     },
     {
@@ -6946,7 +7108,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L223",
       "id": "fakes_fake_ps4debug_page_trunc",
-      "community": 40,
+      "community": 11,
       "norm_label": "page_trunc()"
     },
     {
@@ -6964,7 +7126,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L227",
       "id": "fakes_fake_ps4debug_page_round",
-      "community": 40,
+      "community": 11,
       "norm_label": "page_round()"
     },
     {
@@ -7000,7 +7162,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L239",
       "id": "tests_fakes_fake_ps4debug_py_bool",
-      "community": 12,
+      "community": 14,
       "norm_label": "bool"
     },
     {
@@ -7036,7 +7198,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L256",
       "id": "fakes_fake_ps4debug_insn_length",
-      "community": 14,
+      "community": 26,
       "norm_label": "insn_length()"
     },
     {
@@ -7045,7 +7207,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L263",
       "id": "fakes_fake_ps4debug_default_fpregs",
-      "community": 12,
+      "community": 26,
       "norm_label": "default_fpregs()"
     },
     {
@@ -7054,7 +7216,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L263",
       "id": "tests_fakes_fake_ps4debug_py_bytearray",
-      "community": 14,
+      "community": 26,
       "norm_label": "bytearray"
     },
     {
@@ -7072,7 +7234,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L275",
       "id": "fakes_fake_ps4debug_hang",
-      "community": 6,
+      "community": 20,
       "norm_label": "_hang"
     },
     {
@@ -7108,7 +7270,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L300",
       "id": "fakes_fake_ps4debug_fakethread_pack_regs",
-      "community": 14,
+      "community": 26,
       "norm_label": ".pack_regs()"
     },
     {
@@ -7117,7 +7279,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L305",
       "id": "fakes_fake_ps4debug_check_regs",
-      "community": 11,
+      "community": 35,
       "norm_label": "_check_regs()"
     },
     {
@@ -7135,7 +7297,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L315",
       "id": "fakes_fake_ps4debug_mapping_init",
-      "community": 11,
+      "community": 26,
       "norm_label": ".__init__()"
     },
     {
@@ -7162,7 +7324,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L342",
       "id": "fakes_fake_ps4debug_fakeprocess_map",
-      "community": 40,
+      "community": 11,
       "norm_label": ".map()"
     },
     {
@@ -7171,7 +7333,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L356",
       "id": "fakes_fake_ps4debug_fakeprocess_load_elf",
-      "community": 40,
+      "community": 11,
       "norm_label": ".load_elf()"
     },
     {
@@ -7198,7 +7360,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L398",
       "id": "fakes_fake_ps4debug_fakeprocess_read",
-      "community": 14,
+      "community": 26,
       "norm_label": ".read()"
     },
     {
@@ -7207,7 +7369,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L408",
       "id": "fakes_fake_ps4debug_fakeprocess_write",
-      "community": 40,
+      "community": 26,
       "norm_label": ".write()"
     },
     {
@@ -7216,7 +7378,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L422",
       "id": "fakes_fake_ps4debug_fakeprocess_alive",
-      "community": 12,
+      "community": 14,
       "norm_label": ".alive()"
     },
     {
@@ -7261,7 +7423,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L456",
       "id": "fakes_fake_ps4debug_fakeprocess_trace_stop",
-      "community": 11,
+      "community": 35,
       "norm_label": "._trace_stop()"
     },
     {
@@ -7279,7 +7441,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L473",
       "id": "fakes_fake_ps4debug_fakeprocess_wait4",
-      "community": 12,
+      "community": 26,
       "norm_label": "._wait4()"
     },
     {
@@ -7342,7 +7504,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L518",
       "id": "fakes_fake_ps4debug_fakeps4debug",
-      "community": 6,
+      "community": 20,
       "norm_label": "fakeps4debug"
     },
     {
@@ -7351,7 +7513,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L521",
       "id": "fakes_fake_ps4debug_fakeps4debug_init",
-      "community": 12,
+      "community": 14,
       "norm_label": ".__init__()"
     },
     {
@@ -7360,7 +7522,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L521",
       "id": "tests_fakes_fake_ps4debug_py_float",
-      "community": 12,
+      "community": 14,
       "norm_label": "float"
     },
     {
@@ -7378,7 +7540,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L575",
       "id": "fakes_fake_ps4debug_fakeps4debug_start",
-      "community": 14,
+      "community": 20,
       "norm_label": ".start()"
     },
     {
@@ -7387,7 +7549,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L592",
       "id": "fakes_fake_ps4debug_fakeps4debug_stop",
-      "community": 6,
+      "community": 20,
       "norm_label": ".stop()"
     },
     {
@@ -7396,7 +7558,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L599",
       "id": "fakes_fake_ps4debug_fakeps4debug_enter",
-      "community": 14,
+      "community": 20,
       "norm_label": ".__enter__()"
     },
     {
@@ -7405,7 +7567,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L602",
       "id": "fakes_fake_ps4debug_fakeps4debug_exit",
-      "community": 6,
+      "community": 20,
       "norm_label": ".__exit__()"
     },
     {
@@ -7414,7 +7576,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L607",
       "id": "fakes_fake_ps4debug_fakeps4debug_alive",
-      "community": 12,
+      "community": 14,
       "norm_label": ".alive()"
     },
     {
@@ -7459,7 +7621,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L642",
       "id": "fakes_fake_ps4debug_fakeps4debug_process_state",
-      "community": 11,
+      "community": 20,
       "norm_label": ".process_state()"
     },
     {
@@ -7477,7 +7639,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L654",
       "id": "fakes_fake_ps4debug_fakeps4debug_wait_for",
-      "community": 12,
+      "community": 14,
       "norm_label": ".wait_for()"
     },
     {
@@ -7486,7 +7648,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L663",
       "id": "fakes_fake_ps4debug_fakeps4debug_attached_process",
-      "community": 11,
+      "community": 35,
       "norm_label": "._attached_process()"
     },
     {
@@ -7495,7 +7657,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L674",
       "id": "fakes_fake_ps4debug_fakeps4debug_event_thread",
-      "community": 11,
+      "community": 35,
       "norm_label": "._event_thread()"
     },
     {
@@ -7504,7 +7666,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L685",
       "id": "fakes_fake_ps4debug_fakeps4debug_hit_breakpoint",
-      "community": 11,
+      "community": 35,
       "norm_label": ".hit_breakpoint()"
     },
     {
@@ -7513,7 +7675,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L702",
       "id": "fakes_fake_ps4debug_fakeps4debug_hit_watchpoint",
-      "community": 11,
+      "community": 35,
       "norm_label": ".hit_watchpoint()"
     },
     {
@@ -7522,7 +7684,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L722",
       "id": "fakes_fake_ps4debug_fakeps4debug_raise_signal",
-      "community": 11,
+      "community": 35,
       "norm_label": ".raise_signal()"
     },
     {
@@ -7531,7 +7693,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L739",
       "id": "fakes_fake_ps4debug_fakeps4debug_exit_process",
-      "community": 11,
+      "community": 35,
       "norm_label": ".exit_process()"
     },
     {
@@ -7540,7 +7702,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L754",
       "id": "fakes_fake_ps4debug_fakeps4debug_wait_interrupts",
-      "community": 12,
+      "community": 14,
       "norm_label": ".wait_interrupts()"
     },
     {
@@ -7549,7 +7711,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L758",
       "id": "fakes_fake_ps4debug_fakeps4debug_spawn",
-      "community": 14,
+      "community": 20,
       "norm_label": "._spawn()"
     },
     {
@@ -7558,7 +7720,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L764",
       "id": "fakes_fake_ps4debug_fakeps4debug_shutdown_sockets",
-      "community": 6,
+      "community": 20,
       "norm_label": "._shutdown_sockets()"
     },
     {
@@ -7567,7 +7729,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L782",
       "id": "fakes_fake_ps4debug_fakeps4debug_crash",
-      "community": 6,
+      "community": 20,
       "norm_label": "._crash()"
     },
     {
@@ -7576,7 +7738,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L791",
       "id": "fakes_fake_ps4debug_fakeps4debug_reboot",
-      "community": 6,
+      "community": 20,
       "norm_label": "._reboot()"
     },
     {
@@ -7594,7 +7756,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L798",
       "id": "tests_fakes_fake_ps4debug_py_socket",
-      "community": 14,
+      "community": 26,
       "norm_label": "socket"
     },
     {
@@ -7612,7 +7774,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L808",
       "id": "fakes_fake_ps4debug_fakeps4debug_recv_forced",
-      "community": 6,
+      "community": 26,
       "norm_label": "._recv_forced()"
     },
     {
@@ -7621,7 +7783,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L822",
       "id": "fakes_fake_ps4debug_fakeps4debug_recv_header",
-      "community": 14,
+      "community": 26,
       "norm_label": "._recv_header()"
     },
     {
@@ -7630,7 +7792,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L847",
       "id": "fakes_fake_ps4debug_fakeps4debug_accept_loop",
-      "community": 14,
+      "community": 20,
       "norm_label": "._accept_loop()"
     },
     {
@@ -7639,7 +7801,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L873",
       "id": "fakes_fake_ps4debug_fakeps4debug_broadcast_loop",
-      "community": 6,
+      "community": 20,
       "norm_label": "._broadcast_loop()"
     },
     {
@@ -7648,7 +7810,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L887",
       "id": "fakes_fake_ps4debug_fakeps4debug_handle_client",
-      "community": 14,
+      "community": 26,
       "norm_label": "._handle_client()"
     },
     {
@@ -7657,7 +7819,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L931",
       "id": "fakes_fake_ps4debug_fakeps4debug_log",
-      "community": 14,
+      "community": 26,
       "norm_label": "._log()"
     },
     {
@@ -7675,7 +7837,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L954",
       "id": "fakes_fake_ps4debug_fakeps4debug_cmd_handler",
-      "community": 12,
+      "community": 26,
       "norm_label": "._cmd_handler()"
     },
     {
@@ -7693,7 +7855,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L985",
       "id": "fakes_fake_ps4debug_fakeps4debug_rw",
-      "community": 14,
+      "community": 26,
       "norm_label": "._rw()"
     },
     {
@@ -7702,7 +7864,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1011",
       "id": "fakes_fake_ps4debug_fakeps4debug_read_mem",
-      "community": 14,
+      "community": 26,
       "norm_label": "._read_mem()"
     },
     {
@@ -7720,7 +7882,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1031",
       "id": "fakes_fake_ps4debug_fakeps4debug_proc_vm_map",
-      "community": 6,
+      "community": 26,
       "norm_label": "._proc_vm_map()"
     },
     {
@@ -7756,7 +7918,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1078",
       "id": "fakes_fake_ps4debug_fakeps4debug_proc_write",
-      "community": 6,
+      "community": 26,
       "norm_label": "._proc_write()"
     },
     {
@@ -7810,7 +7972,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1205",
       "id": "fakes_fake_ps4debug_fakeps4debug_proc_protect",
-      "community": 6,
+      "community": 11,
       "norm_label": "._proc_protect()"
     },
     {
@@ -7837,7 +7999,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1247",
       "id": "fakes_fake_ps4debug_fakeps4debug_proc_free",
-      "community": 6,
+      "community": 11,
       "norm_label": "._proc_free()"
     },
     {
@@ -7846,7 +8008,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1261",
       "id": "fakes_fake_ps4debug_fakeps4debug_proc_scan",
-      "community": 6,
+      "community": 26,
       "norm_label": "._proc_scan()"
     },
     {
@@ -7900,7 +8062,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1402",
       "id": "fakes_fake_ps4debug_fakeps4debug_debug_cleanup",
-      "community": 14,
+      "community": 26,
       "norm_label": "._debug_cleanup()"
     },
     {
@@ -7981,7 +8143,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1626",
       "id": "fakes_fake_ps4debug_fakeps4debug_debug_singlestep",
-      "community": 11,
+      "community": 6,
       "norm_label": "._debug_singlestep()"
     },
     {
@@ -7990,7 +8152,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1650",
       "id": "fakes_fake_ps4debug_fakeps4debug_check_debug_interrupt",
-      "community": 14,
+      "community": 26,
       "norm_label": "._check_debug_interrupt()"
     },
     {
@@ -7999,7 +8161,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1700",
       "id": "fakes_fake_ps4debug_fakeps4debug_send_interrupt",
-      "community": 14,
+      "community": 26,
       "norm_label": "._send_interrupt()"
     },
     {
@@ -8008,7 +8170,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1721",
       "id": "fakes_fake_ps4debug_fakeps4debug_kern_range_ok",
-      "community": 6,
+      "community": 20,
       "norm_label": "._kern_range_ok()"
     },
     {
@@ -8026,7 +8188,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1729",
       "id": "fakes_fake_ps4debug_fakeps4debug_kern_read",
-      "community": 6,
+      "community": 20,
       "norm_label": "._kern_read()"
     },
     {
@@ -8035,7 +8197,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1746",
       "id": "fakes_fake_ps4debug_fakeps4debug_kern_write",
-      "community": 6,
+      "community": 20,
       "norm_label": "._kern_write()"
     },
     {
@@ -8044,7 +8206,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1765",
       "id": "fakes_fake_ps4debug_fakeps4debug_console_reboot",
-      "community": 6,
+      "community": 20,
       "norm_label": "._console_reboot()"
     },
     {
@@ -8053,7 +8215,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1772",
       "id": "fakes_fake_ps4debug_fakeps4debug_console_end",
-      "community": 6,
+      "community": 20,
       "norm_label": "._console_end()"
     },
     {
@@ -8089,7 +8251,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1803",
       "id": "fakes_fake_ps4debug_fakeps4debug_console_info",
-      "community": 6,
+      "community": 20,
       "norm_label": "._console_info()"
     },
     {
@@ -8152,7 +8314,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L264",
       "id": "fakes_fake_ps4debug_rationale_264",
-      "community": 12,
+      "community": 26,
       "norm_label": "savefpu_ymm with freebsd's initial fpu state (cw 0x37f, mxcsr 0x1f80)."
     },
     {
@@ -8170,7 +8332,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L276",
       "id": "fakes_fake_ps4debug_rationale_276",
-      "community": 6,
+      "community": 20,
       "norm_label": "the real handler thread spins forever. the connection is never served again."
     },
     {
@@ -8188,7 +8350,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L343",
       "id": "fakes_fake_ps4debug_rationale_343",
-      "community": 40,
+      "community": 11,
       "norm_label": "add a vm_map entry. bounds are rounded to 16 kib pages (vm_map entries are page"
     },
     {
@@ -8197,7 +8359,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L357",
       "id": "fakes_fake_ps4debug_rationale_357",
-      "community": 40,
+      "community": 11,
       "norm_label": "map each pt_load segment at base+p_vaddr (page aligned), prot from p_flags, file"
     },
     {
@@ -8215,7 +8377,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L399",
       "id": "fakes_fake_ps4debug_rationale_399",
-      "community": 14,
+      "community": 26,
       "norm_label": "raw memory (ignores protections); unmapped bytes read as zero."
     },
     {
@@ -8224,7 +8386,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L409",
       "id": "fakes_fake_ps4debug_rationale_409",
-      "community": 40,
+      "community": 26,
       "norm_label": "raw write (ignores protections). raises valueerror if any byte is unmapped."
     },
     {
@@ -8242,7 +8404,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L457",
       "id": "fakes_fake_ps4debug_rationale_457",
-      "community": 11,
+      "community": 35,
       "norm_label": "[freebsd] ptracestop(): process stops, wait4 will report wstopsig == sig."
     },
     {
@@ -8260,7 +8422,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L474",
       "id": "fakes_fake_ps4debug_rationale_474",
-      "community": 12,
+      "community": 26,
       "norm_label": "wait4(pid, wnohang): (0, none) nothing; (pid, status); (-1, none) echild."
     },
     {
@@ -8287,7 +8449,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L519",
       "id": "fakes_fake_ps4debug_rationale_519",
-      "community": 6,
+      "community": 20,
       "norm_label": "fake ps4debug payload. ``start()`` binds; ``self.port`` holds the real tcp port."
     },
     {
@@ -8296,7 +8458,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L643",
       "id": "fakes_fake_ps4debug_rationale_643",
-      "community": 11,
+      "community": 20,
       "norm_label": "state of the attached process (or of the last one attached; none if never)."
     },
     {
@@ -8305,7 +8467,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L686",
       "id": "fakes_fake_ps4debug_rationale_686",
-      "community": 11,
+      "community": 35,
       "norm_label": "the thread executes the int3 planted by cmd_debug_breakpt ``index``."
     },
     {
@@ -8314,7 +8476,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L704",
       "id": "fakes_fake_ps4debug_rationale_704",
-      "community": 11,
+      "community": 35,
       "norm_label": "hardware watchpoint ``index`` fires (#db): sigtrap, dr6 bit ``index`` set."
     },
     {
@@ -8323,7 +8485,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L724",
       "id": "fakes_fake_ps4debug_rationale_724",
-      "community": 11,
+      "community": 35,
       "norm_label": "a signal is posted to the traced process (e.g. sigsegv=11 from a fault)."
     },
     {
@@ -8332,7 +8494,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L740",
       "id": "fakes_fake_ps4debug_rationale_740",
-      "community": 11,
+      "community": 35,
       "norm_label": "the attached process gets sigkill from outside (e.g. the shell closes the game)."
     },
     {
@@ -8341,7 +8503,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L783",
       "id": "fakes_fake_ps4debug_rationale_783",
-      "community": 6,
+      "community": 20,
       "norm_label": "the payload thread faults -> sceshellcore (which hosts it) dies -> every socket"
     },
     {
@@ -8350,7 +8512,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L809",
       "id": "fakes_fake_ps4debug_rationale_809",
-      "community": 6,
+      "community": 26,
       "norm_label": "net_recv_data(..., force=1) (net.c:38-67). on eof the real loop spins forever."
     },
     {
@@ -8359,7 +8521,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L823",
       "id": "fakes_fake_ps4debug_rationale_823",
-      "community": 14,
+      "community": 26,
       "norm_label": "net_recv_data(fd, &packet, 12, 0) on a so_nbio socket: reads what is there, mayb"
     },
     {
@@ -8368,7 +8530,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L888",
       "id": "fakes_fake_ps4debug_rationale_888",
-      "community": 14,
+      "community": 26,
       "norm_label": "handle_client() (server.c:175-295)."
     },
     {
@@ -8386,7 +8548,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L955",
       "id": "fakes_fake_ps4debug_rationale_955",
-      "community": 12,
+      "community": 26,
       "norm_label": "cmd_handler() (server.c:38-60)."
     },
     {
@@ -8404,7 +8566,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L987",
       "id": "fakes_fake_ps4debug_rationale_987",
-      "community": 14,
+      "community": 26,
       "norm_label": "sys_proc_rw -> proc_rwmem (kdebugger proc.c:89-127) [freebsd]: page at a time, t"
     },
     {
@@ -8422,7 +8584,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1032",
       "id": "fakes_fake_ps4debug_rationale_1032",
-      "community": 6,
+      "community": 26,
       "norm_label": "sys_proc_vm_map_handle (kdebugger hooks.c:93-127)."
     },
     {
@@ -8449,7 +8611,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1262",
       "id": "fakes_fake_ps4debug_rationale_1262",
-      "community": 6,
+      "community": 26,
       "norm_label": "proc_scan_handle (proc.c:633-719), bugs included:          * the page buffer is"
     },
     {
@@ -8476,7 +8638,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1651",
       "id": "fakes_fake_ps4debug_rationale_1651",
-      "community": 14,
+      "community": 26,
       "norm_label": "server.c:62-173. returns true when the client must be freed (econnreset on dbgfd"
     },
     {
@@ -8485,7 +8647,7 @@
       "source_file": "tests/fakes/fake_ps4debug.py",
       "source_location": "L1701",
       "id": "fakes_fake_ps4debug_rationale_1701",
-      "community": 14,
+      "community": 26,
       "norm_label": "net_send_data on dbgfd. [freebsd] after the peer closed, the first write still"
     },
     {
@@ -8530,7 +8692,7 @@
       "source_file": "tests/fakes/run_fake.py",
       "source_location": "L39",
       "id": "fakes_run_fake_build_demo",
-      "community": 5,
+      "community": 32,
       "norm_label": "build_demo()"
     },
     {
@@ -8602,7 +8764,7 @@
       "source_file": "tests/fakes/run_fake.py",
       "source_location": "L40",
       "id": "fakes_run_fake_rationale_40",
-      "community": 5,
+      "community": 32,
       "norm_label": "populate ``fake`` with system processes and a game. returns useful addresses."
     },
     {
@@ -8656,7 +8818,7 @@
       "source_file": "tests/test_bridge_deploy.py",
       "source_location": "L35",
       "id": "tests_test_bridge_deploy_py_str",
-      "community": 22,
+      "community": 18,
       "norm_label": "str"
     },
     {
@@ -8791,23 +8953,23 @@
       "source_file": "tests/test_core.py",
       "source_location": "L58",
       "id": "tests_test_core_test_address_expressions",
-      "community": 13,
+      "community": 19,
       "norm_label": "test_address_expressions()"
     },
     {
       "label": "test_unmapped_warning()",
       "file_type": "code",
       "source_file": "tests/test_core.py",
-      "source_location": "L72",
+      "source_location": "L74",
       "id": "tests_test_core_test_unmapped_warning",
-      "community": 15,
+      "community": 13,
       "norm_label": "test_unmapped_warning()"
     },
     {
       "label": "test_guess_fault_null_field_access()",
       "file_type": "code",
       "source_file": "tests/test_core.py",
-      "source_location": "L78",
+      "source_location": "L80",
       "id": "tests_test_core_test_guess_fault_null_field_access",
       "community": 15,
       "norm_label": "test_guess_fault_null_field_access()"
@@ -8816,7 +8978,7 @@
       "label": "test_guess_fault_rip_relative_and_index()",
       "file_type": "code",
       "source_file": "tests/test_core.py",
-      "source_location": "L85",
+      "source_location": "L87",
       "id": "tests_test_core_test_guess_fault_rip_relative_and_index",
       "community": 15,
       "norm_label": "test_guess_fault_rip_relative_and_index()"
@@ -8825,7 +8987,7 @@
       "label": "test_stack_code_pointers()",
       "file_type": "code",
       "source_file": "tests/test_core.py",
-      "source_location": "L93",
+      "source_location": "L95",
       "id": "tests_test_core_test_stack_code_pointers",
       "community": 15,
       "norm_label": "test_stack_code_pointers()"
@@ -8834,7 +8996,7 @@
       "label": "test_disasm()",
       "file_type": "code",
       "source_file": "tests/test_core.py",
-      "source_location": "L99",
+      "source_location": "L101",
       "id": "tests_test_core_test_disasm",
       "community": 15,
       "norm_label": "test_disasm()"
@@ -8843,7 +9005,7 @@
       "label": "test_build_elf_layout()",
       "file_type": "code",
       "source_file": "tests/test_core.py",
-      "source_location": "L103",
+      "source_location": "L105",
       "id": "tests_test_core_test_build_elf_layout",
       "community": 15,
       "norm_label": "test_build_elf_layout()"
@@ -8881,7 +9043,7 @@
       "source_file": "tests/test_e2e_debug.py",
       "source_location": "L1",
       "id": "tests_test_e2e_debug",
-      "community": 27,
+      "community": 13,
       "norm_label": "test_e2e_debug.py"
     },
     {
@@ -8890,7 +9052,7 @@
       "source_file": "tests/test_e2e_debug.py",
       "source_location": "L20",
       "id": "tests_test_e2e_debug_free_port",
-      "community": 27,
+      "community": 13,
       "norm_label": "free_port()"
     },
     {
@@ -8899,7 +9061,7 @@
       "source_file": "tests/test_e2e_debug.py",
       "source_location": "L20",
       "id": "tests_test_e2e_debug_py_int",
-      "community": 24,
+      "community": 28,
       "norm_label": "int"
     },
     {
@@ -8908,7 +9070,7 @@
       "source_file": "tests/test_e2e_debug.py",
       "source_location": "L26",
       "id": "tests_test_e2e_debug_make_console",
-      "community": 27,
+      "community": 13,
       "norm_label": "make_console()"
     },
     {
@@ -8917,7 +9079,7 @@
       "source_file": "tests/test_e2e_debug.py",
       "source_location": "L44",
       "id": "tests_test_e2e_debug_console",
-      "community": 27,
+      "community": 13,
       "norm_label": "console()"
     },
     {
@@ -8926,7 +9088,7 @@
       "source_file": "tests/test_e2e_debug.py",
       "source_location": "L59",
       "id": "tests_test_e2e_debug_test_process_primitives",
-      "community": 15,
+      "community": 13,
       "norm_label": "test_process_primitives()"
     },
     {
@@ -8935,7 +9097,7 @@
       "source_file": "tests/test_e2e_debug.py",
       "source_location": "L75",
       "id": "tests_test_e2e_debug_test_breakpoint_hit_snapshot_and_detach_restores",
-      "community": 15,
+      "community": 13,
       "norm_label": "test_breakpoint_hit_snapshot_and_detach_restores()"
     },
     {
@@ -8944,7 +9106,7 @@
       "source_file": "tests/test_e2e_debug.py",
       "source_location": "L112",
       "id": "tests_test_e2e_debug_test_crash_snapshot_guesses_null_pointer",
-      "community": 15,
+      "community": 13,
       "norm_label": "test_crash_snapshot_guesses_null_pointer()"
     },
     {
@@ -8953,7 +9115,7 @@
       "source_file": "tests/test_e2e_debug.py",
       "source_location": "L123",
       "id": "tests_test_e2e_debug_test_watchpoint_pause_and_step",
-      "community": 27,
+      "community": 13,
       "norm_label": "test_watchpoint_pause_and_step()"
     },
     {
@@ -8962,7 +9124,7 @@
       "source_file": "tests/test_e2e_debug.py",
       "source_location": "L147",
       "id": "tests_test_e2e_debug_test_debug_command_error_keeps_session",
-      "community": 27,
+      "community": 13,
       "norm_label": "test_debug_command_error_keeps_session()"
     },
     {
@@ -8971,7 +9133,7 @@
       "source_file": "tests/test_e2e_debug.py",
       "source_location": "L157",
       "id": "tests_test_e2e_debug_test_limits_and_existing_int3",
-      "community": 27,
+      "community": 13,
       "norm_label": "test_limits_and_existing_int3()"
     },
     {
@@ -8980,7 +9142,7 @@
       "source_file": "tests/test_e2e_debug.py",
       "source_location": "L171",
       "id": "tests_test_e2e_debug_test_process_exit_ends_session_without_crashing_payload",
-      "community": 27,
+      "community": 13,
       "norm_label": "test_process_exit_ends_session_without_crashing_payload()"
     },
     {
@@ -8989,7 +9151,7 @@
       "source_file": "tests/test_e2e_debug.py",
       "source_location": "L183",
       "id": "tests_test_e2e_debug_test_attach_fails_when_ps4_cannot_call_back",
-      "community": 27,
+      "community": 13,
       "norm_label": "test_attach_fails_when_ps4_cannot_call_back()"
     },
     {
@@ -8998,7 +9160,7 @@
       "source_file": "tests/test_e2e_debug.py",
       "source_location": "L1",
       "id": "tests_test_e2e_debug_rationale_1",
-      "community": 27,
+      "community": 13,
       "norm_label": "cliente + sessao de debug contra o ps4debug falso (escrito de forma independente"
     },
     {
@@ -9142,7 +9304,7 @@
       "source_file": "tests/test_fake_ps4debug.py",
       "source_location": "L77",
       "id": "tests_test_fake_ps4debug_fake",
-      "community": 5,
+      "community": 32,
       "norm_label": "fake()"
     },
     {
@@ -9556,7 +9718,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L1",
       "id": "tests_test_ftp",
-      "community": 19,
+      "community": 7,
       "norm_label": "test_ftp.py"
     },
     {
@@ -9565,7 +9727,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L54",
       "id": "tests_test_ftp_test_parse_list_line",
-      "community": 19,
+      "community": 7,
       "norm_label": "test_parse_list_line()"
     },
     {
@@ -9574,7 +9736,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L63",
       "id": "tests_test_ftp_test_parse_list_line_ignored",
-      "community": 19,
+      "community": 7,
       "norm_label": "test_parse_list_line_ignored()"
     },
     {
@@ -9583,7 +9745,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L71",
       "id": "tests_test_ftp_console_root",
-      "community": 19,
+      "community": 7,
       "norm_label": "console_root()"
     },
     {
@@ -9592,7 +9754,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L84",
       "id": "tests_test_ftp_pyftpd",
-      "community": 19,
+      "community": 7,
       "norm_label": "pyftpd"
     },
     {
@@ -9601,7 +9763,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L85",
       "id": "tests_test_ftp_pyftpd_init",
-      "community": 19,
+      "community": 7,
       "norm_label": ".__init__()"
     },
     {
@@ -9610,7 +9772,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L85",
       "id": "tests_test_ftp_py_path",
-      "community": 19,
+      "community": 7,
       "norm_label": "path"
     },
     {
@@ -9619,7 +9781,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L95",
       "id": "tests_test_ftp_pyftpd_loop",
-      "community": 19,
+      "community": 7,
       "norm_label": "._loop()"
     },
     {
@@ -9628,7 +9790,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L99",
       "id": "tests_test_ftp_pyftpd_stop",
-      "community": 19,
+      "community": 7,
       "norm_label": ".stop()"
     },
     {
@@ -9637,7 +9799,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L106",
       "id": "tests_test_ftp_client",
-      "community": 19,
+      "community": 7,
       "norm_label": "client()"
     },
     {
@@ -9646,7 +9808,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L117",
       "id": "tests_test_ftp_test_list_dir_root_sorted",
-      "community": 19,
+      "community": 7,
       "norm_label": "test_list_dir_root_sorted()"
     },
     {
@@ -9655,7 +9817,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L126",
       "id": "tests_test_ftp_test_list_dir_normalizes_paths",
-      "community": 19,
+      "community": 7,
       "norm_label": "test_list_dir_normalizes_paths()"
     },
     {
@@ -9664,7 +9826,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L131",
       "id": "tests_test_ftp_test_read_file_truncation_then_more_operations",
-      "community": 19,
+      "community": 7,
       "norm_label": "test_read_file_truncation_then_more_operations()"
     },
     {
@@ -9673,7 +9835,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L143",
       "id": "tests_test_ftp_test_download_sha256",
-      "community": 19,
+      "community": 7,
       "norm_label": "test_download_sha256()"
     },
     {
@@ -9682,7 +9844,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L157",
       "id": "tests_test_ftp_test_size",
-      "community": 19,
+      "community": 7,
       "norm_label": "test_size()"
     },
     {
@@ -9691,7 +9853,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L164",
       "id": "tests_test_ftp_test_nonexistent_paths_raise_clear_errors",
-      "community": 19,
+      "community": 7,
       "norm_label": "test_nonexistent_paths_raise_clear_errors()"
     },
     {
@@ -9700,7 +9862,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L180",
       "id": "tests_test_ftp_test_concurrent_calls_are_serialized",
-      "community": 19,
+      "community": 7,
       "norm_label": "test_concurrent_calls_are_serialized()"
     },
     {
@@ -9709,7 +9871,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L199",
       "id": "tests_test_ftp_test_connection_refused_message",
-      "community": 19,
+      "community": 7,
       "norm_label": "test_connection_refused_message()"
     },
     {
@@ -9718,7 +9880,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L213",
       "id": "tests_test_ftp_ftps4_line",
-      "community": 19,
+      "community": 7,
       "norm_label": "ftps4_line()"
     },
     {
@@ -9727,7 +9889,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L213",
       "id": "tests_test_ftp_py_str",
-      "community": 19,
+      "community": 7,
       "norm_label": "str"
     },
     {
@@ -9736,7 +9898,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L221",
       "id": "tests_test_ftp_ftps4handler",
-      "community": 19,
+      "community": 7,
       "norm_label": "ftps4handler"
     },
     {
@@ -9745,7 +9907,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L225",
       "id": "tests_test_ftp_ftps4handler_handle",
-      "community": 19,
+      "community": 7,
       "norm_label": ".handle()"
     },
     {
@@ -9754,7 +9916,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L244",
       "id": "tests_test_ftp_ftps4handler_send",
-      "community": 19,
+      "community": 7,
       "norm_label": ".send()"
     },
     {
@@ -9763,7 +9925,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L248",
       "id": "tests_test_ftp_ftps4handler_local",
-      "community": 19,
+      "community": 7,
       "norm_label": ".local()"
     },
     {
@@ -9772,7 +9934,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L251",
       "id": "tests_test_ftp_ftps4handler_accept_data",
-      "community": 19,
+      "community": 7,
       "norm_label": ".accept_data()"
     },
     {
@@ -9781,7 +9943,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L257",
       "id": "tests_test_ftp_ftps4handler_do_user",
-      "community": 19,
+      "community": 7,
       "norm_label": ".do_user()"
     },
     {
@@ -9790,7 +9952,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L260",
       "id": "tests_test_ftp_ftps4handler_do_pass",
-      "community": 19,
+      "community": 7,
       "norm_label": ".do_pass()"
     },
     {
@@ -9799,7 +9961,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L263",
       "id": "tests_test_ftp_ftps4handler_do_type",
-      "community": 19,
+      "community": 7,
       "norm_label": ".do_type()"
     },
     {
@@ -9808,7 +9970,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L266",
       "id": "tests_test_ftp_ftps4handler_do_quit",
-      "community": 19,
+      "community": 7,
       "norm_label": ".do_quit()"
     },
     {
@@ -9817,7 +9979,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L270",
       "id": "tests_test_ftp_ftps4handler_do_pasv",
-      "community": 19,
+      "community": 7,
       "norm_label": ".do_pasv()"
     },
     {
@@ -9826,7 +9988,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L275",
       "id": "tests_test_ftp_ftps4handler_do_cwd",
-      "community": 19,
+      "community": 7,
       "norm_label": ".do_cwd()"
     },
     {
@@ -9835,7 +9997,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L282",
       "id": "tests_test_ftp_ftps4handler_do_list",
-      "community": 19,
+      "community": 7,
       "norm_label": ".do_list()"
     },
     {
@@ -9844,7 +10006,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L292",
       "id": "tests_test_ftp_ftps4handler_do_retr",
-      "community": 19,
+      "community": 7,
       "norm_label": ".do_retr()"
     },
     {
@@ -9853,7 +10015,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L308",
       "id": "tests_test_ftp_fakeftps4",
-      "community": 19,
+      "community": 7,
       "norm_label": "fakeftps4"
     },
     {
@@ -9862,7 +10024,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L312",
       "id": "tests_test_ftp_fakeftps4_init",
-      "community": 19,
+      "community": 7,
       "norm_label": ".__init__()"
     },
     {
@@ -9871,7 +10033,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L321",
       "id": "tests_test_ftp_fakeftps4_logins",
-      "community": 19,
+      "community": 7,
       "norm_label": ".logins()"
     },
     {
@@ -9880,7 +10042,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L321",
       "id": "tests_test_ftp_py_int",
-      "community": 19,
+      "community": 7,
       "norm_label": "int"
     },
     {
@@ -9889,7 +10051,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L324",
       "id": "tests_test_ftp_fakeftps4_kick_all",
-      "community": 19,
+      "community": 7,
       "norm_label": ".kick_all()"
     },
     {
@@ -9898,7 +10060,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L329",
       "id": "tests_test_ftp_fakeftps4_stop",
-      "community": 19,
+      "community": 7,
       "norm_label": ".stop()"
     },
     {
@@ -9907,7 +10069,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L336",
       "id": "tests_test_ftp_ftps4",
-      "community": 19,
+      "community": 7,
       "norm_label": "ftps4()"
     },
     {
@@ -9916,7 +10078,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L344",
       "id": "tests_test_ftp_test_ftps4_listing_and_size_fallback",
-      "community": 19,
+      "community": 7,
       "norm_label": "test_ftps4_listing_and_size_fallback()"
     },
     {
@@ -9925,7 +10087,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L359",
       "id": "tests_test_ftp_test_ftps4_truncated_read_reconnects_when_server_stays_busy",
-      "community": 19,
+      "community": 7,
       "norm_label": "test_ftps4_truncated_read_reconnects_when_server_stays_busy()"
     },
     {
@@ -9934,7 +10096,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L372",
       "id": "tests_test_ftp_test_ftps4_full_read_and_missing_file",
-      "community": 19,
+      "community": 7,
       "norm_label": "test_ftps4_full_read_and_missing_file()"
     },
     {
@@ -9943,7 +10105,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L381",
       "id": "tests_test_ftp_test_ftps4_reconnects_after_server_drops_connection",
-      "community": 19,
+      "community": 7,
       "norm_label": "test_ftps4_reconnects_after_server_drops_connection()"
     },
     {
@@ -9952,7 +10114,7 @@
       "source_file": "tests/test_ftp.py",
       "source_location": "L222",
       "id": "tests_test_ftp_rationale_222",
-      "community": 19,
+      "community": 7,
       "norm_label": "comportamento do ftps4: sem size/mlsd, list de caminho inexistente lista a pasta"
     },
     {
@@ -10694,10 +10856,46 @@
       "norm_label": "primeiro uso com o console"
     },
     {
-      "label": "Configura\u00e7\u00e3o (`.mcp.json` \u2192 env)",
+      "label": "Desempenho e recomenda\u00e7\u00f5es de uso",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L47",
+      "id": "readme_desempenho_e_recomenda\u00e7\u00f5es_de_uso",
+      "community": 41,
+      "norm_label": "desempenho e recomendacoes de uso"
+    },
+    {
+      "label": "Rede: o que limita a leitura de mem\u00f3ria",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L49",
+      "id": "readme_rede_o_que_limita_a_leitura_de_mem\u00f3ria",
+      "community": 41,
+      "norm_label": "rede: o que limita a leitura de memoria"
+    },
+    {
+      "label": "Ler menos mem\u00f3ria",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L90",
+      "id": "readme_ler_menos_mem\u00f3ria",
+      "community": 41,
+      "norm_label": "ler menos memoria"
+    },
+    {
+      "label": "Sess\u00f5es de debug",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L98",
+      "id": "readme_sess\u00f5es_de_debug",
+      "community": 41,
+      "norm_label": "sessoes de debug"
+    },
+    {
+      "label": "Configura\u00e7\u00e3o (`.mcp.json` \u2192 env)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L104",
       "id": "readme_configura\u00e7\u00e3o_mcp_json_env",
       "community": 41,
       "norm_label": "configuracao (`.mcp.json` \u2192 env)"
@@ -10706,7 +10904,7 @@
       "label": "Seguran\u00e7a (se\u00e7\u00e3o 8)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L62",
+      "source_location": "L119",
       "id": "readme_seguran\u00e7a_se\u00e7\u00e3o_8",
       "community": 41,
       "norm_label": "seguranca (secao 8)"
@@ -10715,7 +10913,7 @@
       "label": "Testar sem o PS4",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L70",
+      "source_location": "L127",
       "id": "readme_testar_sem_o_ps4",
       "community": 41,
       "norm_label": "testar sem o ps4"
@@ -10724,7 +10922,7 @@
       "label": "Estrutura",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L79",
+      "source_location": "L136",
       "id": "readme_estrutura",
       "community": 41,
       "norm_label": "estrutura"
@@ -10766,10 +10964,19 @@
       "norm_label": "onde ficam"
     },
     {
+      "label": "Como chegar aos arquivos",
+      "file_type": "document",
+      "source_file": "docs/kh3-formato-legendas.md",
+      "source_location": "L41",
+      "id": "docs_kh3_formato_legendas_como_chegar_aos_arquivos",
+      "community": 39,
+      "norm_label": "como chegar aos arquivos"
+    },
+    {
       "label": "Estrutura do arquivo",
       "file_type": "document",
       "source_file": "docs/kh3-formato-legendas.md",
-      "source_location": "L30",
+      "source_location": "L47",
       "id": "docs_kh3_formato_legendas_estrutura_do_arquivo",
       "community": 39,
       "norm_label": "estrutura do arquivo"
@@ -10778,7 +10985,7 @@
       "label": "Em mem\u00f3ria",
       "file_type": "document",
       "source_file": "docs/kh3-formato-legendas.md",
-      "source_location": "L37",
+      "source_location": "L60",
       "id": "docs_kh3_formato_legendas_em_mem\u00f3ria",
       "community": 39,
       "norm_label": "em memoria"
@@ -10787,7 +10994,7 @@
       "label": "Fonte e glifos",
       "file_type": "document",
       "source_file": "docs/kh3-formato-legendas.md",
-      "source_location": "L43",
+      "source_location": "L67",
       "id": "docs_kh3_formato_legendas_fonte_e_glifos",
       "community": 39,
       "norm_label": "fonte e glifos"
@@ -10796,7 +11003,7 @@
       "label": "Limites",
       "file_type": "document",
       "source_file": "docs/kh3-formato-legendas.md",
-      "source_location": "L49",
+      "source_location": "L73",
       "id": "docs_kh3_formato_legendas_limites",
       "community": 39,
       "norm_label": "limites"
@@ -11360,6 +11567,24 @@
       "norm_label": "limitacoes conhecidas"
     },
     {
+      "label": "Aceita 0x412abc, 4271804, \"eboot.bin+0x12abc\" ou \"eboot.bin\" (base do m\u00f3dulo).",
+      "file_type": "rationale",
+      "source_file": "ps4_mcp/client.py",
+      "source_location": "L252",
+      "community": 19,
+      "norm_label": "aceita 0x412abc, 4271804, \"eboot.bin+0x12abc\" ou \"eboot.bin\" (base do modulo).",
+      "id": "ps4_mcp_client_rationale_252"
+    },
+    {
+      "label": "O payload devolve zeros fora das regi\u00f5es mapeadas; avisa para o agente n\u00e3o se en",
+      "file_type": "rationale",
+      "source_file": "ps4_mcp/client.py",
+      "source_location": "L277",
+      "community": 13,
+      "norm_label": "o payload devolve zeros fora das regioes mapeadas; avisa para o agente nao se en",
+      "id": "ps4_mcp_client_rationale_277"
+    },
+    {
       "label": "Comando de debug na conex\u00e3o auxiliar. Sem repeti\u00e7\u00e3o autom\u00e1tica: repetir um BREAK",
       "file_type": "rationale",
       "source_file": "ps4_mcp/debug.py",
@@ -11913,176 +12138,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/neural/stats.json",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "neural_stats",
-      "target": "neural_stats_lastadaptation"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/neural/stats.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "neural_stats",
-      "target": "neural_stats_patternslearned"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/neural/stats.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "neural_stats",
-      "target": "neural_stats_signalsprocessed"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/neural/stats.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "neural_stats",
-      "target": "neural_stats_trajectoriesrecorded"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/policy/ledger-anchors.json",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "policy_ledger_anchors",
-      "target": "policy_ledger_anchors_entries"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/policy/ledger-anchors.json",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "policy_ledger_anchors",
-      "target": "policy_ledger_anchors_version"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "policy_state",
-      "target": "policy_state_approvals"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "policy_state",
-      "target": "policy_state_budgets"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L493",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "policy_state",
-      "target": "policy_state_ledgerhead"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L492",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "policy_state",
-      "target": "policy_state_ledgerlength"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L490",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "policy_state",
-      "target": "policy_state_migratedat"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L491",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "policy_state",
-      "target": "policy_state_migratedfrom"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "policy_state",
-      "target": "policy_state_mode"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "policy_state",
-      "target": "policy_state_receipts"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "policy_state",
-      "target": "policy_state_rules"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "policy_state",
-      "target": "policy_state_usage"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude-flow/policy/state.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "policy_state",
-      "target": "policy_state_version"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".mcp.json",
       "source_location": "L1",
@@ -12185,92 +12240,32 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L3",
+      "source_file": "agentdb.rvf.idmap.json",
+      "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "swarm_ewc_fisher",
-      "target": "swarm_ewc_fisher_config"
+      "source": "agentdb_rvf_idmap",
+      "target": "agentdb_rvf_idmap_idtolabel",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L395",
+      "source_file": "agentdb.rvf.idmap.json",
+      "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "swarm_ewc_fisher",
-      "target": "swarm_ewc_fisher_consolidationhistory"
+      "source": "agentdb_rvf_idmap",
+      "target": "agentdb_rvf_idmap_labeltoid",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L8",
+      "source_file": "agentdb.rvf.idmap.json",
+      "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "swarm_ewc_fisher",
-      "target": "swarm_ewc_fisher_globalfisher"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L394",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "swarm_ewc_fisher",
-      "target": "swarm_ewc_fisher_patterns"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L396",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "swarm_ewc_fisher",
-      "target": "swarm_ewc_fisher_savedat"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "swarm_ewc_fisher",
-      "target": "swarm_ewc_fisher_version"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "swarm_ewc_fisher_config",
-      "target": "swarm_ewc_fisher_config_dimensions"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "swarm_ewc_fisher_config",
-      "target": "swarm_ewc_fisher_config_fisherdecayrate"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".swarm/ewc-fisher.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "swarm_ewc_fisher_config",
-      "target": "swarm_ewc_fisher_config_lambda"
+      "source": "agentdb_rvf_idmap",
+      "target": "agentdb_rvf_idmap_nextlabel",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -18852,6 +18847,39 @@
       "target": "ps4_mcp_bridge_py_bool"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/find_aes_ascii.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_find_aes_ascii",
+      "target": "ps4_mcp_client"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_find.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_find",
+      "target": "ps4_mcp_client"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "kh3_trace_pak_mount",
+      "target": "ps4_mcp_client",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "ps4_mcp/client.py",
@@ -19053,6 +19081,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read",
+      "target": "ps4_mcp_client"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "scripts/fase0_smoke.py",
       "source_location": "L17",
       "weight": 1.0,
@@ -19091,6 +19130,38 @@
       "confidence_score": 0.5,
       "source": "context",
       "target": "ps4_mcp_client_ps4debugerror"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_find.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "kh3_kh3_find",
+      "target": "ps4_mcp_client_ps4debugerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/kh3/kh3_find.py",
+      "source_location": "L8",
+      "weight": 0.8,
+      "source": "kh3_kh3_find_retry",
+      "target": "ps4_mcp_client_ps4debugerror",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "kh3_trace_pak_mount",
+      "target": "ps4_mcp_client_ps4debugerror",
+      "confidence_score": 1.0
     },
     {
       "relation": "uses",
@@ -19453,6 +19524,47 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read",
+      "target": "ps4_mcp_client_ps4debugerror"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L19",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "scripts_bench_read_py_float",
+      "target": "ps4_mcp_client_ps4debugerror"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L19",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "scripts_bench_read_py_int",
+      "target": "ps4_mcp_client_ps4debugerror"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L19",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "scripts_bench_read_py_str",
+      "target": "ps4_mcp_client_ps4debugerror"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "scripts/fase0_smoke.py",
       "source_location": "L17",
       "weight": 1.0,
@@ -19469,6 +19581,26 @@
       "confidence_score": 0.5,
       "source": "scripts_fase0_smoke_py_int",
       "target": "ps4_mcp_client_ps4debugerror"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L14",
+      "weight": 0.8,
+      "source": "scripts_kh3_trace_pak_mount_py_int",
+      "target": "ps4_mcp_client_ps4debugerror",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L14",
+      "weight": 0.8,
+      "source": "scripts_kh3_trace_pak_mount_py_str",
+      "target": "ps4_mcp_client_ps4debugerror",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -20643,6 +20775,60 @@
       "target": "ps4_mcp_client_ps4debug"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/find_aes_ascii.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_find_aes_ascii",
+      "target": "ps4_mcp_client_ps4debug"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_find.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_find",
+      "target": "ps4_mcp_client_ps4debug"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/kh3/kh3_find.py",
+      "source_location": "L8",
+      "weight": 0.8,
+      "source": "kh3_kh3_find_retry",
+      "target": "ps4_mcp_client_ps4debug",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "kh3_trace_pak_mount",
+      "target": "ps4_mcp_client_ps4debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "kh3_trace_pak_mount_eboot_pids",
+      "target": "ps4_mcp_client_ps4debug",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "uses",
       "confidence": "INFERRED",
       "source_file": "ps4_mcp/debug.py",
@@ -21079,6 +21265,58 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read",
+      "target": "ps4_mcp_client_ps4debug"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read_bench_debug",
+      "target": "ps4_mcp_client_ps4debug"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L19",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "scripts_bench_read_py_float",
+      "target": "ps4_mcp_client_ps4debug"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L19",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "scripts_bench_read_py_int",
+      "target": "ps4_mcp_client_ps4debug"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L19",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "scripts_bench_read_py_str",
+      "target": "ps4_mcp_client_ps4debug"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "scripts/fase0_smoke.py",
       "source_location": "L17",
       "weight": 1.0,
@@ -21106,6 +21344,26 @@
       "confidence_score": 0.5,
       "source": "scripts_fase0_smoke_py_int",
       "target": "ps4_mcp_client_ps4debug"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L14",
+      "weight": 0.8,
+      "source": "scripts_kh3_trace_pak_mount_py_int",
+      "target": "ps4_mcp_client_ps4debug",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L14",
+      "weight": 0.8,
+      "source": "scripts_kh3_trace_pak_mount_py_str",
+      "target": "ps4_mcp_client_ps4debug",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -21714,6 +21972,16 @@
       "target": "ps4_mcp_client_parse_address"
     },
     {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4_mcp/client.py",
+      "source_location": "L254",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ps4_mcp_client_rationale_254",
+      "target": "ps4_mcp_client_parse_address"
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -22032,6 +22300,16 @@
       "target": "ps4_mcp_client_unmapped_warning"
     },
     {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "ps4_mcp/client.py",
+      "source_location": "L279",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ps4_mcp_client_rationale_279",
+      "target": "ps4_mcp_client_unmapped_warning"
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -22096,6 +22374,17 @@
       "confidence_score": 1.0,
       "source": "tests_test_e2e_debug_test_process_primitives",
       "target": "ps4_mcp_client_unmapped_warning"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "kh3_trace_pak_mount",
+      "target": "ps4_mcp_config",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -22167,6 +22456,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "ps4_mcp_server",
+      "target": "ps4_mcp_config"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read",
       "target": "ps4_mcp_config"
     },
     {
@@ -22326,6 +22626,28 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read",
+      "target": "ps4_mcp_config_discover_ps4"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read_main",
+      "target": "ps4_mcp_config_discover_ps4"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "scripts/fase0_smoke.py",
       "source_location": "L18",
       "weight": 1.0,
@@ -22397,6 +22719,17 @@
       "confidence_score": 0.5,
       "source": "context",
       "target": "ps4_mcp_config_config"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "kh3_trace_pak_mount",
+      "target": "ps4_mcp_config_config",
+      "confidence_score": 1.0
     },
     {
       "relation": "uses",
@@ -22623,6 +22956,26 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L15",
+      "weight": 0.8,
+      "source": "scripts_kh3_trace_pak_mount_py_int",
+      "target": "ps4_mcp_config_config",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L15",
+      "weight": 0.8,
+      "source": "scripts_kh3_trace_pak_mount_py_str",
+      "target": "ps4_mcp_config_config",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
       "source_file": "ps4_mcp/debug.py",
       "source_location": "L26",
       "weight": 0.8,
@@ -22683,6 +23036,17 @@
       "confidence_score": 1.0,
       "source": "ps4_mcp_config_config_out_dir",
       "target": "ps4_mcp_config_py_path"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "kh3_trace_pak_mount",
+      "target": "ps4_mcp_debug",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -23147,6 +23511,17 @@
       "target": "ps4_mcp_debug_debugsession"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "kh3_trace_pak_mount",
+      "target": "ps4_mcp_debug_debugsession",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "ps4_mcp/debug.py",
@@ -23527,6 +23902,26 @@
       "confidence_score": 0.5,
       "source": "ps4_mcp_server_py_str",
       "target": "ps4_mcp_debug_debugsession"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L16",
+      "weight": 0.8,
+      "source": "scripts_kh3_trace_pak_mount_py_int",
+      "target": "ps4_mcp_debug_debugsession",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L16",
+      "weight": 0.8,
+      "source": "scripts_kh3_trace_pak_mount_py_str",
+      "target": "ps4_mcp_debug_debugsession",
+      "confidence_score": 0.5
     },
     {
       "relation": "imports",
@@ -33372,6 +33767,145 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read",
+      "target": "scripts_bench_read_bench_debug"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read",
+      "target": "scripts_bench_read_bench_ftp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read",
+      "target": "scripts_bench_read_main"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read_bench_debug",
+      "target": "scripts_bench_read_py_float"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read_bench_debug",
+      "target": "scripts_bench_read_py_int"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read_bench_debug",
+      "target": "scripts_bench_read_py_str"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L75",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read_main",
+      "target": "scripts_bench_read_bench_debug"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read_bench_ftp",
+      "target": "scripts_bench_read_py_str"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read_bench_ftp",
+      "target": "scripts_bench_read_py_int"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read_main",
+      "target": "scripts_bench_read_py_int"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read_bench_ftp",
+      "target": "scripts_bench_read_py_float"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read_main",
+      "target": "scripts_bench_read_bench_ftp"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/bench_read.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_bench_read_rationale_41",
+      "target": "scripts_bench_read_bench_ftp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "scripts/fase0_smoke.py",
       "source_location": "L21",
       "weight": 1.0,
@@ -33675,6 +34209,434 @@
       "confidence_score": 1.0,
       "source": "scripts_install_openorbis_finalize",
       "target": "scripts_install_openorbis_ensure_openssl11"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/build_patch.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "kh3_build_patch",
+      "target": "kh3_build_patch_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/build_patch.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "kh3_build_patch",
+      "target": "kh3_build_patch_pkgtool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/build_patch.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "kh3_build_patch_main",
+      "target": "kh3_build_patch_pkgtool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/build_patch.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "kh3_build_patch_pkgtool",
+      "target": "scripts_kh3_build_patch_py_str",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/build_patch.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "kh3_build_patch_main",
+      "target": "scripts_kh3_build_patch_py_int",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/find_aes_ascii.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_find_aes_ascii",
+      "target": "kh3_find_aes_ascii_ok"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/find_aes_ascii.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_find_aes_ascii_rationale_1",
+      "target": "kh3_find_aes_ascii"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_find.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "kh3_kh3_find",
+      "target": "kh3_kh3_find_retry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_find.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_find_rationale_1",
+      "target": "kh3_kh3_find"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_find.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "kh3_kh3_find_rationale_16",
+      "target": "kh3_kh3_find_retry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_find.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "kh3_kh3_find_retry",
+      "target": "kh3_kh3_find_retry_getattr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_find.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "kh3_kh3_find_retry",
+      "target": "kh3_kh3_find_retry_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_mod",
+      "target": "kh3_kh3_mod_fstr"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_mod",
+      "target": "kh3_kh3_mod_pak_v4"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_mod",
+      "target": "kh3_kh3_mod_read_locres"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_mod",
+      "target": "kh3_kh3_mod_write_locres"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_mod_rationale_1",
+      "target": "kh3_kh3_mod"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "kh3_kh3_mod_read_locres",
+      "target": "kh3_pak_index_u"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_mod_read_locres",
+      "target": "scripts_kh3_kh3_mod_py_bytes"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_mod_fstr",
+      "target": "scripts_kh3_kh3_mod_py_bytes"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_mod_pak_v4",
+      "target": "scripts_kh3_kh3_mod_py_bytes"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_mod_write_locres",
+      "target": "scripts_kh3_kh3_mod_py_bytes"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_mod_fstr",
+      "target": "scripts_kh3_kh3_mod_py_bool"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_mod_fstr",
+      "target": "scripts_kh3_kh3_mod_py_str"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_mod_pak_v4",
+      "target": "kh3_kh3_mod_fstr"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_mod_write_locres",
+      "target": "kh3_kh3_mod_fstr"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_mod_pak_v4",
+      "target": "scripts_kh3_kh3_mod_py_str"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_mod_write_locres",
+      "target": "scripts_kh3_kh3_mod_py_bool"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/kh3_mod.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_kh3_mod_rationale_41",
+      "target": "kh3_kh3_mod_write_locres"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/pak_extract.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_pak_extract",
+      "target": "kh3_pak_extract_ftp_range"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/pak_extract.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_pak_extract_rationale_1",
+      "target": "kh3_pak_extract"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/pak_index.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_pak_index",
+      "target": "kh3_pak_index_fstr"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/pak_index.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_pak_index",
+      "target": "kh3_pak_index_ftp_range"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/pak_index.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_pak_index",
+      "target": "kh3_pak_index_u"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/pak_index.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_pak_index_rationale_1",
+      "target": "kh3_pak_index"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/pak_index.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kh3_pak_index_fstr",
+      "target": "kh3_pak_index_u"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "kh3_trace_pak_mount",
+      "target": "kh3_trace_pak_mount_eboot_pids",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "kh3_trace_pak_mount",
+      "target": "kh3_trace_pak_mount_wstr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "kh3_trace_pak_mount_wstr",
+      "target": "scripts_kh3_trace_pak_mount_py_int",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "kh3_trace_pak_mount_wstr",
+      "target": "scripts_kh3_trace_pak_mount_py_str",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/kh3/trace_pak_mount.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "kh3_trace_pak_mount_eboot_pids",
+      "target": "scripts_kh3_trace_pak_mount_py_int",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -45336,6 +46298,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ps4_agent_cc_ps4",
+      "target": "readme_desempenho_e_recomenda\u00e7\u00f5es_de_uso"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L15",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -45381,6 +46353,36 @@
       "confidence_score": 1.0,
       "source": "readme_ps4_agent_cc_ps4",
       "target": "readme_testar_sem_o_ps4"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_desempenho_e_recomenda\u00e7\u00f5es_de_uso",
+      "target": "readme_ler_menos_mem\u00f3ria"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_desempenho_e_recomenda\u00e7\u00f5es_de_uso",
+      "target": "readme_rede_o_que_limita_a_leitura_de_mem\u00f3ria"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_desempenho_e_recomenda\u00e7\u00f5es_de_uso",
+      "target": "readme_sess\u00f5es_de_debug"
     },
     {
       "relation": "contains",
@@ -45451,6 +46453,16 @@
       "confidence_score": 1.0,
       "source": "docs_kh3_formato_legendas_kh3_formato_das_legendas_piloto_da_se\u00e7\u00e3o_11",
       "target": "docs_kh3_formato_legendas_onde_ficam"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/kh3-formato-legendas.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_kh3_formato_legendas_onde_ficam",
+      "target": "docs_kh3_formato_legendas_como_chegar_aos_arquivos"
     },
     {
       "relation": "contains",
@@ -46559,5 +47571,5 @@
       "source_file": "ps4-claude-agent-plano.md"
     }
   ],
-  "built_at_commit": "a8a0a5d311e024cd9265623a1cb161ac3e4d0055"
+  "built_at_commit": "7ba79ac50386901b6238aeac2f8885281b38c871"
 }

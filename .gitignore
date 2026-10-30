@@ -12,3 +12,5 @@ graphify-out/.rebuild.lock
 .claude-flow/
 .swarm/
 ruvector.db
+# arquivos do jogo e chave AES do KH3: nunca versionar
+kh3_work/

@@ -44,6 +44,63 @@ Fica de fora, como o próprio plano pede: subagentes por área do port (só depo
 
 > ⚠️ Se um ATTACH falhar por causa da porta 755 ou do firewall, o ps4debug fica preso em "debugging". É um bug do próprio payload. Reinicie o console e recarregue o payload. O `ps4_diagnose` existe para evitar isso.
 
+## Desempenho e recomendações de uso
+
+### Rede: o que limita a leitura de memória
+
+Medido em 2026-10-29 com o PS4 e o PC no Wi-Fi 2.4 GHz (PC com link de 300 Mbit/s e sinal −39 dBm):
+
+| Teste | Velocidade |
+|---|---|
+| ps4debug, 1 conexão, blocos de 1 MiB | 1.8–3.3 MiB/s |
+| ps4debug, 8 conexões em paralelo | 2.2 MiB/s |
+| FTP do GoldHEN | 1.2–1.8 MiB/s |
+
+O ps4debug e o FTP são códigos diferentes no console e param no mesmo teto. Mais conexões também não ajudam. O limite é o Wi-Fi do PS4, não o software. Paralelizar ou fazer pedidos assíncronos só divide o mesmo link. Varrer os ~460 MiB do heap de um jogo leva uns 4 minutos assim.
+
+Para medir a sua rede: `uv run python scripts/bench_read.py`.
+
+**Cabo direto PC ↔ PS4, os dois sem depender do roteador.** Esta é a melhor opção quando não dá para levar cabo até o roteador. O PC continua na internet pelo Wi-Fi e compartilha a conexão com o PS4 pelo cabo:
+
+1. Ligue um cabo de rede comum entre o PS4 e o PC. Não precisa de cabo cruzado: as duas portas detectam sozinhas.
+2. No PC (NetworkManager), compartilhe a conexão pela porta com fio. O PC vira `10.42.0.1` e entrega IP ao PS4 por DHCP:
+   ```bash
+   nmcli connection add type ethernet ifname enp3s0 con-name ps4-direto ipv4.method shared ipv6.method disabled
+   nmcli connection up ps4-direto
+   ```
+   Troque `enp3s0` pelo nome da sua porta (`ip -br link`).
+3. No PS4: Configurações → Rede → Configurar conexão com a Internet → **Usar um cabo de rede** → Fácil. O PS4 desliga o Wi-Fi e passa a sair para a internet pelo PC.
+4. Anote o IP que o PS4 recebeu (`10.42.0.x`, aparece em Rede → Status da conexão) e use `export PS4_IP=10.42.0.x`. Defina o IP explicitamente: a descoberta automática pode procurar na rede do Wi-Fi.
+5. O ps4debug conecta de volta em `10.42.0.1:755`. Se o firewall estiver ativo, libere a porta 755 também nessa interface.
+
+**Medido com cabo direto (2026-10-29):** **10.1 MiB/s** com uma conexão, 5× o Wi-Fi. O cabo usado tinha mau contato e o link caiu para 100 Mbps (`Downshift occurred ... check cabling!` no `journalctl -k`), então esse número já é praticamente o teto do link (~11.5 MiB/s). Com um cabo Cat5e/Cat6 bom, o link fica em Gigabit e o limite passa a ser o payload. A estimativa, ainda não medida, é de 10–30 MiB/s. A varredura do heap cai de ~4 min para ~45 s a 100 Mbps, e deve ficar abaixo disso em Gigabit.
+
+> ⚠️ Durante um benchmark com 8 conexões paralelas e 64 MiB pelo cabo, o PS4 teve um kernel panic (tela preta, precisou reiniciar). Com 1 conexão, rodou sem problema. A causa não está confirmada. Até lá, use 1 conexão (padrão do `bench_read.py`) e não paralelize as leituras.
+
+Se o NetworkManager compartilhar a conexão e mesmo assim o PS4 não pegar IP, ou se ele parar no erro **NW-31456-9** depois da tela do proxy, olhe o firewall:
+- **ufw ativo:** ele bloqueia o DHCP e o DNS vindos do cabo. Libere com `sudo ufw allow in on enp3s0` e `sudo ufw route allow in on enp3s0 out on wlp4s0`.
+- **Erro no fim do teste de internet:** a rede local já funciona. Saia da tela, porque a configuração com cabo fica salva. Se o PS4 precisar de internet e o Docker estiver instalado, a política de `FORWARD` em `DROP` pode bloquear o NAT. Libere com `sudo iptables -I DOCKER-USER -i enp3s0 -o wlp4s0 -j ACCEPT` e a regra de volta (`-i wlp4s0 -o enp3s0 -m state --state RELATED,ESTABLISHED -j ACCEPT`).
+- **Depois de trocar de rede, o ps4debug pode ter caído:** recarregue pelo GoldHEN → Payloads.
+
+**Outras opções:**
+- **USB não serve para isso.** As portas USB do PS4 só funcionam como host: aceitam pendrive, controle e HD, mas não criam uma rede com o PC. Um pendrive ajuda só para mover arquivos grandes, não para ler memória ao vivo.
+- **Wi-Fi 5 GHz,** se o seu modelo de PS4 suportar (o Slim e o Pro suportam; o modelo original, CUH-10xx/11xx, só tem 2.4 GHz). Ligue o PS4 na rede 5 GHz do roteador e meça. O ganho costuma ser bem menor que o do cabo.
+- **Aproxime o PS4 do roteador** ou tire obstáculos. No 2.4 GHz o PS4 é o lado fraco do link.
+
+### Ler menos memória
+
+Na prática, isso ajuda tanto quanto a rede:
+- **Restrinja a região.** No `search_memory`, use `regions` (`writable`, `code` ou um trecho do nome). Em recomps, procure só no heap do jogo guest. No Super Mario Wonder recomp, por exemplo, ele fica em `0x5000000000` (~460 MiB) e não nos 3.5 GiB graváveis do processo.
+- **Refine em vez de varrer de novo.** Numa varredura de valor (por exemplo, moedas), a segunda passada relê só os blocos onde sobraram candidatos. Ela foi de 430 mil candidatos para 13 lendo bem menos memória.
+- **Combine valores vizinhos.** Procurar dois números juntos (por exemplo, moedas `38` + moedas roxas `158`) encontra a estrutura numa passada só.
+- **Gere o dump uma vez e trabalhe fora do console.** O `dump_module` gera o ELF uma vez. Depois disso, a análise no ReVa/Ghidra não usa mais a rede.
+
+### Sessões de debug
+
+- **Não deixe o jogo anexado e parado por muito tempo.** No teste, o Super Mario Wonder ficou minutos congelado (bug do attach, já corrigido) e crashou no detach. Para inspecionar, use `pause` → leitura → `resume`, em ciclos curtos.
+- **Depois de reiniciar o console, recarregue o payload.** Se ele estiver em `/data/payloads/` no PS4, carregue pelo GoldHEN → Payloads, sem precisar do BinLoader.
+- **FW 12.52 com ps4debug 1.3 (GoldHEN v1.1.19):** o ATTACH deixava o processo parado e o módulo principal se chama `executable`. O cliente já trata os dois casos: `"eboot.bin+0x…"` continua funcionando. Detalhes do attach no item 14 de [`docs/protocolo-ps4debug.md`](docs/protocolo-ps4debug.md).
+
 ## Configuração (`.mcp.json` → env)
 
 | Variável | Padrão | Uso |
@@ -84,6 +141,6 @@ ps4_mcp/            servidor MCP: server.py (ferramentas), client.py/protocol.py
                     bridge.py (app do PS4), deploy.py (OpenOrbis + Remote Package Installer)
 tests/              testes + fakes/ (ps4debug falso) + crash-homebrew/ (PKG de teste da fase 3)
 ps4-app/            app CCPS4 Agent Viewer (fase 6)
-scripts/            fase0_smoke.py, send_payload.py, metrics.py, install_openorbis.sh
+scripts/            fase0_smoke.py, send_payload.py, bench_read.py, metrics.py, install_openorbis.sh
 docs/               protocolo-ps4debug.md, relatorio-fase5.md, kh3-formato-legendas.md
 ```

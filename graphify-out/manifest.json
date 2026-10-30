@@ -175,17 +175,17 @@
     "semantic_hash": ""
   },
   "ps4_mcp/client.py": {
-    "mtime": 1793286862.3196688,
-    "ast_hash": "381fae30ff49cd20127fb95ab04b39b3",
+    "mtime": 1793311453.4420855,
+    "ast_hash": "6d22da11af4ad81f1711f47941d3b09c",
     "semantic_hash": ""
   },
   "ps4_mcp/config.py": {
-    "mtime": 1793295117.3081467,
+    "mtime": 1793311453.4422958,
     "ast_hash": "8d822b34079eaa65ce42203542a96877",
     "semantic_hash": ""
   },
   "ps4_mcp/debug.py": {
-    "mtime": 1793310008.505529,
+    "mtime": 1793311453.4425826,
     "ast_hash": "d0e3e9130bba78552f821fee48209bc9",
     "semantic_hash": ""
   },
@@ -220,7 +220,7 @@
     "semantic_hash": ""
   },
   "ps4_mcp/server.py": {
-    "mtime": 1793295117.3106341,
+    "mtime": 1793311453.4430237,
     "ast_hash": "7b07ad3a7e4d6146608263909b9a25f4",
     "semantic_hash": ""
   },
@@ -240,7 +240,7 @@
     "semantic_hash": ""
   },
   "scripts/fase0_smoke.py": {
-    "mtime": 1793295117.3087604,
+    "mtime": 1793311453.4433143,
     "ast_hash": "fd8d297182014bbcc53dd9b89c4fac12",
     "semantic_hash": ""
   },
@@ -255,7 +255,7 @@
     "semantic_hash": ""
   },
   "scripts/send_payload.py": {
-    "mtime": 1793295117.309077,
+    "mtime": 1793311453.4435024,
     "ast_hash": "34e460525fc55b734b46251a57fe0483",
     "semantic_hash": ""
   },
@@ -310,8 +310,8 @@
     "semantic_hash": ""
   },
   "tests/test_core.py": {
-    "mtime": 1793278964.1995451,
-    "ast_hash": "8bb9d48552a1465dd9fa3da9b8029641",
+    "mtime": 1793311453.4437068,
+    "ast_hash": "323a3a9bde2ed584d9061f4bb1b28693",
     "semantic_hash": ""
   },
   "tests/test_e2e_debug.py": {
@@ -350,17 +350,17 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1793295117.3122797,
-    "ast_hash": "8c1f22aadbd6ca0c66e0fc6deef43516",
+    "mtime": 1793313602.5603347,
+    "ast_hash": "9d18cd46778d3421adeb3ac0eaa07861",
     "semantic_hash": ""
   },
   "docs/kh3-formato-legendas.md": {
-    "mtime": 1793279118.2266972,
-    "ast_hash": "6f5fdc26b3202129906a0803e12f9d92",
+    "mtime": 1793314808.1767993,
+    "ast_hash": "64dc6c469485ab569a7a6702d6d496f4",
     "semantic_hash": ""
   },
   "docs/protocolo-ps4debug.md": {
-    "mtime": 1793310047.4178855,
+    "mtime": 1793311453.4192293,
     "ast_hash": "78aa3d710dfee677b5a26d32f9642110",
     "semantic_hash": ""
   },
@@ -385,7 +385,7 @@
     "semantic_hash": ""
   },
   "tests/test_discover.py": {
-    "mtime": 1793295124.0522778,
+    "mtime": 1793311453.443816,
     "ast_hash": "5137dffe052dfb87812f88ac343f0a56",
     "semantic_hash": ""
   },
@@ -412,6 +412,51 @@
   ".swarm/ewc-fisher.json": {
     "mtime": 1793310227.784766,
     "ast_hash": "84146f38cd0d58f9e3b39c2199615b6a",
+    "semantic_hash": ""
+  },
+  "scripts/bench_read.py": {
+    "mtime": 1793313605.8009543,
+    "ast_hash": "02bda01ec4a2396d17728f4c892d4198",
+    "semantic_hash": ""
+  },
+  "scripts/kh3/find_aes_ascii.py": {
+    "mtime": 1793316373.5706124,
+    "ast_hash": "efe84352edb9740be842b06391e7e058",
+    "semantic_hash": ""
+  },
+  "scripts/kh3/kh3_find.py": {
+    "mtime": 1793322330.0809972,
+    "ast_hash": "76c79ff9fd037954bf131987ac1d1022",
+    "semantic_hash": ""
+  },
+  "scripts/kh3/kh3_mod.py": {
+    "mtime": 1793316373.6653209,
+    "ast_hash": "998d7f5961c67b9351cda48bd3696e11",
+    "semantic_hash": ""
+  },
+  "scripts/kh3/pak_extract.py": {
+    "mtime": 1793316383.6788383,
+    "ast_hash": "88b1a1f13e265832df6ef959fa48f87a",
+    "semantic_hash": ""
+  },
+  "scripts/kh3/pak_index.py": {
+    "mtime": 1793316383.678406,
+    "ast_hash": "84e97decfeb802e258c00e37e7fcfe46",
+    "semantic_hash": ""
+  },
+  "agentdb.rvf.idmap.json": {
+    "mtime": 1793321672.7593246,
+    "ast_hash": "8c2624d8c0331d61a2131e88b326e61f",
+    "semantic_hash": ""
+  },
+  "scripts/kh3/build_patch.py": {
+    "mtime": 1793317875.9612248,
+    "ast_hash": "58f03514387527e02e5fbab27484b827",
+    "semantic_hash": ""
+  },
+  "scripts/kh3/trace_pak_mount.py": {
+    "mtime": 1793322650.972013,
+    "ast_hash": "4677d63b9291b23aef22013d2fbb57fa",
     "semantic_hash": ""
   }
 }

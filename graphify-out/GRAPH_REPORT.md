@@ -1,16 +1,16 @@
-# Graph Report - CC-PS4  (2026-10-29)
+# Graph Report - CC-PS4  (2026-10-30)
 
 ## Corpus Check
-- 82 files · ~109,819 words
+- 86 files · ~75,188 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1289 nodes · 3267 edges · 62 communities (59 shown, 3 thin omitted)
-- Extraction: 88% EXTRACTED · 12% INFERRED · 0% AMBIGUOUS · INFERRED: 378 edges (avg confidence: 0.6)
+- 1314 nodes · 3341 edges · 65 communities (63 shown, 2 thin omitted)
+- Extraction: 88% EXTRACTED · 12% INFERRED · 0% AMBIGUOUS · INFERRED: 395 edges (avg confidence: 0.59)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a8a0a5d3`
+- Built from commit: `7ba79ac5`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -50,6 +50,7 @@
 - [[_COMMUNITY_Community 32|Community 32]]
 - [[_COMMUNITY_Community 33|Community 33]]
 - [[_COMMUNITY_Community 34|Community 34]]
+- [[_COMMUNITY_Community 35|Community 35]]
 - [[_COMMUNITY_Community 36|Community 36]]
 - [[_COMMUNITY_Community 37|Community 37]]
 - [[_COMMUNITY_Community 38|Community 38]]
@@ -63,19 +64,22 @@
 - [[_COMMUNITY_Community 46|Community 46]]
 - [[_COMMUNITY_Community 47|Community 47]]
 - [[_COMMUNITY_Community 48|Community 48]]
+- [[_COMMUNITY_Community 49|Community 49]]
+- [[_COMMUNITY_Community 50|Community 50]]
 - [[_COMMUNITY_Community 51|Community 51]]
+- [[_COMMUNITY_Community 64|Community 64]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `FakePS4Debug` - 103 edges
-2. `str` - 56 edges
-3. `PS4Debug` - 52 edges
-4. `DebugSession` - 49 edges
-5. `int` - 48 edges
-6. `PS4DebugError` - 42 edges
+2. `PS4Debug` - 64 edges
+3. `str` - 56 edges
+4. `DebugSession` - 52 edges
+5. `PS4DebugError` - 51 edges
+6. `int` - 48 edges
 7. `ConsoleFTP` - 38 edges
 8. `int` - 35 edges
 9. `LogReader` - 32 edges
-10. `FakeProcess` - 31 edges
+10. `Config` - 31 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `ReVa MCP (Ghidra 12.1.3 headless)` --semantically_similar_to--> `REA MCP (Ghidra/IDA)`  [INFERRED] [semantically similar]
@@ -86,8 +90,8 @@
   tests/test_bridge_deploy.py → ps4_mcp/bridge.py
 - `str` --uses--> `Bridge`  [INFERRED]
   tests/test_bridge_deploy.py → ps4_mcp/bridge.py
-- `int` --uses--> `PS4DebugError`  [INFERRED]
-  scripts/fase0_smoke.py → ps4_mcp/client.py
+- `Retry` --uses--> `PS4DebugError`  [INFERRED]
+  scripts/kh3/kh3_find.py → ps4_mcp/client.py
 
 ## Import Cycles
 - None detected.
@@ -97,15 +101,15 @@
 - **ps4-mcp console access backends** — cc_ps4_ps4_claude_agent_plano_ps4debug_python_client, cc_ps4_ps4_claude_agent_plano_ftp_server, cc_ps4_ps4_claude_agent_plano_log_reader, cc_ps4_ps4_claude_agent_plano_event_queue [EXTRACTED 1.00]
 - **Risk-tiered tool catalog** — cc_ps4_ps4_claude_agent_plano_read_tools, cc_ps4_ps4_claude_agent_plano_debug_tools, cc_ps4_ps4_claude_agent_plano_write_tools, cc_ps4_ps4_claude_agent_plano_security [INFERRED 0.85]
 
-## Communities (62 total, 3 thin omitted)
+## Communities (65 total, 2 thin omitted)
 
 ### Community 0 - "Debug Events & RE Link"
 Cohesion: 0.17
-Nodes (5): DebugSession, int, Comando de debug na conexão auxiliar. Sem repetição automática: repetir um BREAK, Comando de debug na conexão auxiliar. Sem repetição automática: repetir um BREAK, PS4DebugError
+Nodes (6): _bind_hint(), DebugSession, int, Comando de debug na conexão auxiliar. Sem repetição automática: repetir um BREAK, Comando de debug na conexão auxiliar. Sem repetição automática: repetir um BREAK, PS4DebugError
 
 ### Community 1 - "Toolchain & Token Setup"
-Cohesion: 0.05
-Nodes (86): bridge_state_t, bridge_check_message(), bridge_config_defaults(), bridge_kind_name(), bridge_kind_parse(), bridge_parse_config(), bridge_parse_discovery(), bridge_parse_feed() (+78 more)
+Cohesion: 0.06
+Nodes (85): bridge_state_t, bridge_check_message(), bridge_config_defaults(), bridge_kind_name(), bridge_kind_parse(), bridge_parse_config(), bridge_parse_discovery(), bridge_parse_feed() (+77 more)
 
 ### Community 2 - "Plan Phases & KH3 Pilot"
 Cohesion: 0.07
@@ -121,15 +125,15 @@ Nodes (31): 10. Modelo de execução: o agente fica vivo durante o jogo, 11.1 Ob
 
 ### Community 5 - "Safety & Write Gating"
 Cohesion: 0.11
-Nodes (53): build_demo(), Populate ``fake`` with system processes and a game. Returns useful addresses., attach(), dbg_listener(), fake(), _fixed_interrupt_model(), free_port(), nothing_pending() (+45 more)
+Nodes (50): attach(), dbg_listener(), _fixed_interrupt_model(), free_port(), nothing_pending(), parse_interrupt(), bool, bytes (+42 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.11
-Nodes (11): FakePS4Debug, _Hang, sys_proc_vm_map_handle (kdebugger hooks.c:93-127)., proc_scan_handle (proc.c:633-719), bugs included:          * the page buffer is, Unpack a packet struct; short packets are zero padded (real: reads past the buff, The real handler thread spins forever. The connection is never served again., Fake ps4debug payload. ``start()`` binds; ``self.port`` holds the real TCP port., The payload thread faults -> SceShellCore (which hosts it) dies -> every socket (+3 more)
+Cohesion: 0.18
+Nodes (3): Unpack a packet struct; short packets are zero padded (real: reads past the buff, proc_find_by_pid (kdebugger proc.c:24-35): walks allproc, zombies are not there., _unpack()
 
 ### Community 7 - "Community 7"
-Cohesion: 0.17
-Nodes (7): Bridge, _clean(), bool, float, int, str, Bridge PC ↔ app "CCPS4 Agent Viewer" no PS4 (fase 6, opcional, liga com PS4_BRID
+Cohesion: 0.05
+Nodes (43): FTP, _clean_path(), ConsoleFTP, _explain(), FTPError, parse_list_line(), BaseException, bool (+35 more)
 
 ### Community 8 - "Community 8"
 Cohesion: 0.08
@@ -144,72 +148,76 @@ Cohesion: 0.08
 Nodes (38): ClientSession, OO_PS4_TOOLCHAIN, PS4_BRIDGE, PS4_ENABLE_DEPLOY, PS4_ENABLE_WRITE, PS4_IP, PS4_LOG_SOURCE, PS4_WORKDIR (+30 more)
 
 ### Community 11 - "Community 11"
-Cohesion: 0.09
-Nodes (18): _check_regs(), FakeProcess, FakeThread, _Mapping, proc_allocate (kdebugger proc.c:137-172): vm_map_findspace = first fit from min_, proc_create_thread (kdebugger proc.c:211-356): needs an r-x libkernel*.sprx mapp, proc_load_elf (kdebugger proc.c:358-465, elf.c): uses p_paddr, only R_X86_64_REL, ptrace target resolution [FreeBSD]: ids > PID_MAX are lwpids (tdfind); otherwise (+10 more)
+Cohesion: 0.12
+Nodes (15): FakeProcess, FakeThread, _Mapping, page_round(), page_trunc(), proc_allocate (kdebugger proc.c:137-172): vm_map_findspace = first fit from min_, proc_create_thread (kdebugger proc.c:211-356): needs an r-x libkernel*.sprx mapp, proc_load_elf (kdebugger proc.c:358-465, elf.c): uses p_paddr, only R_X86_64_REL (+7 more)
 
 ### Community 12 - "Community 12"
-Cohesion: 0.08
-Nodes (25): Exception, _ConnLost, _Crash, default_fpregs(), dr7_access(), dr7_enabled(), dr7_len(), dr7_mask() (+17 more)
+Cohesion: 0.12
+Nodes (19): Exception, _ConnLost, _Crash, dr7_access(), dr7_enabled(), dr7_len(), dr7_mask(), dr7_set() (+11 more)
 
 ### Community 13 - "Community 13"
-Cohesion: 0.09
-Nodes (50): describe_address(), module_base(), parse_address(), parse_int(), Aceita 0x412abc, 4271804, "eboot.bin+0x12abc" ou "eboot.bin" (base do módulo)., clamp(), attach(), compare_bytes() (+42 more)
+Cohesion: 0.14
+Nodes (13): MapEntry, O payload devolve zeros fora das regiões mapeadas; avisa para o agente não se en, O payload devolve zeros fora das regiões mapeadas; avisa para o agente não se en, unmapped_warning(), test_unmapped_warning(), console(), free_port(), make_console() (+5 more)
 
 ### Community 14 - "Community 14"
-Cohesion: 0.10
-Nodes (15): _DebugContext, insn_length(), server.c:62-173. Returns True when the client must be freed (ECONNRESET on dbgfd, net_send_data on dbgfd. [FreeBSD] after the peer closed, the first write still, Raw memory (ignores protections); unmapped bytes read as zero., struct debug_context (protocol.h:316-324). Lives inside a client slot., struct server_client (protocol.h:326-332): one of SERVER_MAXCLIENTS static slots, net_recv_data(fd, &packet, 12, 0) on a SO_NBIO socket: reads what is there, mayb (+7 more)
+Cohesion: 0.16
+Nodes (7): _DebugContext, struct debug_context (protocol.h:316-324). Lives inside a client slot., struct server_client (protocol.h:326-332): one of SERVER_MAXCLIENTS static slots, free_client() (server.c:20-29)., _Slot, bool, float
 
 ### Community 15 - "Community 15"
-Cohesion: 0.09
-Nodes (31): MapEntry, find_map(), O payload devolve zeros fora das regiões mapeadas; avisa para o agente não se en, unmapped_warning(), build_elf(), bytes, int, Gera um ELF64 a partir de regiões de memória dumpadas, para abrir no Ghidra/ReVa (+23 more)
+Cohesion: 0.13
+Nodes (23): find_map(), build_elf(), bytes, int, Gera um ELF64 a partir de regiões de memória dumpadas, para abrir no Ghidra/ReVa, segments: (endereço, bytes, prot com bits 1=R 2=W 4=X do mapa do ps4debug)., build_snapshot(), disasm() (+15 more)
 
 ### Community 16 - "Community 16"
 Cohesion: 0.06
-Nodes (74): end_of_headers(), fail(), http_build_get(), http_build_post(), http_resp_feed(), http_resp_finish(), http_resp_init(), lower() (+66 more)
+Nodes (75): end_of_headers(), fail(), http_build_get(), http_build_post(), http_resp_feed(), http_resp_finish(), http_resp_init(), lower() (+67 more)
 
 ### Community 17 - "Community 17"
-Cohesion: 0.16
-Nodes (9): PS4Debug, bool, bytes, float, int, str, Notificação do sistema na tela do PS4 (aparece por cima do jogo)., Comandos de processo/kernel/console numa conexão própria, com lock (thread-safe) (+1 more)
+Cohesion: 0.15
+Nodes (12): Connection, PS4Debug, bool, bytes, float, int, str, Notificação do sistema na tela do PS4 (aparece por cima do jogo). (+4 more)
 
 ### Community 18 - "Community 18"
-Cohesion: 0.10
-Nodes (21): BaseModel, Audit, check_lan(), bool, int, Path, str, Segurança e auditoria (seção 8 do plano): só rede local, limites e log de toda c (+13 more)
+Cohesion: 0.11
+Nodes (21): BaseModel, DeployError, Audit, check_lan(), bool, int, Path, str (+13 more)
 
 ### Community 19 - "Community 19"
-Cohesion: 0.05
-Nodes (41): FTP, _clean_path(), ConsoleFTP, _explain(), FTPError, parse_list_line(), BaseException, bool (+33 more)
+Cohesion: 0.13
+Nodes (29): describe_address(), module_base(), parse_address(), parse_int(), Aceita 0x412abc, 4271804, "eboot.bin+0x12abc" ou "eboot.bin" (base do módulo)., Aceita 0x412abc, 4271804, "eboot.bin+0x12abc" ou "eboot.bin" (base do módulo)., clamp(), attach() (+21 more)
 
 ### Community 20 - "Community 20"
-Cohesion: 0.12
-Nodes (15): clear_breakpoint(), clear_watchpoint(), get_registers(), list_threads(), main(), pause(), Remove o breakpoint (o ps4debug devolve o byte original)., Registradores de uma thread (thread_id=0 usa a thread do último evento). O proce (+7 more)
+Cohesion: 0.14
+Nodes (6): FakePS4Debug, _Hang, The real handler thread spins forever. The connection is never served again., Fake ps4debug payload. ``start()`` binds; ``self.port`` holds the real TCP port., State of the attached process (or of the last one attached; None if never)., The payload thread faults -> SceShellCore (which hosts it) dies -> every socket
 
 ### Community 21 - "Community 21"
-Cohesion: 0.22
-Nodes (13): cstr(), Interrupt, pack_regs(), parse_interrupt(), parse_regs(), bool, bytes, int (+5 more)
+Cohesion: 0.29
+Nodes (3): App, Lê um arquivo do console via FTP. mode: auto (texto se parecer texto, senão hex), read_file()
 
 ### Community 22 - "Community 22"
 Cohesion: 0.11
-Nodes (26): build_homebrew(), DeployError, _FileServer, install_pkg(), _lenient_json(), local_ip_for(), _post(), bytes (+18 more)
+Nodes (24): build_homebrew(), _FileServer, install_pkg(), _lenient_json(), local_ip_for(), _post(), bytes, float (+16 more)
 
 ### Community 23 - "Community 23"
-Cohesion: 0.10
-Nodes (30): Context, prot_str(), build_homebrew(), confirm(), dump_module(), get_messages(), install_pkg(), _j() (+22 more)
+Cohesion: 0.07
+Nodes (26): PS4 Agent: servidor MCP para o Claude Code investigar o PS4 em tempo de execução, build_homebrew(), detach(), download_file(), get_messages(), _j(), list_dir(), list_processes() (+18 more)
 
 ### Community 24 - "Community 24"
-Cohesion: 0.30
-Nodes (23): IntEnum, OSError, Connection, PS4DebugError, Cliente das primitivas do ps4debug: processos, memória, kernel e notificações., Falha de comunicação ou de uso do ps4debug (mensagem pronta para o agente)., Uma conexão TCP com o ps4debug (porta 744)., StatusError (+15 more)
+Cohesion: 0.17
+Nodes (7): Bridge, _clean(), bool, float, int, str, Bridge PC ↔ app "CCPS4 Agent Viewer" no PS4 (fase 6, opcional, liga com PS4_BRID
 
 ### Community 25 - "Community 25"
-Cohesion: 0.19
-Nodes (12): _bool(), discover_ps4(), _int(), float, Path, str, Configuração do ps4-mcp, lida de variáveis de ambiente (definidas no .mcp.json)., Acha o PS4 na rede local. Tenta o DDP em broadcast e, sem resposta, varre a /24 (+4 more)
+Cohesion: 0.14
+Nodes (18): _bool(), discover_ps4(), _int(), float, Path, str, Configuração do ps4-mcp, lida de variáveis de ambiente (definidas no .mcp.json)., Acha o PS4 na rede local. Tenta o DDP em broadcast e, sem resposta, varre a /24 (+10 more)
+
+### Community 26 - "Community 26"
+Cohesion: 0.08
+Nodes (18): default_fpregs(), insn_length(), sys_proc_vm_map_handle (kdebugger hooks.c:93-127)., proc_scan_handle (proc.c:633-719), bugs included:          * the page buffer is, server.c:62-173. Returns True when the client must be freed (ECONNRESET on dbgfd, net_send_data on dbgfd. [FreeBSD] after the peer closed, the first write still, savefpu_ymm with FreeBSD's initial FPU state (cw 0x37f, mxcsr 0x1f80)., Raw memory (ignores protections); unmapped bytes read as zero. (+10 more)
 
 ### Community 27 - "Community 27"
-Cohesion: 0.29
-Nodes (5): console(), free_port(), make_console(), Cliente + sessão de debug contra o ps4debug falso (escrito de forma independente, test_attach_fails_when_ps4_cannot_call_back()
+Cohesion: 0.16
+Nodes (16): Testa como chave AES toda sequência de 32 caracteres ASCII imprimíveis do eboot, Cliente das primitivas do ps4debug: processos, memória, kernel e notificações., Sessão de debug: attach, breakpoints, watchpoints, controle do processo e fila d, cstr(), Interrupt, pack_regs(), parse_interrupt(), parse_regs() (+8 more)
 
 ### Community 28 - "Community 28"
-Cohesion: 0.17
-Nodes (11): approvals, budgets, ledgerHead, ledgerLength, migratedAt, migratedFrom, mode, receipts (+3 more)
+Cohesion: 0.33
+Nodes (18): IntEnum, OSError, PS4DebugError, Falha de comunicação ou de uso do ps4debug (mensagem pronta para o agente)., StatusError, Config, bool, bytes (+10 more)
 
 ### Community 29 - "Community 29"
 Cohesion: 0.31
@@ -224,40 +232,44 @@ Cohesion: 0.41
 Nodes (10): install_openorbis.sh script, archive_ok(), ensure_openssl11(), fail(), finalize(), log(), need(), pkg_smoke_test() (+2 more)
 
 ### Community 32 - "Community 32"
-Cohesion: 0.24
-Nodes (9): FakePS4Debug, _demo_code(), main(), Run the fake ps4debug server with a demo console.      uv run python -m tests.fa, increment_counter(): push rbp; mov rbp,rsp; mov eax,[rip+c]; add eax,1; mov [rip, _repl(), bytes, int (+1 more)
+Cohesion: 0.23
+Nodes (12): FakePS4Debug, build_demo(), _demo_code(), main(), Run the fake ps4debug server with a demo console.      uv run python -m tests.fa, increment_counter(): push rbp; mov rbp,rsp; mov eax,[rip+c]; add eax,1; mov [rip, Populate ``fake`` with system processes and a game. Returns useful addresses., _repl() (+4 more)
 
 ### Community 33 - "Community 33"
 Cohesion: 0.35
 Nodes (6): bytes, int, str, main(), Img, load_font()
 
 ### Community 34 - "Community 34"
-Cohesion: 0.20
-Nodes (9): config, dimensions, fisherDecayRate, lambda, consolidationHistory, globalFisher, patterns, savedAt (+1 more)
+Cohesion: 0.21
+Nodes (12): fstr(), pak_v4(), Troca strings de um .locres (v1) e empacota num pak UE4 v4 sem criptografia. Uso, utf16=True grava todo FString em UTF-16, como o KH3 faz; False usa ANSI quando o, read_locres(), write_locres(), fstr(), Baixa e decifra o índice de um pak UE4 (v4) pelo FTP e lista os arquivos. Uso: p (+4 more)
+
+### Community 35 - "Community 35"
+Cohesion: 0.26
+Nodes (6): _check_regs(), [FreeBSD] ptracestop(): process stops, wait4 will report WSTOPSIG == sig., The thread executes the int3 planted by CMD_DEBUG_BREAKPT ``index``., Hardware watchpoint ``index`` fires (#DB): SIGTRAP, DR6 bit ``index`` set., A signal is posted to the traced process (e.g. SIGSEGV=11 from a fault)., The attached process gets SIGKILL from outside (e.g. the shell closes the game).
 
 ### Community 36 - "Community 36"
 Cohesion: 0.20
 Nodes (9): Arquitetura, CCPS4 Agent Viewer (fase 6, opcional), Configuração (opcional): `/data/ccps4/viewer.cfg`, Controles, Instalar, Limitações (leia antes), O que foi validado e o que não foi, Protocolo bridge v1 (resumo) (+1 more)
 
 ### Community 37 - "Community 37"
-Cohesion: 0.40
-Nodes (4): lastAdaptation, patternsLearned, signalsProcessed, trajectoriesRecorded
+Cohesion: 0.09
+Nodes (40): Context, prot_str(), clear_breakpoint(), clear_watchpoint(), confirm(), dump_module(), get_registers(), install_pkg() (+32 more)
 
 ### Community 38 - "Community 38"
 Cohesion: 0.25
 Nodes (7): Build, CCPS4 Crash Test (alvo da fase 3), Instalar no PS4 (GoldHEN), Limitações conhecidas, O que ele faz, Offsets e endereço em tempo de execução, Procedimento do teste da fase 3
 
 ### Community 39 - "Community 39"
-Cohesion: 0.25
-Nodes (7): Checklist do piloto (seção 11.4) com as ferramentas do ps4-mcp, Em memória, Estrutura do arquivo, Fonte e glifos, KH3: formato das legendas (piloto da seção 11), Limites, Onde ficam
+Cohesion: 0.22
+Nodes (8): Checklist do piloto (seção 11.4) com as ferramentas do ps4-mcp, Como chegar aos arquivos, Em memória, Estrutura do arquivo, Fonte e glifos, KH3: formato das legendas (piloto da seção 11), Limites, Onde ficam
 
 ### Community 40 - "Community 40"
-Cohesion: 0.29
-Nodes (5): page_round(), page_trunc(), Add a vm_map entry. Bounds are rounded to 16 KiB pages (vm_map entries are page, Map each PT_LOAD segment at base+p_vaddr (page aligned), prot from p_flags, file, Raw write (ignores protections). Raises ValueError if any byte is unmapped.
+Cohesion: 0.33
+Nodes (3): Procura textos na memória do KH3 pulando MiBs zerados (amostra de 4 KiB por MiB), Cliente que reconecta e repete a chamada quando o link cai (cabo com mau contato, Retry
 
 ### Community 41 - "Community 41"
-Cohesion: 0.25
-Nodes (7): Configuração (`.mcp.json` → env), Estado por fase, Estrutura, Primeiro uso com o console, PS4 Agent (CC-PS4), Segurança (seção 8), Testar sem o PS4
+Cohesion: 0.17
+Nodes (11): Configuração (`.mcp.json` → env), Desempenho e recomendações de uso, Estado por fase, Estrutura, Ler menos memória, Primeiro uso com o console, PS4 Agent (CC-PS4), Rede: o que limita a leitura de memória (+3 more)
 
 ### Community 42 - "Community 42"
 Cohesion: 0.29
@@ -266,6 +278,10 @@ Nodes (6): 1. Caso investigado, 2. Como rodar, 3. Métricas, 4. O que funcionou 
 ### Community 43 - "Community 43"
 Cohesion: 0.52
 Nodes (6): bytes, int, str, main(), read_ppm(), write_png()
+
+### Community 44 - "Community 44"
+Cohesion: 0.50
+Nodes (4): main(), pkgtool(), int, str
 
 ### Community 45 - "Community 45"
 Cohesion: 0.43
@@ -283,25 +299,33 @@ Nodes (5): bytearray, bytes, int, main(), png_bytes()
 Cohesion: 0.40
 Nodes (4): Comportamentos que o cliente precisa respeitar, Formato, Protocolo do ps4debug: o que foi conferido no código-fonte, Sinais (FreeBSD)
 
+### Community 49 - "Community 49"
+Cohesion: 0.50
+Nodes (3): idToLabel, labelToId, nextLabel
+
+### Community 64 - "Community 64"
+Cohesion: 0.50
+Nodes (4): eboot_pids(), wstr(), int, str
+
 ## Knowledge Gaps
-- **143 isolated node(s):** `trajectoriesRecorded`, `patternsLearned`, `signalsProcessed`, `lastAdaptation`, `version` (+138 more)
+- **126 isolated node(s):** `/home/luizp2/Desktop/CC-PS4/.venv/bin/python`, `PS4_IP`, `PS4_WORKDIR`, `PS4_LOG_SOURCE`, `PS4_BRIDGE` (+121 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `FakePS4Debug` connect `Community 6` to `Community 32`, `Safety & Write Gating`, `Community 11`, `Community 12`, `Community 14`, `Community 24`, `Community 27`?**
-  _High betweenness centrality (0.168) - this node is a cross-community bridge._
-- **Why does `LogReader` connect `Community 8` to `Community 13`, `Community 18`, `Community 19`, `Community 23`, `Community 25`?**
+- **Why does `FakePS4Debug` connect `Community 20` to `Community 32`, `Community 35`, `Safety & Write Gating`, `Community 6`, `Community 11`, `Community 12`, `Community 13`, `Community 14`, `Community 26`, `Community 28`?**
+  _High betweenness centrality (0.159) - this node is a cross-community bridge._
+- **Why does `PS4Debug` connect `Community 17` to `Community 64`, `Debug Events & RE Link`, `Community 37`, `Community 7`, `Community 40`, `Community 13`, `Community 15`, `Community 18`, `Community 21`, `Community 23`, `Community 25`, `Community 27`, `Community 28`?**
   _High betweenness centrality (0.056) - this node is a cross-community bridge._
-- **Why does `ConsoleFTP` connect `Community 19` to `Community 25`, `Community 18`, `Community 13`, `Community 23`?**
+- **Why does `LogReader` connect `Community 8` to `Community 37`, `Community 7`, `Community 18`, `Community 21`, `Community 23`, `Community 25`?**
   _High betweenness centrality (0.053) - this node is a cross-community bridge._
 - **Are the 11 inferred relationships involving `FakePS4Debug` (e.g. with `FakePS4Debug` and `bytes`) actually correct?**
   _`FakePS4Debug` has 11 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 35 inferred relationships involving `PS4Debug` (e.g. with `Context` and `Retry`) actually correct?**
+  _`PS4Debug` has 35 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 11 inferred relationships involving `str` (e.g. with `Bridge` and `PS4Debug`) actually correct?**
   _`str` has 11 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 29 inferred relationships involving `PS4Debug` (e.g. with `Context` and `OSError`) actually correct?**
-  _`PS4Debug` has 29 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 16 inferred relationships involving `DebugSession` (e.g. with `Context` and `Connection`) actually correct?**
-  _`DebugSession` has 16 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 18 inferred relationships involving `DebugSession` (e.g. with `Context` and `Connection`) actually correct?**
+  _`DebugSession` has 18 INFERRED edges - model-reasoned connections that need verification._
